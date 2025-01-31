@@ -1,4 +1,4 @@
-name: Nuclei-Templates-Collecter
+name: Nuclei-Templates-Collector
 
 on:
   schedule:
@@ -7,7 +7,6 @@ on:
     branches:
       - main
 
-# Actions project permission
 permissions:
   contents: write
 
@@ -35,14 +34,34 @@ jobs:
         unzip nuclei/nuclei_3.3.7_linux_amd64.zip -d nuclei
         mv nuclei/nuclei /usr/local/bin/nuclei
         rm -rf nuclei
+
     - name: Running nucleihub
       run: |
         # Step 1
-        curl -s "https://raw.githubusercontent.com/rix4uni/nucleihub/refs/heads/main/reponames.txt" | nucleihub updatecheck | grep "Updated today:" | sed 's/^\Updated today: //' | nucleihub download --output-directory nucleihub-downloaded-repos
+        curl -s "https://raw.githubusercontent.com/rix4uni/nucleihub/refs/heads/main/reponames.txt" | nucleihub updatecheck | grep "Updated today:" | sed 's/^\Updated today: //' | nucleihub download -[...]
         # Step 2
         nucleihub duplicate --input-directory nucleihub-downloaded-repos --output-directory nucleihub-templates --large-content
         # Step 3
         rm -rf nucleihub-downloaded-repos
+
+    - name: Organize files into subfolders
+      run: |
+        cd nucleihub-templates
+        count=0
+        folder_index=1
+        mkdir "folder_${folder_index}"
+        for file in *; do
+          if [ -f "$file" ]; then
+            mv "$file" "folder_${folder_index}/"
+            count=$((count + 1))
+            if [ "$count" -eq 100 ]; then
+              folder_index=$((folder_index + 1))
+              mkdir "folder_${folder_index}"
+              count=0
+            fi
+          fi
+        done
+
     - name: Commit and push changes if there are any
       run: |
         git config --global user.name 'GitHub Actions'
@@ -57,4 +76,3 @@ jobs:
         else
           echo "No changes to commit"
         fi
-        
