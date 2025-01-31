@@ -23,6 +23,20 @@ jobs:
       with:
         go-version: '1.23.0'  # Specify the version of Go you want to use
 
+    - name: Cache Go modules
+      uses: actions/cache@v2
+      with:
+        path: |
+          ~/.go/pkg/mod
+          ~/.cache/go-build
+        key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+        restore-keys: |
+          ${{ runner.os }}-go-
+
+    - name: Install dependencies
+      run: |
+        go mod tidy
+
     - name: Installing tar and nucleihub via binary
       run: |
         sudo apt install tar
