@@ -1,25 +1,24 @@
-id: digital-publications-by-supsystic-b24356a61f592c8aa73b02e734b61fcd
+id: digital-publications-by-supsystic-c3037cbbf442afd290f5cbaac70cbcb3
 
 info:
-  name: "Digital Publications by Supsystic <= 1.6.12 - Stored Cross-Site Scripting"
+  name: >
+    Digital Publications by Supsystic <= 1.7.3 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Digital Publications by Supsystic plugin for WordPress is vulnerable to Stored Cross-Site Scripting via all of the input fields when editing a publication in versions up to, and including, 1.6.12 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The Digital Publications by Supsystic plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions up to, and including, 1.7.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with administrative privileges to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-roundup-february-2021-part-1/
-    - https://wpscan.com/vulnerability/3d3aaab2-3e70-4b1d-bee4-2e12941cec7c
-    - https://www.exploit-db.com/exploits/49542
-    - https://wordpress.org/plugins/digital-publications-by-supsystic/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2503876%40digital-publications-by-supsystic&new=2503876%40digital-publications-by-supsystic&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/277942cb-f4ca-4197-8f61-2e0cb03115a6?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/digital-publications-by-supsystic/"
     google-query: inurl:"/wp-content/plugins/digital-publications-by-supsystic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,digital-publications-by-supsystic,medium
+  tags: cve,wordpress,wp-plugin,digital-publications-by-supsystic,low
 
 http:
   - method: GET
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.12')
+          - compare_versions(version, '<= 1.7.3')

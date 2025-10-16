@@ -1,15 +1,15 @@
-id: radius-blocks-987991b88ebc1d68189b91d3b0071e99
+id: radius-blocks-1e7cdea114fdb029c9926e3fceb93319
 
 info:
   name: >
-    Radius Blocks – WordPress Gutenberg Blocks <= 2.1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Radius Blocks <= 2.2.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via subHeadingTagName Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b168e3e-9d22-4318-9b71-c217733a8d28?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ff41796a-0ba8-468f-8b79-274064da154e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.2')
+          - compare_versions(version, '<= 2.2.1')

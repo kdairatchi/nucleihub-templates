@@ -1,15 +1,15 @@
-id: wp-marketing-automations-2b1ccc66f4b675522311158cfb5af29c
+id: wp-marketing-automations-68c595a6189445c1513dac4597db0ed0
 
 info:
   name: >
-    Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By FunnelKit <= 3.2.2 - Unauthenticated SQL Injection
+    Recover WooCommerce Cart Abandonment, Newsletter, Email Marketing, Marketing Automation By FunnelKit <= 3.5.3 - Missing Authorization to Unauthenticated Arbitrary Plugin Installation
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/011d654a-637f-418c-8bd3-e87fd889f1ab?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/094972e6-7e02-4060-b069-e39c8cde9331?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-marketing-automations/"
     google-query: inurl:"/wp-content/plugins/wp-marketing-automations/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-marketing-automations,critical
+  tags: cve,wordpress,wp-plugin,wp-marketing-automations,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.2')
+          - compare_versions(version, '<= 3.5.3')

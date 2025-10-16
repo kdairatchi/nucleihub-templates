@@ -1,12 +1,14 @@
 id: pop3
 info:
-  name: Cubic Circle Cucipop pop3d
+  name: Eudora Internet Mail Server X pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
+    operating_system: Mac OS X
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Cubic Circle's v(\d[-.\w]+) .* POP3 ready
+    - ^\+OK ([-\w_.]+) running EIMS X ([\w.]+) <

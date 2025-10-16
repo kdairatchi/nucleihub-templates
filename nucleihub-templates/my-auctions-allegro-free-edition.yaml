@@ -1,15 +1,15 @@
-id: my-auctions-allegro-free-edition-dc19a6b021fa4769afd0abba1c966e24
+id: my-auctions-allegro-free-edition-cf63d3b283e91a830f98fe240e2aaec3
 
 info:
   name: >
-    My auctions allegro <= 3.6.17 - Reflected Cross-Site Scripting
+    My auctions allegro <= 3.6.20 - Authenticated (Contributor+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57a78696-5892-4621-992f-5e4a7d8fa965?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f24003da-2d30-427c-b3f7-bbce4649c34d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/my-auctions-allegro-free-edition/"
     google-query: inurl:"/wp-content/plugins/my-auctions-allegro-free-edition/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,my-auctions-allegro-free-edition,medium
+  tags: cve,wordpress,wp-plugin,my-auctions-allegro-free-edition,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.17')
+          - compare_versions(version, '<= 3.6.20')

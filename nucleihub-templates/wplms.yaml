@@ -1,25 +1,24 @@
-id: wplms-9951a84eab4170ced8992613b65f65d2
+id: wplms-99be6965c039ace5ca114abd5868944c
 
 info:
-  name: "WPLMS Learning Management System for WordPress, WordPress LMS <= 1.8.4.1 - Privilege Escalation"
+  name: >
+    WPLMS Learning Management System for WordPress, WordPress LMS <= 1.8.4.1 - Privilege Escalation
   author: topscoder
-  severity: high
-  description: "The WPLMS theme for WordPress is vulnerable to Privilege Escalation in versions 1.5.2 to 1.8.4.1 via the 'wp_ajax_import_data' AJAX action. This makes it possible for authenticated attackers to change otherwise restricted settings and potentially create a new accessible admin account."
+  severity: low
+  description: >
+    The WPLMS theme for WordPress is vulnerable to Privilege Escalation in versions 1.5.2 to 1.8.4.1 via the 'wp_ajax_import_data' AJAX action. This makes it possible for authenticated attackers to change otherwise restricted settings and potentially create a new accessible admin account.
   reference:
-    - https://packetstormsecurity.com/files/130291/
-    - https://www.rapid7.com/db/modules/auxiliary/admin/http/wp_wplms_privilege_escalation/
-    - https://twitter.com/_wpscan_/status/564874637679820800?lang=ca
-    - https://wpscan.com/vulnerability/7785
-    - https://themeforest.net/item/wplms-learning-management-system/6780226
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6e0e8f5f-8216-4276-a810-860f9b52c447?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/wplms/"
     google-query: inurl:"/wp-content/themes/wplms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,wplms,high
+  tags: cve,wordpress,wp-theme,wplms,low
 
 http:
   - method: GET

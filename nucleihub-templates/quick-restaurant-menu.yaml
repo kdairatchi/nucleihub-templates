@@ -1,21 +1,24 @@
-id: quick-restaurant-menu-f651e65c79650a5c1daa0aa87dca8b71
+id: quick-restaurant-menu-9a9401ef69bfea744a84fc5e9b132d57
 
 info:
-  name: "Quick Restaurant Menu <= 2.0.0 - Authenticated (Subscriber+) Stored Cross-Site Scripting"
+  name: >
+    Quick Restaurant Menu <= 2.0.0 - Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Quick Restaurant Menu plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in its AJAX actions in versions up to, and including, 2.0.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The Quick Restaurant Menu plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in its AJAX actions in versions up to, and including, 2.0.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2787757%40quick-restaurant-menu&new=2787757%40quick-restaurant-menu&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/057a440e-4917-45c5-90ab-bb8654eae68f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/quick-restaurant-menu/"
     google-query: inurl:"/wp-content/plugins/quick-restaurant-menu/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,quick-restaurant-menu,medium
+  tags: cve,wordpress,wp-plugin,quick-restaurant-menu,low
 
 http:
   - method: GET

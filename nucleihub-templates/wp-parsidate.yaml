@@ -1,17 +1,19 @@
-id: wp-parsidate-02752217058d19321ce6136f605f443e
+id: wp-parsidate-cd5461c298331e6088879d243a935f4e
 
 info:
-  name: "Parsi Date <= 4.0.1 - Reflected Cross-Site Scripting"
+  name: >
+    Parsi Date <= 4.0.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Parsi Date plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 4.0.1 due to insufficient input sanitization and output escaping on urls. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The Parsi Date plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 4.0.1 due to insufficient input sanitization and output escaping on urls. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://wpscan.com/vulnerability/d52714e8-8d04-440e-8261-b61ba3c71d6d
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2852175%40wp-parsidate%2Ftrunk&old=2639693%40wp-parsidate%2Ftrunk&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f4955368-85bc-4a9c-8d3a-446e09955f6c?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N
     cvss-score: 5.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-parsidate/"
     google-query: inurl:"/wp-content/plugins/wp-parsidate/"

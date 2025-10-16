@@ -1,24 +1,24 @@
-id: events-manager-a07bd3936811d9512b1195d41c0e9b8d
+id: events-manager-32a35ca841ce0b14d4a9fc75461a8b01
 
 info:
-  name: "Events Manager <= 5.9.7.1 - CSV Injection"
+  name: >
+    Events Manager < 5.9.7.2 & Events Manager Pro < 2.6.7.2 - Unauthenticated CSV Injection
   author: topscoder
-  severity: medium
-  description: "The Events Manager plugin for WordPress is vulnerable to CSV Injection in versions up to, and including, 5.9.7.1 through the use of the Microsoft Excel DDE function. This allows low-privileged attackers to embed untrusted input into exported CSV files, which can result in code execution when these files are downloaded and opened on a local system with a vulnerable configuration."
+  severity: high
+  description: >
+    The Events Manager Pro, versions up to 2.6.7.2, and Events Manager, versions up to 5.9.7.2, plugins for WordPress are vulnerable to CSV Injection. This allows unauthenticated attackers to embed untrusted input into exported CSV files, which can result in code execution when these files are downloaded and opened on a local system with a vulnerable configuration.
   reference:
-    - https://wp-events-plugin.com/blog/2020/02/05/events-manager-5-9-7-2-pro-2-6-7-2/
-    - https://fortiguard.com/zeroday/FG-VD-20-034
-    - https://wpscan.com/vulnerability/10062
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-events-manager-csv-injection-5-9-7-1/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74b81d31-8ee6-47cf-a5e8-3cf0900ebea0?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:C/C:L/I:L/A:L
-    cvss-score: 5.5
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
+    cvss-score: 7.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/events-manager/"
     google-query: inurl:"/wp-content/plugins/events-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,events-manager,medium
+  tags: cve,wordpress,wp-plugin,events-manager,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.9.7.1')
+          - compare_versions(version, '< 5.9.7.2')

@@ -1,22 +1,24 @@
-id: listingpro-ad4cab720cd67c6cd91062ace81cfe48
+id: listingpro-2f8cc55ba5067e345ea39e7bc88f29f8
 
 info:
-  name: "ListingPro - WordPress Directory & Listing Theme < 2.6.1 - Arbitrary Plugin Installation, Activation and Deactivation"
+  name: >
+    ListingPro - WordPress Directory & Listing Theme < 2.5.4 - Cross-Site Scripting
   author: topscoder
-  severity: critical
-  description: "The ListingPro - WordPress Directory & Listing Theme for WordPress is vulnerable to Arbitrary Plugin Installation, Activation and Deactivation in versions before 2.6.1. This is due to a missing capability check on the lp_cc_addons_actions function. This makes it possible for unauthenticated attackers to arbitrarily install, activate and deactivate any plugin."
+  severity: medium
+  description: >
+    The ListingPro - WordPress Directory & Listing Theme for WordPress is vulnerable to Cross-Site Scripting via the 'lp_s_loc' parameter in versions up to, and including, 2.5.3 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://blog.nintechnet.com/wordpress-listingpro-theme-fixed-a-critical-vulnerability/
-    - https://themeforest.net/item/listingpro-multipurpose-directory-theme/19386460
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19fbb332-f660-4572-82a3-c68e0bc7efcf?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/listingpro/"
     google-query: inurl:"/wp-content/themes/listingpro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,listingpro,critical
+  tags: cve,wordpress,wp-theme,listingpro,medium
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.6.1')
+          - compare_versions(version, '< 2.5.4')

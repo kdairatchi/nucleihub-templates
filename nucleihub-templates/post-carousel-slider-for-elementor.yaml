@@ -1,15 +1,15 @@
-id: post-carousel-slider-for-elementor-7ce3093d4f3e9adea14ad773b3a3df2a
+id: post-carousel-slider-for-elementor-352296477a88a48329c34b8b4c6a6aa9
 
 info:
   name: >
-    Post Carousel Slider for Elementor <= 1.4.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Post Carousel Slider for Elementor <= 1.6.0 - Authenticated (Subscriber+) Missing Authorization via process_wbelps_promo_form Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c205041a-01c9-44cd-8270-dafae2a78cbf?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b92afdf-51e0-4cf5-9f2b-997b9ff98b23?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.0')
+          - compare_versions(version, '<= 1.6.0')

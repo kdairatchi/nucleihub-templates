@@ -1,22 +1,24 @@
-id: picture-gallery
+id: picture-gallery-c54f1f614a93c381e7ccc422fb1147a1
 
 info:
-  name: "Picture Gallery – Frontend Image Uploads, AJAX Photo List < 1.4.3 - Cross-Site Scripting"
+  name: >
+    Picture Gallery – Frontend Image Uploads, AJAX Photo List < 1.4.3 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Picture Gallery – Frontend Image Uploads, AJAX Photo List plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'p_videowhisper_content_edit' parameter in versions up to, and including, 1.4.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with administrative privileges and above to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled."
+  severity: low
+  description: >
+    The Picture Gallery – Frontend Image Uploads, AJAX Photo List plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'p_videowhisper_content_edit' parameter in versions up to, and including, 1.4.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with administrative privileges and above to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.
   reference:
-    - https://packetstormsecurity.com/files/163776/
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2583327%40picture-gallery&new=2583327%40picture-gallery&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea01e11e-31b5-4cd9-8fab-3693e47f705a?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 5.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/picture-gallery/"
     google-query: inurl:"/wp-content/plugins/picture-gallery/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,picture-gallery,medium
+  tags: cve,wordpress,wp-plugin,picture-gallery,low
 
 http:
   - method: GET

@@ -1,15 +1,15 @@
-id: pronamic-google-maps-fddecb301a445cc22bb7b0c7020a2428
+id: pronamic-google-maps-caa654261753717a0d087020262f20a9
 
 info:
   name: >
-    Pronamic Google Maps <= 2.3.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Pronamic Google Maps <= 2.4.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d696d5c-e113-4d41-b077-4eb6b2c93669?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/06752651-4c7f-48dd-989c-c254c6ca7ae4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.2')
+          - compare_versions(version, '<= 2.4.1')

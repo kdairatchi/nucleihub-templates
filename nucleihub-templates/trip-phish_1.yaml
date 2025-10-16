@@ -8,9 +8,8 @@ info:
     A trip phishing website was detected
   reference:
     - https://trip.com
-  metadata:
-    max-request: 1
   tags: phishing,trip,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"trip.com")'
-# digest: 4b0a00483046022100b680a7aebe7d7c614fb604ca1d0df62b28e3f3c145fcc4589f9509334daa7e40022100917bc8a43837b6ad5ddab4da39925f2eae702a772a74e6961d1c423573fe0e2a:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022056d07a6df2644b48bb0c57ea3f4c87693c8e3d86fd43d39aed7a20e589171cac022100ff83ceef5334bc8853b13d0e4e80ed8d48d42cfe5e6545e51b3d3935624f1dd2:922c64590222798bb761d5b6d8e72950

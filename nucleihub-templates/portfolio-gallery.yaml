@@ -1,19 +1,19 @@
-id: portfolio-gallery
+id: portfolio-gallery-60a79d5053c406e6880190c222bd4d67
 
 info:
-  name: "Portfolio Gallery <= 2.1.0 - Reflected Cross-Site Scripting"
+  name: >
+    Portfolio Gallery <= 1.5.7 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Portfolio Gallery plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'id' parameter in versions up to, and including, 2.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The Portfolio Gallery plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the GET 'id' parameter in versions up to, and including, 1.5.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1486727
-    - https://sumofpwn.nl/advisory/2016/cross_site_scripting_in_huge_it_portfolio_gallery_wordpress_plugin.html
-    - https://seclists.org/fulldisclosure/2016/Nov/114
-    - https://rastating.github.io/portfolio-2-1-10-reflected-xss
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0a439cd6-c9d1-42d0-9067-4b425f2869a9?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/portfolio-gallery/"
     google-query: inurl:"/wp-content/plugins/portfolio-gallery/"
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.0')
+          - compare_versions(version, '<= 1.5.7')

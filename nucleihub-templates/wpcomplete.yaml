@@ -1,15 +1,15 @@
-id: wpcomplete-393202b49941bad49555cd21bb4dfec8
+id: wpcomplete-a6887ef575b25f2f4c331ea327330e6c
 
 info:
   name: >
-    WPComplete <= 2.9.4 - Reflected Cross-Site Scripting
+    WPComplete <= 2.9.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e3adbc2-fa45-4c35-a214-2b101e8c9748?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/56104b40-2d8a-40c9-8e80-01a093e54424?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wpcomplete/"
     google-query: inurl:"/wp-content/plugins/wpcomplete/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpcomplete,medium
+  tags: cve,wordpress,wp-plugin,wpcomplete,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.9.5')
+          - compare_versions(version, '<= 2.9.5')

@@ -1,17 +1,19 @@
-id: video-conferencing-with-zoom-api-123050da768f674023e8ffc84b941d85
+id: video-conferencing-with-zoom-api-cada35bdbe5e2a0f3053da42343b771e
 
 info:
-  name: "Video Conferencing with Zoom <= 3.9.2 - Reflected Cross-Site Scripting"
+  name: >
+    Video Conferencing with Zoom < 3.8.16 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Video Conferencing with Zoom plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in versions up to, and including, 3.9.2. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The Video Conferencing with Zoom plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘host_id’ parameter in versions before 3.8.16 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://patchstack.com/database/vulnerability/video-conferencing-with-zoom-api-/wordpress-video-conferencing-with-zoom-plugin-3-9-2-reflected-cross-site-scripting-xss-vulnerability
-    - https://wpscan.com/vulnerability/73cd6923-8c3b-435c-8f69-793e5fc46655
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d4ba4365-449e-4271-b46e-7f149efc752c?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/video-conferencing-with-zoom-api/"
     google-query: inurl:"/wp-content/plugins/video-conferencing-with-zoom-api/"
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.9.2')
+          - compare_versions(version, '< 3.8.16')

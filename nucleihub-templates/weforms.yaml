@@ -1,4 +1,4 @@
-id: weforms-f935e8b9dbbb32e243d94a187e126971
+id: weforms-c268716bf30ae41ae60702e885e99f4e
 
 info:
   name: >
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= *')
+          - compare_versions(version, '<= 1.6.23')

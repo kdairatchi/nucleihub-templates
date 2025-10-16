@@ -1,17 +1,19 @@
-id: event-calendar-wd-69b87bae465fb82052727592fcbbe735
+id: event-calendar-wd-90c868a278cd87e7ee80b84972b697e1
 
 info:
-  name: "Event Calendar <= 1.1.44 - Cross-Site Scripting"
+  name: >
+    Event Calendar <= 1.1.44 - Cross-Site Scripting
   author: topscoder
   severity: high
-  description: "The Event Calendar WD plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.1.44 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    The Event Calendar WD plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.1.44 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2540182
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-event-calendar-wd-responsive-event-calendar-cross-site-scripting-1-1-44/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d5a0c05-736f-4fb9-9358-894977664bf4?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/event-calendar-wd/"
     google-query: inurl:"/wp-content/plugins/event-calendar-wd/"

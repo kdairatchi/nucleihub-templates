@@ -1,15 +1,15 @@
-id: simple-sticky-footer-c0d2a5b1d20ef87bf938ceb35c2fdbb8
+id: simple-sticky-footer-f207dacfa050f928d6ab61aab42de279
 
 info:
   name: >
-    Simple Sticky Footer <= 1.3.2 - Cross-Site Request Forgery to Cross-Site Scripting
+    Simple Sticky Footer  <= 1.3.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/329f6e9b-f2f4-4c4e-9512-fcf504c2c0ed?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a7d1469-37c9-4e7b-a4fc-781697e41d11?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-sticky-footer/"
     google-query: inurl:"/wp-content/plugins/simple-sticky-footer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-sticky-footer,medium
+  tags: cve,wordpress,wp-plugin,simple-sticky-footer,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.2')
+          - compare_versions(version, '<= 1.3.5')

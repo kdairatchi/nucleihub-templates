@@ -1,15 +1,15 @@
-id: wp-register-profile-with-shortcode-8520b6db9675b3665cb20b3a844f5dfb
+id: wp-register-profile-with-shortcode-e7cee174b377831db08f9dddeccefb3e
 
 info:
   name: >
-    WP Register Profile With Shortcode <= 3.5.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    WP Register Profile With Shortcode <= 3.6.2 - Authenticated (Contributor+) Sensitive Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0c20f87e-3670-444c-aa8a-28988dfe2fd9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2ae7f5e3-7312-4fee-962b-3aecd8432557?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.7')
+          - compare_versions(version, '<= 3.6.2')

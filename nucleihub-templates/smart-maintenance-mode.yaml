@@ -1,15 +1,15 @@
-id: smart-maintenance-mode-a708a634f5e41bf092fc01571809bb26
+id: smart-maintenance-mode-1b2bbb2d8f19a2706b270ea92bdd1c8b
 
 info:
   name: >
-    Smart Maintenance Mode <= 1.4.4 - Cross-Site Request Forgery
+    Smart Maintenance Mode <= 1.5.2 - Reflected Cross-Site Scripting via setstatus Parameter
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/138c636b-27fb-4d76-b01c-60a10749913d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea9ca8ac-e735-4e84-af0f-45d22a8e2124?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.4')
+          - compare_versions(version, '<= 1.5.2')

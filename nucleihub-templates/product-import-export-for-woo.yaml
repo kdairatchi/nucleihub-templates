@@ -1,15 +1,15 @@
-id: product-import-export-for-woo-918875e76828b72e975ab2a83a860805
+id: product-import-export-for-woo-13c97b8d1e9300c041bd77258b7563b6
 
 info:
   name: >
-    Product Import Export for WooCommerce <= 2.3.7 - Authenticated(Shop Manager+) Arbitrary File Upload via upload_import_file
+    Product Import Export for WooCommerce <= 2.5.0 - Directory Traversal to Authenticated (Administrator+) Limited Arbitrary File Deletion via admin_log_page Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cee6a100-cda5-48a6-9f9c-ea17f80c4165?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d222ef6d-cdec-482e-92ba-65eeabbcdeae?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.7')
+          - compare_versions(version, '<= 2.5.0')

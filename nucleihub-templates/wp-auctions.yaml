@@ -1,4 +1,4 @@
-id: wp-auctions-89ead7db0eb36d917e5bca365b6051f0
+id: wp-auctions-50d3727334b58ef99ed01a956c1cea3a
 
 info:
   name: >
@@ -9,7 +9,7 @@ info:
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6c240829-0672-4ac2-b49a-2068a0a549f1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/40f909ca-aadd-4a3d-9e25-24265abdee73?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

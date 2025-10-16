@@ -1,15 +1,15 @@
-id: eventer-40fda4580df6ac5cf1cb4f5a7dcaac0c
+id: eventer-ea555fb1d3e47ba21a61c07486f5299f
 
 info:
   name: >
-    Eventer <= 3.9.7 - Authenticated (Subscriber+) Arbitrary File Read
+    Eventer - WordPress Event & Booking Manager Plugin <= 3.9.9.2 - Authenticated (Subscriber+) SQL Injection via reg_id
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aea5f970-243f-4642-83e1-34db11c4ca63?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bd42c89e-57db-458f-910c-404a5615f280?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.9.7')
+          - compare_versions(version, '<= 3.9.9.2')

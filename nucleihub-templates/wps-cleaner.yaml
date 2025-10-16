@@ -1,24 +1,24 @@
-id: wps-cleaner-0165bbc3edcfe04eacd84c177f1ee3b2
+id: wps-cleaner-5fafd04aabea3eb926faabe1dd5fa61a
 
 info:
-  name: "WPS Cleaner <= 1.4.4 - Missing Authorization Checks"
+  name: >
+    WPS Cleaner <= 1.4.4 - Missing Authorization Checks
   author: topscoder
-  severity: medium
-  description: "The WPS Cleaner plugin for WordPress is vulnerable to authorization bypass in versions up to, and including, 1.4.4. This is due to missing capability and nonce checks on 7 different functions found in the '/classes/plugin.php' file. This makes it possible for authenticated attackers with minimal permissions, such as a subscriber, to perform a variety of actions such as deleting arbitrary files, creating zip archives, deleting zip archives, and deleting alerts among some additional actions."
+  severity: low
+  description: >
+    The WPS Cleaner plugin for WordPress is vulnerable to authorization bypass in versions up to, and including, 1.4.4. This is due to missing capability and nonce checks on 7 different functions found in the '/classes/plugin.php' file. This makes it possible for authenticated attackers with minimal permissions, such as a subscriber, to perform a variety of actions such as deleting arbitrary files, creating zip archives, deleting zip archives, and deleting alerts among some additional actions.
   reference:
-    - https://secupress.me/blog/wps-cleaner-v1-4-4-multiples-vulnerabilities/
-    - https://wpscan.com/vulnerability/9e589ceb-e4c9-407f-880e-704ba3625b82
-    - https://wordpress.org/plugins/wps-cleaner/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2124680%40wps-cleaner&new=2124680%40wps-cleaner&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fb147a5d-65ad-4304-b13a-670f11398e63?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
     cvss-score: 6.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wps-cleaner/"
     google-query: inurl:"/wp-content/plugins/wps-cleaner/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wps-cleaner,medium
+  tags: cve,wordpress,wp-plugin,wps-cleaner,low
 
 http:
   - method: GET

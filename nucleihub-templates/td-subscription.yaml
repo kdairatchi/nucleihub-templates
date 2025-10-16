@@ -1,15 +1,15 @@
-id: td-subscription-21e7baa1b7c412504f0433c9bff1a447
+id: td-subscription-24bd043cf2467311425855aaf2c13939
 
 info:
   name: >
-    tagDiv Opt-In Builder <= 1.4.4 - Authenticated (Admin+) SQL Injection
+    tagDiv Opt-In Builder <= 1.7 - Authenticated (Subscriber+) SQL Injection via subscriptionCouponId Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7659ac9b-fa4e-4cb7-9887-38aa65b6d1c3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fff1cff1-6745-4124-ba93-8b0749eae61a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.4')
+          - compare_versions(version, '<= 1.7')

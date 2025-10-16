@@ -1,23 +1,24 @@
-id: ulisting-5dbc01f7b0f6c2a386a3664610ac3e23
+id: ulisting-8942e0738ceefa8fb704f64e152c8b1c
 
 info:
-  name: "Listing, Classified Ads & Business Directory – uListing <= 2.0.8 - Cross-Site Request Forgery"
+  name: >
+    Listing, Classified Ads & Business Directory – uListing <= 2.0.8 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The Listing, Classified Ads & Business Directory – uListing plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.0.8. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to edit blog settings and post meta via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The Listing, Classified Ads & Business Directory – uListing plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.0.8. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to edit blog settings and post meta via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-3/
-    - https://wpscan.com/vulnerability/fe0fee35-4f20-4ab9-a18c-85a76a61ef09
-    - https://plugins.trac.wordpress.org/changeset/2590718
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/284b9b04-aa8f-41ff-b944-3488c5da8e20?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ulisting/"
     google-query: inurl:"/wp-content/plugins/ulisting/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ulisting,high
+  tags: cve,wordpress,wp-plugin,ulisting,medium
 
 http:
   - method: GET

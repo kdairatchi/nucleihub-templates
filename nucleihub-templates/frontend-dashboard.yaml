@@ -1,15 +1,15 @@
-id: frontend-dashboard-b8834e5a3e036dd5e61d34a3b1068be9
+id: frontend-dashboard-dfd940e9632387107ff72226cb0305de
 
 info:
   name: >
-    Frontend Dashboard <= 2.2.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Frontend Dashboard 1.5.10 - 2.2.7 - Missing Authorization to Authenticated (Subscriber+) Account Takeover/Privilege Escalation via ajax_request Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9ca2479-10ce-42ec-a9f3-0f91119d9525?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f3a10b5-b024-4b3f-af67-b7fcb997d368?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.1')
+          - compare_versions(version, '>= 1.5.10', '<= 2.2.7')

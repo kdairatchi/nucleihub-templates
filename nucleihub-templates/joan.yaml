@@ -1,19 +1,19 @@
-id: joan-e8518664accb634d21ac5be06998fb3f
+id: joan-585ff14c93b0c04bbd6f8473519676c9
 
 info:
-  name: "Jock on air now <= 5.6.1 - Reflected Cross-Site Scripting"
+  name: >
+    Jock on air now <= 5.6.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Jock on air now plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘$_SERVER['PHP_SELF']’ variable in versions up to, and including, 5.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The Jock on air now plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘$_SERVER['PHP_SELF']’ variable in versions up to, and including, 5.6.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-august-2021-part-4/#ib-toc-anchor-2
-    - https://wpscan.com/vulnerability/98905487-cc31-4678-966f-75e2c06d3291
-    - https://wordpress.org/plugins/joan/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2583172%40joan&new=2583172%40joan&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a401db3e-2cf2-4283-bfbe-d4a9587966e1?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/joan/"
     google-query: inurl:"/wp-content/plugins/joan/"

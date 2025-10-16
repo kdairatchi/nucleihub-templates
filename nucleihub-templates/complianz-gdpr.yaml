@@ -1,16 +1,19 @@
-id: complianz-gdpr-16022b20d3dcb407f1909f705bc37713
+id: complianz-gdpr-ffeac647f824d08e9829aaaea12ecbe1
 
 info:
-  name: "Complianz - GDPR/CCPA Cookie Consent <= 6.4.4 - Cross-Site Request Forgery via ajax_delete_snapshot"
+  name: >
+    Complianz - GDPR/CCPA Cookie Consent <= 6.4.4 - Cross-Site Request Forgery via cmplz_duplicate_cookiebanner
   author: topscoder
   severity: medium
-  description: "The Complianz - GDPR/CCPA Cookie Consent plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 6.4.4. This is due to missing or incorrect nonce validation on the ajax_delete_snapshot function. This makes it possible for unauthenticated attackers to delete arbitrary files in the complianz 'snapshots' folder via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    The Complianz - GDPR/CCPA Cookie Consent plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 6.4.4. This is due to missing or incorrect nonce validation on the cmplz_duplicate_cookiebanner function. This makes it possible for unauthenticated attackers to duplicate the compliance cookie banner via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?old_path=%2Fcomplianz-gdpr%2Ftags%2F6.4.4&old=2911698&new_path=%2Fcomplianz-gdpr%2Ftags%2F6.4.5&new=2911698&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e7b81559-93a2-4e50-b213-0e22eea8a219?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/complianz-gdpr/"
     google-query: inurl:"/wp-content/plugins/complianz-gdpr/"

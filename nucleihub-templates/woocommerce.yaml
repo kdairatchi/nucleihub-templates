@@ -1,25 +1,24 @@
-id: woocommerce-2729f4c5d9cabd865234732369cc887a
+id: woocommerce-0aee4d89ea2aaff43e33dc92a822f1bf
 
 info:
-  name: "WooCommerce <= 3.6.4 - Cross-Site Request Forgery to Stored Cross-Site Scripting"
+  name: >
+    WooCommerce < 8.4.0 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The WooCommerce plugin for WordPress is vulnerable to Cross-Site Request forgery in versions up to, and including 3.6.4, due to the CSV importer actions missing a nonce validation.  This makes it possible for attackers with at least author privileges to embed script code in a CSV, upload it to the target site, and then trick an administrator into uploading the CSV injected payload to a product description via a forged request all granted they can trick them into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The WooCommerce plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in all versions before 8.4.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link. IMPORTANT: There was a miscommunication and error in this vulnerability record where we initially reported version 8.5.0 as patched, while 8.4.0 was still vulnerable. This issue was patched in version 8.4.0 and only affects versions up to 8.3.0. Please rest assured knowing you can update the plugin to version 8.4.0 and this issue will be patched.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?reponame=&new=2116363%40woocommerce&old=2096035%40woocommerce
-    - https://twitter.com/WooCommerce/status/1147543261814374401
-    - https://woocommerce.wordpress.com/2019/07/02/woocommerce-3-6-5-security-release/
-    - https://raw.githubusercontent.com/woocommerce/woocommerce/trunk/changelog.txt
-    - https://blog.sonarsource.com/woocommerce-csrf-to-stored-xss
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/43810a17-89b4-44f5-887e-1ad0989ea5b4?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce/"
     google-query: inurl:"/wp-content/plugins/woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce,high
+  tags: cve,wordpress,wp-plugin,woocommerce,medium
 
 http:
   - method: GET
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.6.5')
+          - compare_versions(version, '< 8.4.0')

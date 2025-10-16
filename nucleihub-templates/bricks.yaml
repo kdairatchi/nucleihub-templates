@@ -1,15 +1,15 @@
-id: bricks-72e642df382d0e09bb9a28d4cfbcd00a
+id: bricks-ce82f6f498ed8d069ae809c144392338
 
 info:
   name: >
-    Bricks 1.0 - 1.5.3 - Missing Authorization to Arbitrary Content Creation/Modification
+    Bricksbuilder <= 1.9.6.1 - Authenticated (Contributor+) Privilege Escalation via create_autosave
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a711984-4eb2-4d96-b2b9-0ecd840679b1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb075e85-75fc-4008-8270-4d1064ace29e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/bricks/"
     google-query: inurl:"/wp-content/themes/bricks/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,bricks,high
+  tags: cve,wordpress,wp-theme,bricks,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 1.0', '<= 1.5.3')
+          - compare_versions(version, '<= 1.9.6.1')

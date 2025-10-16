@@ -1,17 +1,19 @@
-id: wp-cafe-5269723aa48cc3633b34bb219061f5cb
+id: wp-cafe-7475907085b3a508d5e606ff372fe89b
 
 info:
-  name: "WPCafe – Food Menu, WooCommerce Food Ordering, Food Delivery, Pickup and Restaurant Reservation <= 2.1.4 - Cross-Site Scripting"
+  name: >
+    WPCafe – Food Menu, WooCommerce Food Ordering, Food Delivery, Pickup and Restaurant Reservation <= 2.1.4 - Cross-Site Scripting
   author: topscoder
   severity: high
-  description: "The WPCafe – Food Menu, WooCommerce Food Ordering, Food Delivery, Pickup and Restaurant Reservation plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including 2.1.4 due to insufficient input sanitization and output escaping on the wpc_location_id parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The WPCafe – Food Menu, WooCommerce Food Ordering, Food Delivery, Pickup and Restaurant Reservation plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including 2.1.4 due to insufficient input sanitization and output escaping on the wpc_location_id parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2728025/wp-cafe/trunk/core/modules/food-menu/hooks.php?contextall=1&old=2703872&old_path=%2Fwp-cafe%2Ftrunk%2Fcore%2Fmodules%2Ffood-menu%2Fhooks.php
-    - https://plugins.trac.wordpress.org/changeset/2728025/wp-cafe/tags/2.2.0/core/modules/food-menu/hooks.php
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b49ae7fc-e860-4387-b596-12640ec7277f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-cafe/"
     google-query: inurl:"/wp-content/plugins/wp-cafe/"

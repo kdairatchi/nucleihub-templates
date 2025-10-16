@@ -1,15 +1,15 @@
-id: uncode-core-d56305bde518cdce3cae6aeee0ed67ea
+id: uncode-core-f749aeb724116dece331eb12a1bf640b
 
 info:
   name: >
-    Uncode Core <= 2.8.8 - Authenticated (Subscriber+) Arbitrary File Deletion
+    Uncode Core <= 2.9.1.6 - Authenticated (Subscriber+) Arbitrary Shortcode Execution in uncode_get_medias
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74ab025d-4e76-46e5-b8f8-963eeea5b802?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0a61e11-1137-4da0-8580-0a44300b1542?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.8')
+          - compare_versions(version, '<= 2.9.1.6')

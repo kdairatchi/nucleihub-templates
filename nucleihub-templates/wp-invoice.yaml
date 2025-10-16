@@ -1,24 +1,24 @@
-id: wp-invoice-9835ece9b5d1a66960367eafed66a672
+id: wp-invoice-4aaf0fb64a11d91baf889e00f344b2d8
 
 info:
-  name: "WP-Invoice – Web Invoice and Billing <= 4.3.1 - Cross-Site Request Forgery to Stored Cross-Site Scripting"
+  name: >
+    WP-Invoice – Web Invoice and Billing <= 4.3.1 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The WP-Invoice – Web Invoice and Billing plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.3.1. This is due to missing  nonce validation on the save settings function. This makes it possible for unauthenticated attackers to modify the plugin's settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The WP-Invoice – Web Invoice and Billing plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.3.1. This is due to missing  nonce validation on the save settings function. This makes it possible for unauthenticated attackers to modify the plugin's settings and inject malicious web scripts via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://packetstormsecurity.com/files/166824/wpinvoice431-xss.txt
-    - https://patchstack.com/database/vulnerability/wp-invoice-/wordpress-wp-invoice-plugin-4-3-1-arbitrary-settings-update-via-cross-site-request-forgery-csrf-vulnerability
-    - https://wpscan.com/vulnerability/ba760ada-1db7-43b4-a6c4-3a5efe888471
-    - https://wpscan.com/vulnerability/7e40e506-ad02-44ca-9d21-3634f3907aad
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c248f11c-f381-4335-b6f7-bb18bbf1f7b0?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-invoice/"
     google-query: inurl:"/wp-content/plugins/wp-invoice/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-invoice,high
+  tags: cve,wordpress,wp-plugin,wp-invoice,medium
 
 http:
   - method: GET

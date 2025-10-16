@@ -1,21 +1,24 @@
-id: masterstudy-lms-learning-management-system-4e174412172d20d167c83e5dee052700
+id: masterstudy-lms-learning-management-system-5750dd778d9bffc4b7784a682fc33851
 
 info:
-  name: "MasterStudy LMS WordPress Plugin <= 2.9.34 - Missing Authorization via wp_ajax_stm_wpcfto_get_settings"
+  name: >
+    MasterStudy LMS WordPress Plugin <= 2.9.34 - Missing Authorization via wp_ajax_stm_wpcfto_get_settings
   author: topscoder
-  severity: medium
-  description: "The MasterStudy LMS WordPress Plugin  is vulnerable to unauthorized access of data due to a missing capability check on an anonymous function called by the stm_wpcfto_get_settings AJAX action in versions up to, and including, 2.9.345. This makes it possible for authenticated attackers with subscriber-level permissions or above to access settings data."
+  severity: low
+  description: >
+    The MasterStudy LMS WordPress Plugin  is vulnerable to unauthorized access of data due to a missing capability check on an anonymous function called by the stm_wpcfto_get_settings AJAX action in versions up to, and including, 2.9.345. This makes it possible for authenticated attackers with subscriber-level permissions or above to access settings data.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2892694%40masterstudy-lms-learning-management-system%2Ftrunk&old=2887526%40masterstudy-lms-learning-management-system%2Ftrunk&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1ddcd2eb-fd7a-48b7-b9ea-3632d49e9734?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 4.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/masterstudy-lms-learning-management-system/"
     google-query: inurl:"/wp-content/plugins/masterstudy-lms-learning-management-system/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,masterstudy-lms-learning-management-system,medium
+  tags: cve,wordpress,wp-plugin,masterstudy-lms-learning-management-system,low
 
 http:
   - method: GET

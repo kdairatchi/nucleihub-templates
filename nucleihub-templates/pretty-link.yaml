@@ -1,22 +1,24 @@
-id: pretty-link-17fd0e83c56c2d35239cad96f5e19695
+id: pretty-link-dcb10ee909d1320fad00d3dafd0ccc56
 
 info:
-  name: "Pretty Links <= 2.1.9 - Unauthenticated Stored Cross-Site Scripting via track_link"
+  name: >
+    Pretty Links – Affiliate Links, Link Branding, Link Tracking & Marketing Plugin <= 3.6.3 - Cross-Site Request Forgery to Plugin Settings Update
   author: topscoder
-  severity: high
-  description: "The Pretty Links plugin for WordPress is vulnerable to Stored Cross-Site Scripting via various IP headers as well as the referer header in versions up to, and including, 2.1.9 due to insufficient input sanitization and output escaping in the track_link function. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: medium
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/stored-xss-and-csv-injection-vulnerabilities-in-wordpress-shortlinks-by-pretty-links-plugin/
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2108490%40pretty-link%2Ftrunk&old=2078274%40pretty-link%2Ftrunk&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/97d78b4b-568e-43e7-bebf-091179c321f6?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pretty-link/"
     google-query: inurl:"/wp-content/plugins/pretty-link/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pretty-link,high
+  tags: cve,wordpress,wp-plugin,pretty-link,medium
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.1.10')
+          - compare_versions(version, '<= 3.6.3')

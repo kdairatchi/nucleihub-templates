@@ -1,22 +1,24 @@
-id: asf-allow-svg-files-cb109deaaa178a3f20d3b7caac11ecb6
+id: asf-allow-svg-files-fd6680890fda8358a7f2b498cf2696fb
 
 info:
-  name: "Allow SVG Files <= 1.1 - Authenticated (Author+) Stored Cross-Site Scripting"
+  name: >
+    Allow SVG Files <= 1.1 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Allow SVG Files plugin for WordPress is vulnerable to Stored Cross-Site Scripting via SVG uploads in versions up to, and including, 1.1 due to insufficient sanitization and escaping on the SVG file. This makes it possible for authenticated attackers with file uploading capabilities, like an author, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    
   reference:
-    - https://patchstack.com/database/vulnerability/asf-allow-svg-files-/wordpress-allow-svg-files-plugin-1-1-authenticated-stored-cross-site-scripting-xss-vulnerability
-    - https://wpscan.com/vulnerability/29015c35-0470-41b8-b197-c71b800ae2a9
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ce57a3eb-a71b-4335-9e6c-52648ce00062?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/asf-allow-svg-files/"
     google-query: inurl:"/wp-content/plugins/asf-allow-svg-files/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,asf-allow-svg-files,medium
+  tags: cve,wordpress,wp-plugin,asf-allow-svg-files,low
 
 http:
   - method: GET

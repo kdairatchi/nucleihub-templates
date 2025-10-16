@@ -1,15 +1,15 @@
-id: smart-grid-gallery-f51b3a1a4a0833e9abf23383e121a55b
+id: smart-grid-gallery-f8fa8554f0d1cb23ccae56222edd64d2
 
 info:
   name: >
-    Video Gallery - Vimeo and YouTube Gallery < 1.1.5 - Stored Cross-Site Scripting
+    Video Gallery – Vimeo and YouTube Gallery <= 1.1.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae3d33dd-2591-4c4e-9769-77575e57ac49?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b1acaf41-76b1-40d7-af6d-d512234986f6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/smart-grid-gallery/"
     google-query: inurl:"/wp-content/plugins/smart-grid-gallery/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,smart-grid-gallery,high
+  tags: cve,wordpress,wp-plugin,smart-grid-gallery,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.1.5')
+          - compare_versions(version, '<= 1.1.7')

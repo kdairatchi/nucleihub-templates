@@ -1,15 +1,15 @@
-id: sequential-order-numbers-for-woocommerce-055e1820b3e7ef430034aac2fbd3cb4b
+id: sequential-order-numbers-for-woocommerce-06665a573fe6f0cea4892ae4771d3725
 
 info:
   name: >
-    BeRocket Plugins <= (Various Versions) - Missing Authorization
+    Sequential Order Numbers for WooCommerce <= 3.6.2 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b8fc89c0-292d-47b4-90b3-79edf3a9e76d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5fbb41db-5369-465e-80a7-3490df46e07e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/sequential-order-numbers-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/sequential-order-numbers-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,sequential-order-numbers-for-woocommerce,high
+  tags: cve,wordpress,wp-plugin,sequential-order-numbers-for-woocommerce,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.7.6')
+          - compare_versions(version, '<= 3.6.2')

@@ -1,15 +1,15 @@
-id: gutenverse-40a79e4610379f5cd721264ce32ca881
+id: gutenverse-3f9f884a5025bb9b16f45c2d7a5ec2b8
 
 info:
   name: >
-    Gutenverse <= 1.9.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Gutenverse <= 3.1.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Animated Text and Fun Fact Blocks
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8056af63-e81f-4321-991e-d201ad1095c4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/76cfe806-a8d9-4249-b2d0-eb3a314ca69a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.0')
+          - compare_versions(version, '<= 3.1.0')

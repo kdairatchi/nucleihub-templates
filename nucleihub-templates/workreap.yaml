@@ -1,31 +1,31 @@
-id: workreap-5f80fafad73be2700358a48cdda826c3
+id: workreap-36cf3fe4811df51c5ec4295979567a7e
 
 info:
   name: >
-    Workreap - Freelance Marketplace and Directory WordPress Theme < 2.2.2 - Arbitrary File Upload
+    Workreap <= 3.3.2 - Authenticated (Subscriber+) Arbitrary File Upload via 'workreap_temp_upload_to_media'
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/59a05868-7457-4fb1-845e-bf7044d5cb81?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/185371b1-5c72-424d-a5b8-42c67aa9380c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
     cve-id: 
   metadata:
-    fofa-query: "wp-content/themes/workreap/"
-    google-query: inurl:"/wp-content/themes/workreap/"
+    fofa-query: "wp-content/plugins/workreap/"
+    google-query: inurl:"/wp-content/plugins/workreap/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,workreap,critical
+  tags: cve,wordpress,wp-plugin,workreap,low
 
 http:
   - method: GET
     redirects: true
     max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-content/themes/workreap/style.css"
+      - "{{BaseURL}}/wp-content/plugins/workreap/readme.txt"
 
     extractors:
       - type: regex
@@ -34,14 +34,14 @@ http:
         group: 1
         internal: true
         regex:
-          - "(?mi)Version: ([0-9.]+)"
+          - "(?mi)Stable tag: ([0-9.]+)"
 
       - type: regex
         name: version
         part: body
         group: 1
         regex:
-          - "(?mi)Version: ([0-9.]+)"
+          - "(?mi)Stable tag: ([0-9.]+)"
 
     matchers-condition: and
     matchers:
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.2.2')
+          - compare_versions(version, '<= 3.3.2')

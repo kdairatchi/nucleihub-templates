@@ -1,15 +1,15 @@
-id: wp-mapa-politico-spain-da9cc5b087f9ce175e6582759b5c6da1
+id: wp-mapa-politico-spain-26b9e2645d017e590168d390e7c0e74b
 
 info:
   name: >
-    Mapa Politico España < 3.7.0 - Stored Cross-Site Scripting
+    WP Mapa Politico España <= 3.8.0 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bd2f7567-a438-417b-bf0f-dec7a9f098b2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2389eaae-374a-41c1-b28e-595841cda9a2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-mapa-politico-spain/"
     google-query: inurl:"/wp-content/plugins/wp-mapa-politico-spain/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-mapa-politico-spain,high
+  tags: cve,wordpress,wp-plugin,wp-mapa-politico-spain,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7.0')
+          - compare_versions(version, '<= 3.8.0')

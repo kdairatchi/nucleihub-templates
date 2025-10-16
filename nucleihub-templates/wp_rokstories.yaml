@@ -1,19 +1,19 @@
-id: wp_rokstories-df8a259f95b0ef250df00dc950acb35d
+id: wp_rokstories-efc3a5fcbe67114e6c24554ba76a9669
 
 info:
-  name: "RokStories <= 1.25 - Arbitrary File Upload"
+  name: >
+    RokStories <= 1.25 - Arbitrary File Upload
   author: topscoder
   severity: critical
-  description: "The RokStories plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'src' parameter in the 'thumb.php' file in versions up to, and including, 1.25. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+  description: >
+    The RokStories plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'src' parameter in the 'thumb.php' file in versions up to, and including, 1.25. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.
   reference:
-    - https://packetstormsecurity.com/files/123270/
-    - https://seclists.org/fulldisclosure/2013/Sep/108
-    - https://web.archive.org/web/20140122192452/http%3A//www.rockettheme.com%3A80/wordpress-updates/1871-security-patch-for-wordpress-timthumb
-    - https://rockettheme.com/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d73ca391-97a3-4701-8429-e73f5914e65e?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp_rokstories/"
     google-query: inurl:"/wp-content/plugins/wp_rokstories/"

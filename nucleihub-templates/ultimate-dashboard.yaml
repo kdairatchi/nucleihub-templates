@@ -1,24 +1,24 @@
-id: ultimate-dashboard
+id: ultimate-dashboard-1a257f6e56e4ace9a423051f9dfa42e2
 
 info:
-  name: "Ultimate Dashboard <= 3.7.5 - Authenticated(Administrator+) Stored Cross-Site Scripting via plugin settings"
+  name: >
+    Ultimate Dashboard <= 3.8.7 - Missing Authorization to Authenticated (Subscriber+) Plugin Modules Activation/Deactivation
   author: topscoder
-  severity: medium
-  description: "The Ultimate Dashboard plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in versions up to, and including, 3.7.5  due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.svn.wordpress.org/ultimate-dashboard/tags/3.7.6/readme.txt
-    - https://plugins.svn.wordpress.org/ultimate-dashboard/tags/3.7.6/readme.md
-    - https://ultimatedashboard.io/
-    - https://plugins.trac.wordpress.org/changeset/2915408/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ffee6564-2718-4461-b481-cbf0e204a04d?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 4.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ultimate-dashboard/"
     google-query: inurl:"/wp-content/plugins/ultimate-dashboard/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-dashboard,medium
+  tags: cve,wordpress,wp-plugin,ultimate-dashboard,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7.6')
+          - compare_versions(version, '<= 3.8.7')

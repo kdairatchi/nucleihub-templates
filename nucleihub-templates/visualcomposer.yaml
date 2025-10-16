@@ -1,23 +1,24 @@
-id: visualcomposer-5074e97293f148bd1da445e44c1d204a
+id: visualcomposer-124e6cb92d413832708b4b1a1ba79e16
 
 info:
-  name: "Visual Composer <= 26.0 - Multiple Cross-Site Scripting"
+  name: >
+    Visual Composer Website Builder <= 45.11.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Visual Composer plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 26.0 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: low
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/multiple-xss-vulnerabilities-fixed-in-wordpress-visual-composer-plugin/
-    - https://wpscan.com/vulnerability/10229
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-visual-composer-website-builder-multiple-cross-site-scripting-vulnerabilities-26-0/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d2d4a2ef-ea4a-456f-a8d1-600f51505ad7?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.5
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/visualcomposer/"
     google-query: inurl:"/wp-content/plugins/visualcomposer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,visualcomposer,medium
+  tags: cve,wordpress,wp-plugin,visualcomposer,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 26.0')
+          - compare_versions(version, '<= 45.11.0')

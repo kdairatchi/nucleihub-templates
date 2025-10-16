@@ -1,23 +1,24 @@
-id: crayon-syntax-highlighter-917fa0572e5a2a37b155692f8009ec01
+id: crayon-syntax-highlighter-c95ed4d91102badd9fbbdc235df10610
 
 info:
-  name: "Crayon Syntax Highlighter Plugin <= 1.13 - Remote File Inclusion"
+  name: >
+    Crayon Syntax Highlighter  2.0 - 2.6.10 - Missing Authorization
   author: topscoder
-  severity: critical
-  description: "The Crayon Syntax Highlighter plugin for WordPress is vulnerable to Remote File Inclusion in versions up to, and including, 1.13 via the crayon_is_php_file function. This allows unauthenticated attackers to include remote files on the server, resulting in code execution."
+  severity: low
+  description: >
+    The Crayon Syntax Highlighter Plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the crayon-theme-editor-save AJAX action in versions 2.0 - 2.6.10. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to overwrite theme files.
   reference:
-    - https://wordpress.org/plugins/crayon-syntax-highlighter/#developers
-    - https://web.archive.org/web/20151108200601/http%3A//ceriksen.com%3A80/2012/10/15/wordpress-crayon-syntax-highlighter-remote-file-inclusion-vulnerability
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=628634%40crayon-syntax-highlighter&new=628634%40crayon-syntax-highlighter&sfp_email=&sfph_mail=#file33
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6cd49c60-e845-4dbb-b6b1-bd59aa1bb3ba?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
+    cvss-score: 5.4
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/crayon-syntax-highlighter/"
     google-query: inurl:"/wp-content/plugins/crayon-syntax-highlighter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,crayon-syntax-highlighter,critical
+  tags: cve,wordpress,wp-plugin,crayon-syntax-highlighter,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.13')
+          - compare_versions(version, '>= 2.0', '<= 2.6.10')

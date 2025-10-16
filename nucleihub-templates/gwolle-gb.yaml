@@ -1,18 +1,19 @@
-id: gwolle-gb-cba343760da1373e2056dd452a2b8721
+id: gwolle-gb-ccbefb06b9378a2cbdabd5aaa80a6982
 
 info:
-  name: "Gwolle Guestbook <= 2.1.0 - Stored Cross-Site Scripting"
+  name: >
+    Gwolle Guestbook <= 2.1.0 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
-  description: "The Gwolle Guestbook plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘/gwolle-gb/admin/page-editor.php’ file in versions up to, and including, 2.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    The Gwolle Guestbook plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.1.0. This is due to missing or incorrect nonce validation on the wp-nonces. This makes it possible for unauthenticated attackers to mass approve denied entries via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://sumofpwn.nl/advisory/2016/cross_site_scripting_vulnerability_in_gwolle_guestbook_wordpress_plugin.html
-    - https://seclists.org/fulldisclosure/2017/Feb/87
-    - https://wpscan.com/vulnerability/08529114-6fee-4bf9-949e-fa31ea3ed39e
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ed61a6b5-5c54-408b-973c-69b0f12d2df5?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/gwolle-gb/"
     google-query: inurl:"/wp-content/plugins/gwolle-gb/"

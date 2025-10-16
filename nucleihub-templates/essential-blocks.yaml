@@ -1,15 +1,15 @@
-id: essential-blocks-fe45233d54ab7141fe3d4bbd20bfca40
+id: essential-blocks-0e67c0227484c5c5376c232ad9d9c6dd
 
 info:
   name: >
-    Essential Blocks – Page Builder Gutenberg Blocks, Patterns & Templates <= 4.5.9 - Authenticated (Contributor+) DOM-Based Cross-Site Scripting via "Social Icons" Block
+    Essential Blocks – Page Builder Gutenberg Blocks, Patterns & Templates <= 5.4.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Slider and Post Carousel Widgets
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6b226067-0287-4f7e-9415-dc3c83f2fd27?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f88f065d-14ca-4547-9a41-f9177979a9ed?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.5.9')
+          - compare_versions(version, '<= 5.4.0')

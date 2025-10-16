@@ -1,15 +1,15 @@
-id: wr-price-list-for-woocommerce-7985f00b0c7160c1ce63c4497180c49f
+id: wr-price-list-for-woocommerce-72c39884181816675659dd084d7231fa
 
 info:
   name: >
-    WR Price List Manager For Woocommerce <= 1.0.8 - Authenticated (Subscriber+) Arbitrary File Upload
+    WR Price List Manager For Woocommerce <= 1.0.8 - Missing Authorization to Arbitrary Content Deletion
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0a56b177-3af4-46ee-93d8-f1a36115f43e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/643ea2b3-246b-40a9-ba48-e10a7d6cdd11?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wr-price-list-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/wr-price-list-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wr-price-list-for-woocommerce,low
+  tags: cve,wordpress,wp-plugin,wr-price-list-for-woocommerce,high
 
 http:
   - method: GET

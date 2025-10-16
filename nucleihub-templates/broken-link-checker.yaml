@@ -1,23 +1,24 @@
-id: broken-link-checker-6163925230192006f2d2af7f98155029
+id: broken-link-checker-3a4dd491e0d53abd186e31cce8a02071
 
 info:
-  name: "Broken Link Checker < 1.10.2 - Authenticated Stored Cross-Site Scripting"
+  name: >
+    Broken Link Checker <= 2.4.4 - Missing Autorization to Authenticated (Subscriber+) Plugin Status Dashboard View
   author: topscoder
-  severity: medium
-  description: "The Broken Link Checker plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘exclusion_list’ parameter in versions up to, and including, 1.10.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/plugins/broken-link-checker/#developers
-    - https://wpscan.com/vulnerability/b81639a2-c281-4d9f-a084-f845ab85d225
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1038180%40broken-link-checker&new=1038180%40broken-link-checker&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/33ac910c-9531-45ea-84cf-1d379233f7d3?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/broken-link-checker/"
     google-query: inurl:"/wp-content/plugins/broken-link-checker/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,broken-link-checker,medium
+  tags: cve,wordpress,wp-plugin,broken-link-checker,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.10.2')
+          - compare_versions(version, '<= 2.4.4')

@@ -1,17 +1,19 @@
-id: wpml-ab9fa0571a8fb3bd29068afdc86c9934
+id: wpml-12f5b943438454660239144494b57c3d
 
 info:
-  name: "WPML <= 4.6.1 - Cross-Site Scripting"
+  name: >
+    WPML <= 4.6.1 - Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The WPML plugin for WordPress is vulnerable to Cross-Site Scripting in versions prior to 4.6.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The WPML plugin for WordPress is vulnerable to Cross-Site Scripting in versions prior to 4.6.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://patchstack.com/database/vulnerability/wpml/wordpress-wpml-plugin-4-6-1-cross-site-scripting-xss-vulnerability
-    - https://wpml.org/changelog/2023/03/wpml-4-6-1-important-security-update/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b5639c00-f34c-45e3-8ff1-dfde7856a80e?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wpml/"
     google-query: inurl:"/wp-content/plugins/wpml/"

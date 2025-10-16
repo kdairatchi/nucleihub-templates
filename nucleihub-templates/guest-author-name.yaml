@@ -1,15 +1,15 @@
-id: guest-author-name-e4fe57e84845d93130048fc45b7bf644
+id: guest-author-name-21e8fc3e36ab62dac87b4147db06ebf6
 
 info:
   name: >
-    (Simply) Guest Author Name <= 4.34 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    (Simply) Guest Author Name <= 4.36 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e9e2864-6624-497f-8bec-df8360ed3f4a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/166c56b4-bf94-4b95-9efe-16219d85f273?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.34')
+          - compare_versions(version, '<= 4.36')

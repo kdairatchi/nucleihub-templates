@@ -1,24 +1,24 @@
-id: gantry
+id: gantry-e7d1b99e868be00cfbca65c0c50e796a
 
 info:
-  name: "Gantry 4 Framework <= 4.1.3 - Remote Code Execution"
+  name: >
+    Gantry 4 Framework <= 4.1.3 - Remote Code Execution
   author: topscoder
-  severity: high
-  description: "The Gantry Web Theme Framework for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 4.1.3 via the $_POST[‘data’] JSON that can passed to eval() when the right conditions are met. This makes it possible authenticated attackers, with minimal privileges such as a subscriber, to execute code on the server."
+  severity: low
+  description: >
+    The Gantry Web Theme Framework for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 4.1.3 via the $_POST[‘data’] JSON that can passed to eval() when the right conditions are met. This makes it possible authenticated attackers, with minimal privileges such as a subscriber, to execute code on the server.
   reference:
-    - https://www.pritect.net/blog/gantry-web-theme-framework-4-1-3-vulnerability
-    - https://wordpress.org/plugins/gantry/#developers
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-gantry-4-framework-remote-command-execution-4-1-3/
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1110275%40gantry&new=1110275%40gantry&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5aeca3b6-6b1b-40b5-8824-de4a90c7ddc3?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/gantry/"
     google-query: inurl:"/wp-content/plugins/gantry/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gantry,high
+  tags: cve,wordpress,wp-plugin,gantry,low
 
 http:
   - method: GET

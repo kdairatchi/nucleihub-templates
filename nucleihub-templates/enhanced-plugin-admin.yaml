@@ -1,18 +1,19 @@
-id: enhanced-plugin-admin-4f885773815edebed067e67c0806a7a0
+id: enhanced-plugin-admin-cb71313232de2d85a7f9189efc2e6f67
 
 info:
-  name: "Enhanced Admin Plugin < 1.16 - Reflected Cross-Site Scripting"
+  name: >
+    Enhanced Admin Plugin < 1.16 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Enhanced Admin Plugin for WordPress is vulnerable to Cross-Site Scripting via the 'REQUEST_URI' variable in versions before 1.16 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Enhanced Admin Plugin for WordPress is vulnerable to Cross-Site Scripting via the 'REQUEST_URI' variable in versions before 1.16 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-enhanced-plugin-admin-cross-site-scripting-1-15/
-    - https://wordpress.org/plugins/enhanced-plugin-admin/#developers
-    - https://plugins.trac.wordpress.org/changeset/1637850
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/13e8f16b-b5a3-4be1-9557-e11cd9ffaea7?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/enhanced-plugin-admin/"
     google-query: inurl:"/wp-content/plugins/enhanced-plugin-admin/"

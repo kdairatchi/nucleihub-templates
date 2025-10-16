@@ -1,24 +1,24 @@
-id: wordfence-504a1e4f843ce193d2f330b0d02d7d1b
+id: wordfence-3738053d45fb919213c17f275e6b806b
 
 info:
-  name: "Wordfence Security <= 5.2.3 - Stored Cross-Site Scripting via HTTP_HOST"
+  name: >
+    Wordfence Security – Firewall & Malware Scan 6.1.1 - 6.1.6 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The Wordfence Security plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the  '$_SERVER['HTTP_HOST']' in PHP in versions up to, and including, 5.2.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthorized attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: medium
+  description: >
+    The Wordfence plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘adminURL’ parameter in versions 6.1.1 through 6.1.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://packetstormsecurity.com/files/128259/
-    - https://www.wordfence.com/wp-content/uploads/2017/11/changelog_7.5.9.txt
-    - https://wpscan.com/vulnerability/b7101912-11de-477e-85e7-dc191ef260f7
-    - https://vexatioustendencies.com/wordfence-v5-2-3-2-stored-xss-insufficient-logging-throttle-bypass-exploit-detection-bypass/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/809d0632-39a7-44a7-b368-9dc58270c666?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wordfence/"
     google-query: inurl:"/wp-content/plugins/wordfence/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wordfence,high
+  tags: cve,wordpress,wp-plugin,wordfence,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.2.3')
+          - compare_versions(version, '>= 6.1.1', '<= 6.1.6')

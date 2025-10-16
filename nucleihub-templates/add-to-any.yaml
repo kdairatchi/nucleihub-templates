@@ -1,18 +1,19 @@
-id: add-to-any-fbfa59422d3ee961cc2146deb28c1df8
+id: add-to-any-c1904ffbd3993b52970300565b0402e2
 
 info:
-  name: "AddToAny Share Buttons <= 1.7.14 - HTTP Host Header Injection"
+  name: >
+    AddToAny Share Buttons <= 1.7.14 - HTTP Host Header Injection
   author: topscoder
   severity: medium
-  description: "The AddToAny Share Buttons plugin for WordPress is vulnerable to Host Header Injections in versions up to, and including, 1.7.14. This is due to a failure to properly validate the HTTP request header. This makes it possible for unauthorized attackers to poison the website cache and log users credentials."
+  description: >
+    The AddToAny Share Buttons plugin for WordPress is vulnerable to Host Header Injections in versions up to, and including, 1.7.14. This is due to a failure to properly validate the HTTP request header. This makes it possible for unauthorized attackers to poison the website cache and log users credentials.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1713858/add-to-any
-    - https://wpscan.com/vulnerability/469e8aa7-b689-438c-8421-fba8ae5972fb
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-addtoany-share-buttons-host-header-injection-1-7-14/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7cc86970-7e63-47d0-9971-ddd0fc992a5a?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
     cvss-score: 4.7
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/add-to-any/"
     google-query: inurl:"/wp-content/plugins/add-to-any/"

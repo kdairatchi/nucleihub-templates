@@ -1,15 +1,15 @@
-id: idonate
+id: idonate-b3139239c5e461d0daa1175dc3a38a73
 
 info:
   name: >
-    IDonate – blood request management system <= 1.9.0 - Authenticated (Admin+) Stored Cross-Site Scripting
+    IDonate 2.0.0 - 2.1.9 - Missing Authorization to Authenticated (Subscriber+) Sensitive Information Disclosure via admin_donor_profile_view Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4ff558bb-7c5a-4e17-a3f5-bc9aa2332af1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5fe7668b-9d70-44b7-a347-3922c0b8684c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.0')
+          - compare_versions(version, '>= 2.0.0', '<= 2.1.9')

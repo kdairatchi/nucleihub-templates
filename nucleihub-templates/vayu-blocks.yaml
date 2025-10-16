@@ -1,15 +1,15 @@
-id: vayu-blocks-0a29ed5a0c8ee37bc8924a42f0fe1e61
+id: vayu-blocks-823260cae7a7dc35f050255d7843a0b7
 
 info:
   name: >
-    Vayu Blocks – Gutenberg Blocks for WordPress & WooCommerce <= 1.1.1 - Missing Authorization to Unauthenticated Arbitrary Plugin Installation/Activation
+    Vayu Blocks – Gutenberg Blocks for WordPress & WooCommerce 1.0.4 - 1.2.1 - Missing Authorization to Unauthenticated Limited Arbitrary Options Update
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81e7ab80-7df2-4ef4-80ee-a11d057151c4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/27ca93a1-3dfc-4bbd-834a-1c04d9e22ebf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.1')
+          - compare_versions(version, '>= 1.0.4', '<= 1.2.1')

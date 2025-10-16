@@ -1,4 +1,4 @@
-id: perfect-font-awesome-integration-980eecf539770cd3790269e6735df477
+id: perfect-font-awesome-integration-209116334db97ace8eaf27d468e0871e
 
 info:
   name: >
@@ -9,7 +9,7 @@ info:
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/11aac185-191b-4f7b-8472-84d3decd582f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d50c9e5-d7c3-46d6-b01b-0a8f0e6f019e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

@@ -1,24 +1,24 @@
-id: user-meta-manager-de1d24791ac34af0bcdbe425a396d6d6
+id: user-meta-manager-896920987b9276f8c4cff50cb6713c83
 
 info:
-  name: "User Meta Manager < 3.4.7 - Authenticated Blind SQL Injection"
+  name: >
+    User Meta Manager < 3.4.7 - Authenticated Blind SQL Injection
   author: topscoder
-  severity: high
-  description: "The User Meta Manager plugin for WordPress is vulnerable to blind SQL Injection via the ‘umm_user’ parameter in versions before 3.4.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: low
+  description: >
+    The User Meta Manager plugin for WordPress is vulnerable to blind SQL Injection via the ‘umm_user’ parameter in versions before 3.4.7 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://seclists.org/bugtraq/2016/Feb/35
-    - https://wordpress.org/plugins/user-meta-manager/#developers
-    - https://plugins.trac.wordpress.org/changeset/1341836
-    - https://www.exploit-db.com/exploits/39410
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f795a46c-ba0c-45d5-9ff7-638752f1681b?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/user-meta-manager/"
     google-query: inurl:"/wp-content/plugins/user-meta-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,user-meta-manager,high
+  tags: cve,wordpress,wp-plugin,user-meta-manager,low
 
 http:
   - method: GET

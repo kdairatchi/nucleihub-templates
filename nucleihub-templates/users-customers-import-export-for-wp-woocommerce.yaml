@@ -1,15 +1,15 @@
-id: users-customers-import-export-for-wp-woocommerce-5cbae8749a6023ec4ed093c127be4ef5
+id: users-customers-import-export-for-wp-woocommerce-ad17def0f904177d6807e3a64d457942
 
 info:
   name: >
-    Export and Import Users and Customers <= 2.4.1 - Missing Authorization to Authenticated (Shop Manager) Arbitrary User Password Change
+    Export and Import Users and Customers <= 2.6.2 - Directory Traversal to Authenticated (Administrator+) Limited Arbitrary File Deletion via admin_log_page Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/47337214-9cc3-4b12-bb71-9acbab3649b7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2d443c70-6537-4c6d-a282-12d392f0f558?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.1')
+          - compare_versions(version, '<= 2.6.2')

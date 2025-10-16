@@ -1,22 +1,24 @@
-id: dc-woocommerce-multi-vendor-92ffbe1624dd0583cab30230f2084fb4
+id: dc-woocommerce-multi-vendor-4a89beb269f24b6006394c50bd2c68fe
 
 info:
-  name: "Multivendor Marketplace Solution for WooCommerce – WC Marketplace <= 3.8.11.8 - Reflected Cross-Site Scripting"
+  name: >
+    MultiVendorX <= 4.0.25 - Improper Authorization on REST Routes via 'save_settings_permission'
   author: topscoder
-  severity: medium
-  description: "The Multivendor Marketplace Solution for WooCommerce plugin is vulnerable to Reflected Cross-Site Scripting via multiple unprotected AJAX actions in versions up to, and including, 3.8.11.8. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    The MultiVendorX plugin for WordPress is vulnerable to unauthorized access of data, modification of data, and loss of data due to an improper capability check on the 'save_settings_permission' function for the REST routes instantiated by the 'mvx_rest_routes_react_module' function versions up to, and including, 4.0.25. This makes it possible for unauthenticated attackers to create, update, and delete vendors, retrieve sensitive information, and modify plugin settings.
   reference:
-    - https://patchstack.com/database/vulnerability/dc-woocommerce-multi-vendor-/wordpress-wc-marketplace-plugin-3-8-11-8-reflected-cross-site-scripting
-    - https://plugins.trac.wordpress.org/changeset/2768861/dc-woocommerce-multi-vendor/tags/3.8.12/classes/class-wcmp-ajax.php?old=2761481&old_path=dc-woocommerce-multi-vendor%2Ftags%2F3.8.11.8%2Fclasses%2Fclass-wcmp-ajax.php
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/afd9046c-5b6a-411e-8e66-ff1ba60d7f9d?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L
+    cvss-score: 8.6
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/dc-woocommerce-multi-vendor/"
     google-query: inurl:"/wp-content/plugins/dc-woocommerce-multi-vendor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,dc-woocommerce-multi-vendor,medium
+  tags: cve,wordpress,wp-plugin,dc-woocommerce-multi-vendor,high
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.8.11.8')
+          - compare_versions(version, '< 4.0.26')

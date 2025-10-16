@@ -1,24 +1,24 @@
-id: woocommerce-product-vendors-fc9960e25d574e9c4cdeba05be00ee0c
+id: woocommerce-product-vendors-671374560a63cd680ca50d70b93f8fd1
 
 info:
-  name: "Product Vendors <= 2.0.35 - Reflected Cross Site Scripting"
+  name: >
+    WooCommerce Products Vendor <= 2.1.65 - Unauthenticated SQL Injection
   author: topscoder
-  severity: medium
-  description: "The Product Vendors is vulnerable to Reflected Cross-Site Scripting via the 'vendor_description' parameter in versions up to, and including, 2.0.35 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: critical
+  description: >
+    The WooCommerce Products Vendor plugin for WordPress is vulnerable to blind SQL Injection via the ‘s_postcode’ parameter in versions up to, and including, 2.1.65 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://hackerone.com/reports/253313
-    - https://woocommerce.com/products/product-vendors/
-    - https://threatpost.com/reflected-xss-bug-patched-in-popular-woocommerce-wordpress-plugin/127744/
-    - https://www.majemedia.com/2017/09/xss-vulnerability-in-woocommerce-product-vendors-plugin/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5c17dea-7b61-4e73-ac61-3fe536c22962?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
-    cvss-score: 4.7
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-product-vendors/"
     google-query: inurl:"/wp-content/plugins/woocommerce-product-vendors/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-product-vendors,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-product-vendors,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0.36')
+          - compare_versions(version, '<= 2.1.65')

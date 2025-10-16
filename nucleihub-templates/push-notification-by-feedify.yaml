@@ -1,15 +1,15 @@
-id: push-notification-by-feedify-dd6b8564691cfec3672d96fdcb536660
+id: push-notification-by-feedify-80f3d66c440d3567431949fc0192eb24
 
 info:
   name: >
-    Feedify – Web Push Notifications <= 2.4.2 - Reflected Cross-Site Scripting
+    Feedify – Web Push Notifications <= 2.4.5 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7a5a33fd-ecc6-40bf-93a5-10ead1c4c1f5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/30430993-b5bc-42fb-9968-7a372b2285c8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.2')
+          - compare_versions(version, '<= 2.4.5')

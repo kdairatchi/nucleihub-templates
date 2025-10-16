@@ -1,22 +1,24 @@
-id: careerfy-64bec1536322b990f698ef79e3291c0c
+id: careerfy-1587ffebfbb648df1137d61ff4174dcb
 
 info:
-  name: "Careerfy - Job Board WordPress Theme <= 3.9.0 - Authenticated Stored Cross-Site Scripting"
+  name: >
+    Careerfy - Job Board WordPress Theme <= 3.9.0 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Careerfy - Job Board WordPress Theme theme for WordPress is vulnerable to Stored Cross-Site Scripting via the 'Member Title', 'Designation', 'Experience', 'Facebook URL', 'Google+ URL', 'Twitter URL', 'LinkedIn URL', 'Description', and 'Full Address' fields in versions up to, and including, 3.9.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The Careerfy - Job Board WordPress Theme theme for WordPress is vulnerable to Stored Cross-Site Scripting via the 'Member Title', 'Designation', 'Experience', 'Facebook URL', 'Google+ URL', 'Twitter URL', 'LinkedIn URL', 'Description', and 'Full Address' fields in versions up to, and including, 3.9.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://github.com/vladvector/vladvector.github.io/commit/b4390f644dcebfe952a65c8a86508acae75c02fa
-    - http://web.archive.org/web/20200812042930/https%3A//themeforest.net/item/careerfy-job-board-wordpress-theme/21137053
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/23b75226-e7c9-4b22-aa1b-1a7d400856d2?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/careerfy/"
     google-query: inurl:"/wp-content/themes/careerfy/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,careerfy,medium
+  tags: cve,wordpress,wp-theme,careerfy,low
 
 http:
   - method: GET

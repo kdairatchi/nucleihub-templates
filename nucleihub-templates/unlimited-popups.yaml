@@ -1,25 +1,24 @@
-id: unlimited-popups-3eff74e66f5c30de47230febf24c4f56
+id: unlimited-popups-b1a13632d530b97144d0593f1a4fddcd
 
 info:
-  name: "Unlimited Pop-Ups < 1.4.4 - Cross-Site Scripting"
+  name: >
+    Unlimited Pop-Ups < 1.4.4 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Unlimited Pop-Ups plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.4.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: high
+  description: >
+    The Unlimited Pop-Ups plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.4.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://0x62626262.wordpress.com/2016/04/21/unlimited-pop-ups-wordpress-plugin-xss-vulnerability/
-    - https://wpscan.com/vulnerability/c0abaa80-cfab-4474-b041-5b8ba30fc3b8
-    - https://patchstack.com/database/vulnerability/unlimited-popups/wordpress-unlimited-popups-plugin-1-4-3-cross-site-scripting
-    - http://web.archive.org/web/20171005053146/https%3A//codecanyon.net/item/unlimited-popups-wordpress-plugin/8575498
-    - https://wordpress.org/plugins/unlimited-popups/#developers
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/61516b71-3346-4033-b55b-a35c5b4ca3dc?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/unlimited-popups/"
     google-query: inurl:"/wp-content/plugins/unlimited-popups/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,unlimited-popups,medium
+  tags: cve,wordpress,wp-plugin,unlimited-popups,high
 
 http:
   - method: GET

@@ -1,18 +1,19 @@
-id: mailchimp-for-wp-446a759dfdab67da958d6e6c4909e9f8
+id: mailchimp-for-wp-cfcefcc742c6a90463a275ab2220f3d4
 
 info:
-  name: "MC4WP: Mailchimp for WordPress <= 4.1.6 - Reflected Cross-Site Scripting"
+  name: >
+    MC4WP: Mailchimp for WordPress <= 4.1.6 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The MC4WP: Mailchimp for WordPress plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the use of add_query_arg() in versions up to, and including, 4.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The MC4WP: Mailchimp for WordPress plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the use of add_query_arg() in versions up to, and including, 4.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1726656/mailchimp-for-wp
-    - https://www.cybersecurity-help.cz/vdb/SB2017090817
-    - https://web.archive.org/web/20190328023701/https%3A//www.ripstech.com/php-security-calendar-2018/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/86cb08ae-aa21-4ee6-baed-03429e4d38e2?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/mailchimp-for-wp/"
     google-query: inurl:"/wp-content/plugins/mailchimp-for-wp/"

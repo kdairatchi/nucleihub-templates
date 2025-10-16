@@ -1,15 +1,15 @@
-id: fluent-support-3aebb0033b5eb39309cbb1b966a5249f
+id: fluent-support-5ab6bd7e0e22cfd379ff98fb9f257f54
 
 info:
   name: >
-    Fluent Support <= 1.8.0 - Insufficient Authorization on Email Verification
+    Fluent Support – Helpdesk & Customer Support Ticket System <= 1.8.5 - Unauthenticated Sensitive Information Exposure Through Unprotected Directory
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/039ac1d9-ccb5-43d0-8b17-10d12b7df90e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/17f40832-8ae5-443a-aa98-f0e61d1152cc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.0')
+          - compare_versions(version, '<= 1.8.5')

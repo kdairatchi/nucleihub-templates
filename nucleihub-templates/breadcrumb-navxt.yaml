@@ -1,19 +1,19 @@
-id: breadcrumb-navxt-0b32909bbf63f69632d2c44ed79f5b18
+id: breadcrumb-navxt-9153ee189a5b7269b27e5c394cfc3036
 
 info:
-  name: "Breadcrumb NavXT <= 6.1.0 - Sensitive Data Exposure"
+  name: >
+    Breadcrumb NavXT <= 6.1.0 - Sensitive Data Exposure
   author: topscoder
   severity: medium
-  description: "The Breadcrumb NavXT plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including 6.1.0. This can allow unauthorized attackers to extract sensitive data including sensitive information that may help in launching further attacks, such as username disclosure."
+  description: >
+    The Breadcrumb NavXT plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including 6.1.0. This can allow unauthorized attackers to extract sensitive data including sensitive information that may help in launching further attacks, such as username disclosure.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1946448/breadcrumb-navxt
-    - https://packetstormsecurity.com/files/149572/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-breadcrumb-navxt-information-disclosure-6-1-0/
-    - https://wpscan.com/vulnerability/976b7d90-7695-4353-aae2-09c87154ff22
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f3c556d-8baf-4d75-a331-51b76ee084ee?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/breadcrumb-navxt/"
     google-query: inurl:"/wp-content/plugins/breadcrumb-navxt/"

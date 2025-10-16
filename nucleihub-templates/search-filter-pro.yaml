@@ -1,15 +1,15 @@
-id: search-filter-pro-4a2a17e4de5ef8a25ffd4c617b5d5234
+id: search-filter-pro-587a6b169ff317db10b3765753faad00
 
 info:
   name: >
-    Search & Filter Pro <= 2.5.17 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Search and filter pro <= 2.5.19 - Missing Authorization to Authenticated (Subscriber+) Post Meta Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ebafc14a-1197-4ac4-ad95-8965a755d5c4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/47adb5fe-534f-48a9-81a3-883e1d2cda7f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.17')
+          - compare_versions(version, '<= 2.5.19')

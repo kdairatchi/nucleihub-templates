@@ -1,17 +1,19 @@
-id: contus-hd-flv-player
+id: contus-hd-flv-player-a49fc9c0f86c4cca3e11e5d9a30c3d6c
 
 info:
-  name: "HD FLV Player <= 1.7 - Arbitrary File Upload"
+  name: >
+    HD FLV Player <= 1.7 - Arbitrary File Upload
   author: topscoder
   severity: critical
-  description: "The HD FLV Player plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the uploadfile function in versions up to, and including, 1.7. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
+  description: >
+    
   reference:
-    - https://packetstormsecurity.com/files/113570/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-contus-hd-flv-player-uploadvideo-php-arbitrary-file-upload-1-7/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f24af4f2-bb05-4833-a2bc-771143970e00?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/contus-hd-flv-player/"
     google-query: inurl:"/wp-content/plugins/contus-hd-flv-player/"

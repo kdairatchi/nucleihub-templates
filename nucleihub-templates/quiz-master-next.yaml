@@ -1,25 +1,24 @@
-id: quiz-master-next-90fbc6d3e4b4a334d199f9deb93dab9a
+id: quiz-master-next-64646ac12350f30574cf412bbb4ebf22
 
 info:
-  name: "Quiz and Survey Master <= 7.0.1 - Arbitrary File Upload"
+  name: >
+    Quiz And Survey Master <= 8.1.15 - Cross-Site Request Forgery via 'display_results'
   author: topscoder
-  severity: critical
-  description: "The Quiz and Survey Master plugin for WordPress is vulnerable to arbitrary file uploads due to missing filename sanitization in the qsm_upload_image_fd_question() function in versions up to, and including, 7.0.1. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server using a double extension attack method which may make remote code execution possible on sites with a configuration that parse the first extension of a file.
-
-This is due to an incomplete fix of CVE-2020-35949."
+  severity: medium
+  description: >
+    The Quiz And Survey Master plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 8.1.15. This is due to missing or incorrect nonce validation on the 'display_results' function. This makes it possible for unauthenticated attackers to submit quizzes on behalf of another user via a forged request granted they can trick a site administrator into performing an action such as clicking on a link. While the nonce has been added to the submission form in version 8.1.15, nonces are still only checked when the submission is performed via AJAX, though submissions can be sent directly to any page that renders the 'display_shortcode' shortcode.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2363719/quiz-master-next/trunk/php/classes/class-qmn-quiz-manager.php?old=2353115&old_path=quiz-master-next%2Ftrunk%2Fphp%2Fclasses%2Fclass-qmn-quiz-manager.php
-    - https://www.wordfence.com/blog/2020/08/critical-vulnerabilities-patched-in-quiz-and-survey-master-plugin/
-    - https://wpscan.com/vulnerability/10380
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/32173d38-7f85-4e0c-9b4c-38bee2783d77?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/quiz-master-next/"
     google-query: inurl:"/wp-content/plugins/quiz-master-next/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,quiz-master-next,critical
+  tags: cve,wordpress,wp-plugin,quiz-master-next,medium
 
 http:
   - method: GET
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.0.1')
+          - compare_versions(version, '< 8.1.15')

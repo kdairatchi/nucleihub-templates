@@ -1,15 +1,15 @@
-id: order-delivery-date-7cd2f383add42b0e1770984e4c63b228
+id: order-delivery-date-710bf68047844bb1e8694e1957368615
 
 info:
   name: >
-    Order Delivery Date for WP e-Commerce <= 1.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Order Delivery Date Pro for WooCommerce < 12.6.0 - Unauthenticated Arbitrary Post Title Disclosure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d74f5813-cf7a-4ffb-9306-56f29b3a7d04?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/934fd6a8-7d94-4127-9a00-1ea2f0c66cdd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2')
+          - compare_versions(version, '>= 2.0', '< 12.6.0')

@@ -1,24 +1,24 @@
-id: computer-repair-shop-34ea74e81a4828837f1c1298c9543ed7
+id: computer-repair-shop-f21b8e658385fe2443a74a1af066dc67
 
 info:
-  name: "Computer Repair Shop < 2.0 - Authenticated (Admin+) Stored Cross-Site Scripting"
+  name: >
+    CRM WordPress Plugin – RepairBuddy <= 3.72 - SQL Injection
   author: topscoder
-  severity: medium
-  description: "The Computer Repair Shop plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions before 2.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with admin-level privileges to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: high
+  description: >
+    The plugin CRM WordPress Plugin for WordPress is vulnerable to SQL injection via several parameters in versions up to, and including, 3.72 due to insufficient escaping on the user-supplied parameter and lack of sufficient preparation of the SQL query. This makes it possible for an attacker to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-computer-repair-shop-cross-site-scripting-1-0/
-    - https://wordpress.org/plugins/computer-repair-shop/#developers
-    - https://web.archive.org/web/20200114060005/https%3A//jrjmulder.nl/plugins/computer-repair-shop/
-    - https://plugins.trac.wordpress.org/changeset/2225815
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/642a6d42-100f-4461-b568-35e089287902?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:L
-    cvss-score: 6.6
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/computer-repair-shop/"
     google-query: inurl:"/wp-content/plugins/computer-repair-shop/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,computer-repair-shop,medium
+  tags: cve,wordpress,wp-plugin,computer-repair-shop,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0')
+          - compare_versions(version, '<= 3.72')

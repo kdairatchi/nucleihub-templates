@@ -1,19 +1,19 @@
-id: contextual-related-posts-e7fbc8853bb7b72d15578feec7ae0fcd
+id: contextual-related-posts-6314f0894ab36b72c4172ad9985dc0a1
 
 info:
-  name: "Contextual Related Posts <= 2.9.3 - Cross-Site Request Forgery"
+  name: >
+    Contextual Related Posts <= 2.9.3 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
-  description: "The Contextual Related Posts plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.9.3. This is due to missing or incorrect nonce validation on the crp_process_settings_export() or crp_process_settings_import() functions. This makes it possible for unauthenticated attackers to perform administrative actions and/or obtain unauthorized information via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    The Contextual Related Posts plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.9.3. This is due to missing or incorrect nonce validation on the crp_process_settings_export() or crp_process_settings_import() functions. This makes it possible for unauthenticated attackers to perform administrative actions and/or obtain unauthorized information via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2387037/contextual-related-posts/trunk/includes/admin/modules/tools.php
-    - https://github.com/WebberZone/contextual-related-posts/releases?page=2
-    - https://wpscan.com/vulnerability/10473
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-contextual-related-posts-cross-site-request-forgery-2-9-3/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d93006ac-037f-4291-b945-afa38358a037?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
     cvss-score: 4.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/contextual-related-posts/"
     google-query: inurl:"/wp-content/plugins/contextual-related-posts/"

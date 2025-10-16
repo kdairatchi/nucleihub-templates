@@ -1,19 +1,19 @@
-id: caldera-forms-a80dbec0757ce762ea8fc25e3da60b45
+id: caldera-forms-3fdeb771c16b8f6044bc21898c9d1567
 
 info:
-  name: "Caldera Forms <= 1.5.4 - Cross-Site Scripting"
+  name: >
+    Caldera Forms <= 1.4.1 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Caldera Forms plugin for WordPress is vulnerable to Cross-Site Scripting via the 'edit' parameter in versions up to, and including, 1.5.4 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Caldera Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via CSRF through the ‘create_form’ action in versions up to, and including, 1.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://calderaforms.com/updates/caldera-forms-1-5-5/
-    - https://wpscan.com/vulnerability/c70219da-eab2-4d0b-ac5a-77f6d565ef31
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-caldera-forms-more-than-contact-forms-cross-site-scripting-1-5-4/
-    - https://patchstack.com/database/vulnerability/caldera-forms/wordpress-caldera-forms-plugin-1-5-4-authenticated-cross-site-scripting-xss-vulnerability
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fc3d84f3-bd9d-40e6-bc88-90c840a928c0?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/caldera-forms/"
     google-query: inurl:"/wp-content/plugins/caldera-forms/"
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.4')
+          - compare_versions(version, '<= 1.4.1')

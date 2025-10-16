@@ -1,22 +1,24 @@
-id: maxbuttons-77b4962931560c0b9835b520a08e8262
+id: maxbuttons-81702fc6f1874241db7adf92927f94ed
 
 info:
-  name: "WordPress Button Plugin MaxButtons <= 9.2 - Shortcode-Based Cross-Site Scripting"
+  name: >
+    WordPress Button Plugin MaxButtons <= 9.2 - Shortcode-Based Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The WordPress Button Plugin MaxButtons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via various shortcode attributes in versions up to, and including, 9.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with contributor-level permissions and above to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The WordPress Button Plugin MaxButtons plugin for WordPress is vulnerable to Stored Cross-Site Scripting via various shortcode attributes in versions up to, and including, 9.2 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with contributor-level permissions and above to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2763300%40maxbuttons&new=2763300%40maxbuttons&sfp_email=&sfph_mail=
-    - https://patchstack.com/database/vulnerability/maxbuttons/wordpress-wordpress-button-plugin-maxbuttons-plugin-9-2-authenticated-stored-cross-site-scripting-xss-vulnerability
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/41f6e826-9326-40fa-80d0-4cff1dd72536?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/maxbuttons/"
     google-query: inurl:"/wp-content/plugins/maxbuttons/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,maxbuttons,medium
+  tags: cve,wordpress,wp-plugin,maxbuttons,low
 
 http:
   - method: GET

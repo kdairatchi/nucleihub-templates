@@ -1,15 +1,15 @@
-id: support-genix-lite-64c576dc3e88ee994a3bf9f765a979d3
+id: support-genix-lite-b28e6f7da9c06bafad92c70aca52a602
 
 info:
   name: >
-    Support Genix <= 1.2.3 - Missing Authorization
+    Support Genix <= 1.4.11 - Authenticated (Subscriber+) Insecure Direct Object Reference
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/40ade684-57a2-43be-9d4a-1c0a653807eb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5cc92354-55f4-4799-a974-14fa6fb584b9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/support-genix-lite/"
     google-query: inurl:"/wp-content/plugins/support-genix-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,support-genix-lite,high
+  tags: cve,wordpress,wp-plugin,support-genix-lite,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.3')
+          - compare_versions(version, '<= 1.4.11')

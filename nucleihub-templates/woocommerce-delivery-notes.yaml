@@ -1,15 +1,15 @@
-id: woocommerce-delivery-notes-8559a4be1435340111a3c9ce4fd04e6a
+id: woocommerce-delivery-notes-24cf7b8009de373a227932b4d8ebe1cb
 
 info:
   name: >
-    Print Invoice & Delivery Notes for WooCommerce <= 5.4.0 - Missing Authorization to Authenticated (Subscriber+) Logo Deletion
+    Print Invoice & Delivery Notes for WooCommerce <= 5.4.1 - Unauthenticated Sensitive Information Exposure Through Unprotected Directory
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8883d4fe-3ca6-4591-9972-219b114126d3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/12ab3e54-a0b9-4420-ac90-f16e23688cca?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.4.0')
+          - compare_versions(version, '<= 5.4.1')

@@ -1,17 +1,19 @@
-id: simple-fields
+id: simple-fields-8d6bc8e548c1b78a5557a5466627f09b
 
 info:
-  name: "Simple Fields <= 1.4.11 - Cross-Site Scripting"
+  name: >
+    Simple Fields <= 1.4.11 - Cross-Site Scripting
   author: topscoder
   severity: high
-  description: "The Simple Fields plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the maybe_do_import() function in versions up to, and including, 1.4.11 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    The Simple Fields plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the maybe_do_import() function in versions up to, and including, 1.4.11 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://wordpress.org/support/topic/hack-related-to-simple-fields/
-    - https://web.archive.org/web/20210619033847/https%3A//www.pluginvulnerabilities.com/2019/09/16/hackers-may-already-be-targeting-this-persistent-xss-vulnerability-in-simple-fields/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f0866a4-0edf-4fb7-8628-4b8e18a2b4bb?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 7.2
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-fields/"
     google-query: inurl:"/wp-content/plugins/simple-fields/"

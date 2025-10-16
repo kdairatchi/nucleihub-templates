@@ -1,22 +1,19 @@
-id: spam-free-wordpress-30096e7d35ea91f148e0b9ac68e56b16
+id: spam-free-wordpress-8add66365ab7130c17cc0f81934a8294
 
 info:
-  name: "Spam Free WordPress <= 1.9.3 - IP Protection Bypass"
+  name: >
+    Spam Free WordPress <= 1.9.3 - IP Protection Bypass
   author: topscoder
   severity: medium
-  description: "The Spam Free WordPress plugin for WordPress is vulnerable to IP Protection Bypass in versions up to, and including, 1.9.3 via the sfw_comment_post_authentication() function due to the fact that the plugin relies on a value that can be user-supplied ('comment_ip' parameter) for the IP address that is checked against the blocklist. This makes it possible for unauthenticated attackers to bypass comment restrictions"
+  description: >
+    The Spam Free WordPress plugin for WordPress is vulnerable to IP Protection Bypass in versions up to, and including, 1.9.3 via the sfw_comment_post_authentication() function due to the fact that the plugin relies on a value that can be user-supplied ('comment_ip' parameter) for the IP address that is checked against the blocklist. This makes it possible for unauthenticated attackers to bypass comment restrictions
   reference:
-    - https://wpscan.com/vulnerability/5102581e-7946-4af3-9423-756519955a5e
-    - https://packetstormsecurity.com/files/119274/
-    - https://exchange.xforce.ibmcloud.com/vulnerabilities/81006
-    - https://exchange.xforce.ibmcloud.com/vulnerabilities/81007
-    - https://wordpress.org/plugins/spam-free-wordpress/#developers
-    - https://plugins.trac.wordpress.org/changeset/741467/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-spam-free-wordpress-security-bypass-1-9-2/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7f7a8ee7-af69-4aff-abf7-6d69d920fe61?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N
     cvss-score: 5.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/spam-free-wordpress/"
     google-query: inurl:"/wp-content/plugins/spam-free-wordpress/"

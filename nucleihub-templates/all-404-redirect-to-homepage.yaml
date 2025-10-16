@@ -1,23 +1,24 @@
-id: all-404-redirect-to-homepage-3b94983ed2f71b4298d8797d3d7d15ab
+id: all-404-redirect-to-homepage-d399912dd025cf50db4d7d4e05a222bb
 
 info:
-  name: "All 404 Redirect to Homepage & Broken images Redirection <= 2.0 - Cross-Site Scripting"
+  name: >
+    All 404 Redirect to Homepage & Broken images Redirection <= 2.0 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The All 404 Redirect to Homepage & Broken images Redirection plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions up to, and including, 2.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The All 404 Redirect to Homepage & Broken images Redirection plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions up to, and including, 2.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-june-2021-part-2/
-    - https://wpscan.com/vulnerability/bb88e2f4-dfb4-4475-8a15-0e46acbb7b49
-    - https://plugins.trac.wordpress.org/changeset/2582783
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f01c9c8-acd4-44c0-8866-a0a819828006?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 5.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/all-404-redirect-to-homepage/"
     google-query: inurl:"/wp-content/plugins/all-404-redirect-to-homepage/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,all-404-redirect-to-homepage,medium
+  tags: cve,wordpress,wp-plugin,all-404-redirect-to-homepage,low
 
 http:
   - method: GET

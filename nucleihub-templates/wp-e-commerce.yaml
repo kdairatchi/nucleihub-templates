@@ -1,24 +1,24 @@
-id: wp-e-commerce-4effb71ec51e1204cc98c1e41b1cafb7
+id: wp-e-commerce-ddcb3d23b263121ed24251495825e26f
 
 info:
-  name: "WP eCommerce < 3.11.4 - SQL Injection"
+  name: >
+    WP eCommerce <= 3.8.9 - SQL Injection
   author: topscoder
-  severity: high
-  description: "The WP eCommerce plugin for WordPress is vulnerable to SQL Injection via the ‘sessionid’ parameter in versions up to, and including, 3.11.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: critical
+  description: >
+    The WP eCommerce plugin for WordPress is vulnerable to generic SQL Injection via the ‘view_purchlogs_by_status’ parameter in versions up to, and including, 3.8.9 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://wptavern.com/wp-ecommerce-3-11-4-patches-sql-injection-vulnerability
-    - https://wpecommerce.org/news/wp-ecommerce-3-11-4-security-update/
-    - https://github.com/wp-e-commerce/WP-e-Commerce/commit/1ea8329a5617c8181490c3fad102cc81d75eb0d4
-    - https://web.archive.org/web/20190429134437/https%3A//wpecommerce.org/news/wp-ecommerce-3-11-4-security-update/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c42a966-0035-4c12-8aa1-226a0157d98f?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
-    cvss-score: 8.3
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-e-commerce/"
     google-query: inurl:"/wp-content/plugins/wp-e-commerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-e-commerce,high
+  tags: cve,wordpress,wp-plugin,wp-e-commerce,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.11.4')
+          - compare_versions(version, '<= 3.8.9')

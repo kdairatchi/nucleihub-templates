@@ -1,25 +1,26 @@
-id: better-wp-security-935e3ca64df8dbabc40b284aaccb67eb
+id: better-wp-security-03c4873d2a4205e6d3b96633868e429e
 
 info:
-  name: "iThemes Security < 3.4.4 - Cross-Site Scripting"
+  name: >
+    iThemes Security <= 5.6.1 - Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The iThemes Security plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions up to, and including, 3.4.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The iThemes Security for WordPress is vulnerable to Stored Cross-Site Scripting via multiple parameters in versions up to, and including, 5.6.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
+    "Security Fix: Updated log output to prevent specific kinds of logged requests from displaying without sanitization. Thanks to Slavco Mihajloski for contacting us about this issue." ~ https://wordpress.org/plugins/better-wp-security/#developers
   reference:
-    - https://seclists.org/bugtraq/2012/Oct/9
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=599012%40better-wp-security&new=599012%40better-wp-security&sfp_email=&sfph_mail=
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-ithemes-security-formerly-better-wp-security-multiple-cross-site-scripting-vulnerabilities-3-4-3/
-    - https://wordpress.org/support/topic/plugin-better-wp-security-security-focus-identifies-possible-wp-better-security-vunerability/
-    - https://packetstormsecurity.com/files/116317/Better-WP-Security-3.4.3-Cross-Site-Scripting.html
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8657003f-da37-4169-9f00-262d7f3d9a9c?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N
-    cvss-score: 6.5
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 6.4
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/better-wp-security/"
     google-query: inurl:"/wp-content/plugins/better-wp-security/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,better-wp-security,medium
+  tags: cve,wordpress,wp-plugin,better-wp-security,low
 
 http:
   - method: GET
@@ -57,4 +58,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4.4')
+          - compare_versions(version, '< 5.6.2')

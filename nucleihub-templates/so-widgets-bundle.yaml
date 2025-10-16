@@ -1,15 +1,15 @@
-id: so-widgets-bundle-d48347ff5635ede2bcde809000344aae
+id: so-widgets-bundle-88dc44a8c4f1f5a29a238973f1cece16
 
 info:
   name: >
-    SiteOrigin Widgets Bundle <= 1.60.0 -  - Authenticated (Contributor+) Stored Cross-Site Scripting via 'siteorigin_widget' Shortcode
+    SiteOrigin Widgets Bundle <= 1.68.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via `data-url` DOM Element Attribute
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b7926ec6-3441-4062-93b2-6c2120c9f406?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb1b93ee-8641-4ddb-8b6b-2e9d30fe338d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.60.0')
+          - compare_versions(version, '<= 1.68.5')

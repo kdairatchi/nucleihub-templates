@@ -1,15 +1,15 @@
-id: kivicare-clinic-management-system-e972e5fa7dc7eb147901d9e27c2ac74c
+id: kivicare-clinic-management-system-5b8f5018fea6acc1fb645663471dc8ff
 
 info:
   name: >
-    KiviCare – Clinic & Patient Management System (EHR) <= 3.6.4 - Authenticated (Doctor/Receptionist+) SQL Injection
+    KiviCare – Clinic & Patient Management System (EHR) <= 3.6.7 - Authenticated (Doctor+) SQL Injection via 'u_id' Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/30f2a3ee-7f95-478c-b3d7-c254b9472d42?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eb6b0c35-b478-4616-a708-1fd243c95c14?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.4')
+          - compare_versions(version, '<= 3.6.7')

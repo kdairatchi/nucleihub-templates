@@ -1,15 +1,15 @@
-id: oceanwp-8a8a5d77da5bb8eeb5efd11fee85d8d3
+id: oceanwp-f092e6c75d20b9ed16374591753831f0
 
 info:
   name: >
-    OceanWP <= 3.5.4 - Missing Authorization to Sensitive Information Exposure via Limited Local File Inclusion
+    Multiple Plugins <= (Various Versions) - Authenticated (Contributor+) Stored DOM-Based Cross-Site Scripting via Magnific Popups JavaScript Library
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5ec2743d-0d96-4056-8fdf-dc81d4e9b76f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dae80fc2-3076-4a32-876d-5df1c62de9bd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/oceanwp/"
     google-query: inurl:"/wp-content/themes/oceanwp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,oceanwp,high
+  tags: cve,wordpress,wp-theme,oceanwp,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.4')
+          - compare_versions(version, '<= 3.6.0')

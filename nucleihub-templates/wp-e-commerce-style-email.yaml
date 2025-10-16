@@ -1,15 +1,15 @@
-id: wp-e-commerce-style-email-32910db4a5cb425efa1258c952c3e5ab
+id: wp-e-commerce-style-email-69ff3b85cab9506f555c0752a45ab35f
 
 info:
   name: >
-    WP e-Commerce Style Email <= 0.6.2 - Reflected Cross-Site Scripting
+    WP e-Commerce Style Email <= 0.6.2 - Cross-Site Request Forgery to Remote Code Execution
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/347307eb-b5d3-45d8-962b-08e26b963d82?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02f941bd-c42d-49de-9af0-374db3ce22f3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

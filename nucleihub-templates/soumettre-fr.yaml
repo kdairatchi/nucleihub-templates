@@ -1,15 +1,15 @@
-id: soumettre-fr-52beb3c84f50d5ffdd6e14d2787ceb3d
+id: soumettre-fr-a48e943d0359bdf3846098f7b55f90e6
 
 info:
   name: >
-    Soumettre.fr <= 2.1.2 - Missing Authorization
+    Soumettre.fr <= 2.1.5 - Improper Authorization to Unauthenticated Soumettre Posts Creation/Modification/Deletion
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ad05b088-977e-4f24-b843-dc65f1aa60e9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4f29d476-0730-437c-8065-309523278efa?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/soumettre-fr/"
     google-query: inurl:"/wp-content/plugins/soumettre-fr/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,soumettre-fr,high
+  tags: cve,wordpress,wp-plugin,soumettre-fr,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.2')
+          - compare_versions(version, '<= 2.1.5')

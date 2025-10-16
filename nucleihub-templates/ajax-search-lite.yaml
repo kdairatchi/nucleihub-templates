@@ -1,23 +1,24 @@
-id: ajax-search-lite-7775ab9f2ac75d9e1f754990ee02f2e5
+id: ajax-search-lite-431ba0fb08359383c58bc1299345bcb1
 
 info:
-  name: "Ajax Search Lite < 3.11 - Missing Authorization to Remote Code Execution"
+  name: >
+    Ajax Search Lite < 3.11 - Missing Authorization to Remote Code Execution
   author: topscoder
-  severity: high
-  description: "The Ajax Search Lite plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the wpdreams_ajaxinputcallback function in versions up to, and including, 3.10. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to bypass restricted actions, which can lead to remote code execution."
+  severity: low
+  description: >
+    The Ajax Search Lite plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the wpdreams_ajaxinputcallback function in versions up to, and including, 3.10. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to bypass restricted actions, which can lead to remote code execution.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-ajax-search-lite-security-bypass-3-1/
-    - https://plugins.trac.wordpress.org/changeset/1121546
-    - http://web.archive.org/web/20150511071851/http%3A//research.evex.pw/?vuln=9
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6c439914-1d5a-4607-8e5c-9279fa3b462c?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ajax-search-lite/"
     google-query: inurl:"/wp-content/plugins/ajax-search-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ajax-search-lite,high
+  tags: cve,wordpress,wp-plugin,ajax-search-lite,low
 
 http:
   - method: GET

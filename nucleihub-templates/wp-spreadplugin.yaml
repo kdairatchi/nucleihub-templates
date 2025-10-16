@@ -1,23 +1,24 @@
-id: wp-spreadplugin-770922d0f06223ff760fe55a3381969b
+id: wp-spreadplugin-066e52cc84d41a08b311ab0276164429
 
 info:
-  name: "WP SpreadPlugin < 3.8.6.2 - Cross-Site Scripting"
+  name: >
+    WP-Spreadplugin <= 4.8.9 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The WP SpreadPlugin plugin for WordPress is vulnerable to Cross-Site Scripting in versions before 3.8.6.2 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset?reponame=&new=1141104%40wp-spreadplugin&old=1137863%40wp-spreadplugin
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-spreadplugin-cross-site-scripting-3-8-6/
-    - https://wordpress.org/plugins/wp-spreadplugin/#developers
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19e9735c-ddaa-4b38-ad21-b2f13c0d4461?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
-    cvss-score: 7.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-spreadplugin/"
     google-query: inurl:"/wp-content/plugins/wp-spreadplugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-spreadplugin,high
+  tags: cve,wordpress,wp-plugin,wp-spreadplugin,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.8.6.2')
+          - compare_versions(version, '<= 4.8.9')

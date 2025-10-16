@@ -1,15 +1,15 @@
-id: themify-icons-e136655ec2a5912cb9bc55d014305746
+id: themify-icons-7c3c9f401cfb68c7ef1fc345e7cb09a0
 
 info:
   name: >
-    Themify Icons <= 2.0.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Themify Icons <= 2.0.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/efa156b7-ab18-414d-80a5-3a1c2a977b3b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/52417477-7318-4d7d-8143-765c843abc31?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.1')
+          - compare_versions(version, '<= 2.0.3')

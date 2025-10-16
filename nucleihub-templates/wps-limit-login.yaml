@@ -1,24 +1,24 @@
-id: wps-limit-login-8e06b0e23bd4268c3f865ec6259bbb34
+id: wps-limit-login-4d4b1efda55193fa5e651f9d521dfebe
 
 info:
-  name: "WPS Limit Login < 1.4.6.1 - Cross-Site Request Forgery"
+  name: >
+    WPS Limit Login < 1.4.6.1 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The WPS Limit Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.6. This is due to missing nonce validation on the wpslimitlogin_rated AJAX action. This makes it possible for unauthenticated attackers to perform administrative actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The WPS Limit Login plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.6. This is due to missing nonce validation on the wpslimitlogin_rated AJAX action. This makes it possible for unauthenticated attackers to perform administrative actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://secupress.me/blog/wps-limit-login-v1-4-5-multiple-vulnerabilities/
-    - https://wordpress.org/plugins/wps-limit-login/#developers
-    - https://plugins.trac.wordpress.org/changeset/2124665
-    - https://plugins.trac.wordpress.org/changeset/2125629
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b3f75424-b9f3-42ee-a96c-ff0ed30cbd2f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wps-limit-login/"
     google-query: inurl:"/wp-content/plugins/wps-limit-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wps-limit-login,high
+  tags: cve,wordpress,wp-plugin,wps-limit-login,medium
 
 http:
   - method: GET

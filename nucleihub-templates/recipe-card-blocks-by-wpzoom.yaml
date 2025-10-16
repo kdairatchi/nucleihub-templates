@@ -1,15 +1,15 @@
-id: recipe-card-blocks-by-wpzoom-17b167f964b4e8d7b54a1ca26f157b21
+id: recipe-card-blocks-by-wpzoom-e61002f886c830bbd02f8af2456cbf95
 
 info:
   name: >
-    Recipe Card Blocks by WPZOOM <= 2.8.2 - Authenticated Stored Cross-Site Scripting
+    Recipe Card Blocks for Gutenberg & Elementor <= 3.4.3 - Insecure Direct Object Reference to Authenticated (Contributor+) Post Disclosure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6f6ece0e-7c7c-4c9b-b860-3b279e98c087?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0c05dcd9-71d2-4881-b5aa-335821ff95b3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.8.3')
+          - compare_versions(version, '<= 3.4.3')

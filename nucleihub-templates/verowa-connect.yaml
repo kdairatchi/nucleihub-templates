@@ -1,15 +1,15 @@
-id: verowa-connect-e19e41c4fd554c823dba2f39d46b632a
+id: verowa-connect-c8c484b6fede98c02d5a1cc0dfa237bb
 
 info:
   name: >
-    Verowa Connect <= 3.0.1 - Unauthenticated SQL Injection
+    Verowa Connect <= 3.0.5 - Authenticated (Administrator+) SQL Injection
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a5da47f6-4cfe-480e-9472-bd5efc8bac71?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/176a2200-db90-4a16-b8bc-da85471ff8d1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/verowa-connect/"
     google-query: inurl:"/wp-content/plugins/verowa-connect/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,verowa-connect,critical
+  tags: cve,wordpress,wp-plugin,verowa-connect,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.1')
+          - compare_versions(version, '<= 3.0.5')

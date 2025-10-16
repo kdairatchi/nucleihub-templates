@@ -1,15 +1,15 @@
-id: dokan-pro
+id: dokan-pro-4c05653ad02a42a7b87cbba80f86001d
 
 info:
   name: >
-    Dokan Pro <= 3.10.3 - Unauthenticated SQL Injection
+    Dokan Pro <= 3.14.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d9de41de-f2f7-4b16-8ec9-d30bbd3d8786?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/54087ddd-5c13-40ff-be80-3d713603f566?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/dokan-pro/"
     google-query: inurl:"/wp-content/plugins/dokan-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,dokan-pro,critical
+  tags: cve,wordpress,wp-plugin,dokan-pro,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.10.3')
+          - compare_versions(version, '<= 3.14.5')

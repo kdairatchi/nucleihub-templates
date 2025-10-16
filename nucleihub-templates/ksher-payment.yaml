@@ -1,15 +1,15 @@
-id: ksher-payment-feab086a0f50a66bbc46a36be670bd88
+id: ksher-payment-2494b53daca4cbc3270458cfc985b0e8
 
 info:
   name: >
-    Ksher <= 1.1.1 - Missing Authorization
+    Ksher <= 1.1.2 - Missing Authorization
   author: topscoder
   severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e7ab6f3a-352c-4104-802d-af2ed9b1154b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a712c529-b69d-4acf-b55a-64fb3a45b990?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.1')
+          - compare_versions(version, '<= 1.1.2')

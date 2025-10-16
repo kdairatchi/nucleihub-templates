@@ -1,15 +1,15 @@
-id: stop-spammer-registrations-plugin-71ca481c5b0e8d2afcdc566f0e342170
+id: stop-spammer-registrations-plugin-36be93ab1a197661819b22d71da61937
 
 info:
   name: >
-    Stop Spammers Security | Block Spam Users, Comments, Forms <= 2024.4 - Cross-Site Request Forgery (CSRF) via sfs_process
+    Anti-Spam: Spam Protection | Block Spam Users, Comments, Forms <= 2024.7 - Cross-Site Request Forgery to Multiple Administrative Actions
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1998cadb-2eb3-4819-aa7c-59e4f777c7f8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aefb192a-ed42-44a9-bbd1-5906909a419c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2024.4')
+          - compare_versions(version, '<= 2024.7')

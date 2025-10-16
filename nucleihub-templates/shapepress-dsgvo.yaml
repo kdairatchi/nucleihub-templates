@@ -1,22 +1,24 @@
-id: shapepress-dsgvo-e3266536e56197b850f9c916502a4cc9
+id: shapepress-dsgvo-98299dc7761d2b76bca22993f913aeda
 
 info:
-  name: "WP DSGVO Tools (GDPR) <= 3.1.23 - Unauthenticated Stored Cross-Site Scripting"
+  name: >
+    WP DSGVO Tools (GDPR) <= 3.1.32 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
   author: topscoder
-  severity: high
-  description: "The WP DSGVO Tools (GDPR) plugin for WordPress is vulnerable to Stored Cross-Site Scripting via an unknown parameter in versions up to, and including, 3.1.23 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    
   reference:
-    - https://wordpress.org/support/topic/weiterleitung-redirects/
-    - https://blog.nintechnet.com/wordpress-wp-dsgvo-tools-gdpr-plugin-patched-vulnerability-actively-exploited/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/df5cd6e7-e821-403f-a048-25c2ca1fb2de?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/shapepress-dsgvo/"
     google-query: inurl:"/wp-content/plugins/shapepress-dsgvo/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,shapepress-dsgvo,high
+  tags: cve,wordpress,wp-plugin,shapepress-dsgvo,low
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.1.24')
+          - compare_versions(version, '<= 3.1.32')

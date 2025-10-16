@@ -1,15 +1,15 @@
-id: wp-syntax-5fa1471b8621ae57e90a0948fa90499f
+id: wp-syntax-15f5fa4dc56dddb94066bb10d631972b
 
 info:
   name: >
-    WP Syntax < 0.9.10 - Remote Code Execution
+    WP-Syntax <= 1.2 - Authenticated (Author+) Regex Denial of Service
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/46b3b01c-8739-4b51-be34-1dd3c50d772e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c28bc239-c77b-4a64-a0bf-edde7d61e268?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-syntax/"
     google-query: inurl:"/wp-content/plugins/wp-syntax/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-syntax,critical
+  tags: cve,wordpress,wp-plugin,wp-syntax,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.9.9')
+          - compare_versions(version, '<= 1.2')

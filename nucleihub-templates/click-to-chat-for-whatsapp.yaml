@@ -1,15 +1,15 @@
-id: click-to-chat-for-whatsapp-552735bf88b0f3e66f060c14f1421abb
+id: click-to-chat-for-whatsapp-691ac12c0883ededf4ac70da7adcff5a
 
 info:
   name: >
-    Click to Chat <= 3.18 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Click to Chat <= 4.22 - Authenticated (Contributor+) Stored DOM-Based Cross-Site Scripting via data-no_number Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19b7cadd-b1b9-4f1d-ab30-78e0b46ad21a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/83695ac4-a08b-4c25-ac33-d9b7498f5a2c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.18')
+          - compare_versions(version, '<= 4.22')

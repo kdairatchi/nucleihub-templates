@@ -1,23 +1,24 @@
-id: woffice
+id: woffice-a061e508f049f80f30df9a19c2bae78c
 
 info:
-  name: "Woffice CRM <= 4.0.1 - Authorization Bypass"
+  name: >
+    Woffice CRM <= 4.0.1 - Authorization Bypass
   author: topscoder
-  severity: medium
-  description: "The Woffice CRM theme for WordPress is vulnerable to authorization bypass due to a missing capability check on the wofficeNotificationGet function in versions up to, and including, 4.0.1. This makes it possible for unauthenticated attackers to view titles of notifications sent from user to user."
+  severity: high
+  description: >
+    The Woffice CRM theme for WordPress is vulnerable to authorization bypass due to a missing capability check on the wofficeNotificationGet function in versions up to, and including, 4.0.1. This makes it possible for unauthenticated attackers to view titles of notifications sent from user to user.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-1/
-    - https://wpscan.com/vulnerability/6b6dae5b-c239-402c-8204-1107d6aae375
-    - https://hub.woffice.io/woffice/changelog#july-21st-2021-version-402
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eaf17a09-3e35-4df8-acb9-7829942597c6?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/woffice/"
     google-query: inurl:"/wp-content/themes/woffice/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,woffice,medium
+  tags: cve,wordpress,wp-theme,woffice,high
 
 http:
   - method: GET

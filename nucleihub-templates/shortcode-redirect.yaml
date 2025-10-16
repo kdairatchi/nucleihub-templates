@@ -1,15 +1,15 @@
-id: shortcode-redirect-afdbb8d8e7cbce88f27554bae9fe7160
+id: shortcode-redirect-2dc838d153a721811c9a00ede37cade6
 
 info:
   name: >
-    Shortcode Redirect <= 1.0.01 - Cross-Site Scripting
+    Shortcode Redirect <= 1.0.02 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2821d32e-386b-4d6a-8079-b6b184d1d266?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81559c61-8816-462d-a64d-6b039fd15b1d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/shortcode-redirect/"
     google-query: inurl:"/wp-content/plugins/shortcode-redirect/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,shortcode-redirect,high
+  tags: cve,wordpress,wp-plugin,shortcode-redirect,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.01')
+          - compare_versions(version, '<= 1.0.02')

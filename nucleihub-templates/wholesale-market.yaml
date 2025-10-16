@@ -1,15 +1,15 @@
-id: wholesale-market-e38a0f81f4301995c751dda79f48bbe0
+id: wholesale-market-a04d6d1e2b4ba84b35bbfb561b6b513c
 
 info:
   name: >
-    Wholesale Market <= 2.2.0 - Information Disclosure via Unauthenticated Arbitrary File Download
+    Wholesale Market for WooCommerce <= 2.0.0 & Wholesale Market <= 2.2.1 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/adcbb70e-c99f-4f05-8869-50cf16f6de79?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9916af89-4b12-47eb-adb2-56267f077d2f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wholesale-market/"
     google-query: inurl:"/wp-content/plugins/wholesale-market/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wholesale-market,low
+  tags: cve,wordpress,wp-plugin,wholesale-market,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.0')
+          - compare_versions(version, '<= 2.2.1')

@@ -1,16 +1,13 @@
 id: ssh
 info:
-  name: Akamai SSH
+  name: MoveIT DMZ sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: ssh
+    info: sshlib $2; protocol $1
     rarity: 0
-    vendor: akamai
-    verified: true
-    version: $2
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-(\d[\d.]*)-(Server-V)\r?\n$
+    - '^SSH-([\d.]+)-([\w._-]+) sshlib: ([78]\.\d+\.\d+\.\d+)\r\n'

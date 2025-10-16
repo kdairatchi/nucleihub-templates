@@ -1,19 +1,19 @@
-id: safe-svg-d21c16f74914a5b4ece7c1e766381ffe
+id: safe-svg-4f3a9d70b9f6e7043c6b613b7327bbd1
 
 info:
-  name: "Safe SVG <= 1.9.5 - Cross-Site Scripting"
+  name: >
+    Safe SVG <= 1.9.5 - Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Safe SVG plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.9.5 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Safe SVG plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.9.5 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://github.com/darylldoyle/svg-sanitizer/issues/31
-    - https://github.com/darylldoyle/safe-svg/issues/9
-    - https://wpscan.com/vulnerability/a23e3629-c6d7-478a-9c74-0f3d27430216
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-safe-svg-cross-site-scripting-1-9-5/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1a0fcd50-e9d6-49a5-979f-61f953b1a1cd?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 5.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/safe-svg/"
     google-query: inurl:"/wp-content/plugins/safe-svg/"

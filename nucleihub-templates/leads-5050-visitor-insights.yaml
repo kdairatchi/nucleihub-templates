@@ -1,23 +1,24 @@
-id: leads-5050-visitor-insights-786b4feeb8247bab000193af32af68a1
+id: leads-5050-visitor-insights-b63a4a4ed28394d42b98e5765808bec5
 
 info:
-  name: "leads5050-visitor-insights <= 1.0.5 - Authorization Bypass"
+  name: >
+    leads5050-visitor-insights <= 1.0.5 - Authorization Bypass
   author: topscoder
-  severity: medium
-  description: "The leads5050-visitor-insights plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the leads5050_set_license function in versions up to, and including, 1.0.5. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to edit the license data in the plugin's settings."
+  severity: low
+  description: >
+    The leads5050-visitor-insights plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the leads5050_set_license function in versions up to, and including, 1.0.5. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to edit the license data in the plugin's settings.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-may-2021-part-2/
-    - https://wpscan.com/vulnerability/3a7636bd-9535-4c2c-8263-1f00fff1c296
-    - https://plugins.trac.wordpress.org/changeset/2521173
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/15d9c743-5700-482a-a6bc-ecf541ea9e7d?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
     cvss-score: 4.3
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/leads-5050-visitor-insights/"
     google-query: inurl:"/wp-content/plugins/leads-5050-visitor-insights/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,leads-5050-visitor-insights,medium
+  tags: cve,wordpress,wp-plugin,leads-5050-visitor-insights,low
 
 http:
   - method: GET

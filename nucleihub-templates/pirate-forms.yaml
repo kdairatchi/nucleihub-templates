@@ -1,21 +1,24 @@
-id: pirate-forms-7cec3ada28f0d0a0295f5351d74c6b46
+id: pirate-forms-dfd166ca948bd5682a587fac80db3b4f
 
 info:
-  name: "Contact Form & SMTP Plugin by PirateForms <= 2.5.1 - Unauthenticated HTML injection"
+  name: >
+    Contact Form & SMTP Plugin for WordPress by PirateForms <= 2.5.2 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The Contact Form & SMTP Plugin by PirateForms plugin for WordPress is vulnerable to HTML injection in the ‘public/class-pirateforms-public.php’ file in versions up to, and including, 2.5.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary HTML in emails that could be used to phish unsuspecting victims."
+  severity: low
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/html-injection-vulnerability-in-wordpress-pirate-forms-plugin/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a99dade-815e-43cf-be24-92c01286f476?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pirate-forms/"
     google-query: inurl:"/wp-content/plugins/pirate-forms/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pirate-forms,high
+  tags: cve,wordpress,wp-plugin,pirate-forms,low
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.5.2')
+          - compare_versions(version, '<= 2.5.2')

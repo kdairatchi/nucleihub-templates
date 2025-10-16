@@ -1,15 +1,15 @@
-id: acf-city-selector-e546a15d46dd2d86c7b45282baf5b6d1
+id: acf-city-selector-98d7ceee39e88f8d587cddf2fee10b9c
 
 info:
   name: >
-    ACF City Selector <= 1.14.0 - Authenticated (Admin+) Arbitrary File Upload
+    ACF City Selector <= 1.16.0 - Unauthenticated Sensitive Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e1cd9978-2d8d-4818-8baf-8f31e0212957?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a9df5f6-2df7-4d32-81ee-da9c4080420d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.14.0')
+          - compare_versions(version, '<= 1.16.0')

@@ -1,26 +1,24 @@
-id: count-per-day-35e4fd2755a73394d80f462f3df49aaa
+id: count-per-day-453c09ddff505f0333c030134ebc2666
 
 info:
-  name: "Count Per Day <= 3.2.3 - Path Disclosure and Denial of Service"
+  name: >
+    Count per Day < 3.2.6 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
-  description: "The Count Per Day plugin for WordPress is vulnerable to Path Disclosure and Denial of Service in versions up to, and including, 3.2.3 via the 'notes.php' file. This makes it possible for unauthenticated attackers to disclose sensitive information and slow/deny the responsiveness of the vulnerable service."
+  severity: medium
+  description: >
+    The Count per Day plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the HTTP Referer header in versions before 3.2.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://packetstormsecurity.com/files/120631/
-    - https://seclists.org/fulldisclosure/2013/Mar/43
-    - https://wpscan.com/vulnerability/df85abfc-810b-48c8-ade7-aacac158e7e9
-    - https://patchstack.com/database/vulnerability/count-per-day/wordpress-count-per-day-plugin-3-2-3-full-path-disclosure
-    - https://wordpress.org/plugins/count-per-day/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=591940%40count-per-day&new=591940%40count-per-day&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/721f7c9e-34f3-4c41-992d-df35b56f95cd?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H
-    cvss-score: 9.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
+    cvss-score: 7.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/count-per-day/"
     google-query: inurl:"/wp-content/plugins/count-per-day/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,count-per-day,critical
+  tags: cve,wordpress,wp-plugin,count-per-day,medium
 
 http:
   - method: GET
@@ -58,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.3')
+          - compare_versions(version, '< 3.2.6')

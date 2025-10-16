@@ -1,15 +1,15 @@
-id: swatchly-93343aa0a2403cba1031441b0dd98003
+id: swatchly-03d83a211698046397f1e0426f6e3ab8
 
 info:
   name: >
-    Swatchly – WooCommerce Variation Swatches for Products <= 1.2.0 - Cross-Site Request Forgery via plugin_activation
+    Swatchly – WooCommerce Variation Swatches for Products (product attributes: Image swatch, Color swatches, Label swatches) 1.2.8 - 1.4.0 - Missing Authorization to Authenticated (Subscriber+) Limited Options Update
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fa73c2a0-a692-47db-99ca-7e7159fc96aa?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39336115-5993-49e1-b810-80a712e8e42b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/swatchly/"
     google-query: inurl:"/wp-content/plugins/swatchly/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,swatchly,medium
+  tags: cve,wordpress,wp-plugin,swatchly,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.0')
+          - compare_versions(version, '>= 1.2.8', '<= 1.4.0')

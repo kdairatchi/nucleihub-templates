@@ -1,15 +1,15 @@
-id: hive-support-1bde14686431e4cb612b187f77f04bc4
+id: hive-support-60c22906d3c15ae25189bcf77eee1042
 
 info:
   name: >
-    Hive Support – WordPress Help Desk <= 1.1.1 - Authenticated (Subscriber+) Arbitrary File Upload
+    Hive Support <= 1.2.4 - Authenticated (Subscriber+) Missing Authorization via hs_update_ai_chat_settings and hive_lite_support_get_all_binbox
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ee4b1dac-6ec6-4c1c-9103-60e53d980b95?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/95c8722e-07c3-4728-8723-4d4a6188fe5e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.1')
+          - compare_versions(version, '<= 1.2.4')

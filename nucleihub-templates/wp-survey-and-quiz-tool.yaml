@@ -1,23 +1,24 @@
-id: wp-survey-and-quiz-tool-a529e2fed5f4d17cc7bb536e20d3a7c8
+id: wp-survey-and-quiz-tool-8afc0fec48fece5d1dbd1548fb1c8027
 
 info:
-  name: "Survey And Quiz Tool <= 2.9.2 - Unauthenticated Cross-Site Scripting"
+  name: >
+    Survey And Quiz Tool <= 2.9.2 - Unauthenticated Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Survey And Quiz Tool plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 2.9.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: high
+  description: >
+    The Survey And Quiz Tool plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 2.9.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://packetstormsecurity.com/files/112685/
-    - https://plugins.trac.wordpress.org/changeset/534119
-    - https://wpscan.com/vulnerability/6ddbc751-0129-47e2-946c-536928eb5059
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9a279832-64d8-4e0b-8eba-b7b89c80069d?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-survey-and-quiz-tool/"
     google-query: inurl:"/wp-content/plugins/wp-survey-and-quiz-tool/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-survey-and-quiz-tool,medium
+  tags: cve,wordpress,wp-plugin,wp-survey-and-quiz-tool,high
 
 http:
   - method: GET

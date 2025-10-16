@@ -1,23 +1,24 @@
-id: ad-inserter-57ff9eca760acbadbae84f7c0e58d457
+id: ad-inserter-6c2c67ba3626d8dc159dbf9853b31ff2
 
 info:
-  name: "Ad Inserter < 2.7.11 - Authenticated (Admin+) Remote Code Execution"
+  name: >
+    Ad Inserter <= 1.5.5 - Cross-Site Request Forgery to Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The Ad Inserter plugin for WordPress is vulnerable to Remote Code Execution in versions before 2.7.11 via the settings.php file. This allows authenticated attackers with admin-level privileges to execute code on the server as well as perform stored cross-site scripting attacks."
+  severity: medium
+  description: >
+    The Ad Inserter plugin for WordPress is vulnerable to Cross-Site Scripting via the 'ai-active-tab' parameter in versions up to, and including, 1.5.5 due to insufficient input sanitization and output escaping and missing nonce validation. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://wordpress.org/plugins/ad-inserter/#developers
-    - https://wpscan.com/vulnerability/134ff1be-b80b-4cfa-9a7c-db4300a2a8d2
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2670374%40ad-inserter&old=2664811%40ad-inserter&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/427c29e6-9bbe-4094-a2a2-46945525f5b3?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 4.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ad-inserter/"
     google-query: inurl:"/wp-content/plugins/ad-inserter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ad-inserter,high
+  tags: cve,wordpress,wp-plugin,ad-inserter,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.7.11')
+          - compare_versions(version, '<= 1.5.5')

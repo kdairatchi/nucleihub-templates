@@ -1,15 +1,15 @@
-id: wp-post-corrector-11b7589b48d3ef2da52ce60cac4ba570
+id: wp-post-corrector-c9c0c3b93368c6781a15ebd8681d0ac4
 
 info:
   name: >
-    WP Post Corrector <= 1.0.2 - Reflected Cross-Site Scripting
+    WP Post Corrector <= 1.0.2 - Authenticated (Administrator+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4b2fa6c3-8a5d-47ad-9b6b-3ed0ba322a49?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5e16a3e2-79db-4647-9712-03ae666feac4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-post-corrector/"
     google-query: inurl:"/wp-content/plugins/wp-post-corrector/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-post-corrector,medium
+  tags: cve,wordpress,wp-plugin,wp-post-corrector,low
 
 http:
   - method: GET

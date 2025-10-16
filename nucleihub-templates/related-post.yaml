@@ -1,15 +1,15 @@
-id: related-post-50f470db25db3e9b2fd4bb5c39c48cf6
+id: related-post-2e1f9cfe474bc16a97826335b0ac9d5e
 
 info:
   name: >
-    Related Posts, Inline Related Posts, Contextual Related Posts, Related Content By PickPlugins <= 2.0.58 - Sensitive Information Exposure
+    Related Posts, Inline Related Posts, Contextual Related Posts, Related Content By PickPlugins <= 2.0.59 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/85f7c69d-0b48-47af-9451-3cfd4326ffe5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/29d22612-8e0d-4275-b370-9729352c951e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/related-post/"
     google-query: inurl:"/wp-content/plugins/related-post/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,related-post,low
+  tags: cve,wordpress,wp-plugin,related-post,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.58')
+          - compare_versions(version, '2.0.59')

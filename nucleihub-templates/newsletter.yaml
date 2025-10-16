@@ -1,16 +1,19 @@
-id: newsletter-791730424fa2aa0cd6e9a143c2efff30
+id: newsletter-836911fc1e57392a4c8086dffdff10b0
 
 info:
-  name: "Newsletter <= 7.6.8 - Reflected Cross-Site Scripting"
+  name: >
+    Newsletter <= 8.0.6 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
-  description: "The Newsletter plugin for WordPress may be vulnerable to Reflected Cross-Site Scripting via the $_SERVER['REQUEST_URI'] parameter in versions up to, and including, 7.6.8 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a victim into performing an action such as clicking on a link. Only victims using older browser should be impacted as newer browsers urlencode the REQUEST_URI parameter by default"
+  description: >
+    The Newsletter – Send awesome emails from WordPress plugin for WordPress is vulnerable to Cross-Site Request Forgery in all versions up to, and including, 8.0.6. This is due to missing or incorrect nonce validation in the main/welcome.php file. This makes it possible for unauthenticated attackers to modify the plugin's settings and send test emails via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2886651%40newsletter%2Ftrunk&old=2878890%40newsletter%2Ftrunk&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c24ee66-7b57-4e4c-bbb5-0451fc24ce4b?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:L/A:N
     cvss-score: 4.7
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/newsletter/"
     google-query: inurl:"/wp-content/plugins/newsletter/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.6.8')
+          - compare_versions(version, '<= 8.0.6')

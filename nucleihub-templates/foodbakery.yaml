@@ -1,18 +1,19 @@
-id: foodbakery-634eeee7c1575bd845866254959c8c9a
+id: foodbakery-5ef1e0f8b31a7bab385e17549bcbea9c
 
 info:
-  name: "FoodBakery <= 1.9 - Reflected Cross-Site Scripting"
+  name: >
+    FoodBakery <= 1.9 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The FoodBakery theme for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 1.9 due to insufficient input sanitization and output escaping on the 'location' parameter. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The FoodBakery theme for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 1.9 due to insufficient input sanitization and output escaping on the 'location' parameter. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://themeforest.net/item/food-bakery-restaurant-bakery-responsive-wordpress-theme/18970331
-    - http://web.archive.org/web/20201127171335/https%3A//vladvector.ru/exploit/2020-07-24-foodbakery-food-delivery-restaurant-directory-wordpress-theme-v1-9.txt
-    - https://wpscan.com/vulnerability/5f6d00ec-98b9-457a-8c65-068ec169a123
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/607d1a6e-2277-4960-a5bd-95e94c510856?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/foodbakery/"
     google-query: inurl:"/wp-content/themes/foodbakery/"

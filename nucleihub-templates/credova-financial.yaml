@@ -1,15 +1,15 @@
-id: credova-financial-60afd6107fd9da419bced346f90a6333
+id: credova-financial-07295d055def35261b0c9920db75c391
 
 info:
   name: >
-    Credova_Financial <= 1.4.8 - Sensitive Information Disclosure
+    Credova_Financial <= 2.4.8 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/034246b2-e123-480d-afaf-cce9d42f1f03?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/22005d74-de46-4b0b-baaf-0bfd69d01240?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/credova-financial/"
     google-query: inurl:"/wp-content/plugins/credova-financial/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,credova-financial,low
+  tags: cve,wordpress,wp-plugin,credova-financial,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.8')
+          - compare_versions(version, '<= 2.4.8')

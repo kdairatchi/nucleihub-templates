@@ -1,15 +1,12 @@
 id: ftp-proxy
 info:
-  name: Webshield2 FTP proxy
+  name: UserGate ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
     operating_system: Windows
-    product: winproxy
     rarity: 0
-    vendor: bluecoat
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 webshield2 FTP proxy ready\.\r\n
+    - ^220 Hi! Welcome \w+ UserGate

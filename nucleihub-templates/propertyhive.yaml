@@ -1,18 +1,19 @@
-id: propertyhive-8744fc0a20106d0a2ffab220946a1591
+id: propertyhive-3e43e1528fc497f06bb047ba7bc4968c
 
 info:
-  name: "PropertyHive < 1.4.26 - Remote Code Execution"
+  name: >
+    PropertyHive < 1.4.26 - Remote Code Execution
   author: topscoder
   severity: critical
-  description: "The PropertyHive plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 1.4.25 via the custom_email_log_cron function. This allows unauthenticated attackers to execute code on the server."
+  description: >
+    The PropertyHive plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 1.4.25 via the custom_email_log_cron function. This allows unauthenticated attackers to execute code on the server.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-propertyhive-remote-code-execution-1-4-25/
-    - https://plugins.svn.wordpress.org/propertyhive/trunk/README.txt
-    - https://www.pluginvulnerabilities.com/2018/11/30/our-proactive-monitoring-caught-a-remote-code-execution-rce-vulnerability-in-the-wordpress-plugin-propertyhive/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02bb12db-0bc9-4c13-918f-1f90b500c165?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/propertyhive/"
     google-query: inurl:"/wp-content/plugins/propertyhive/"

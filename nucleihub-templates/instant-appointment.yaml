@@ -1,18 +1,18 @@
-id: instant-appointment-a445ce7a1ad57b249626cdd5f0cfc37e
+id: instant-appointment-c8e377587fad75fab8144c44b3252599
 
 info:
   name: >
-    Instant Appointment <= 1.2 - Unauthenticated SQL Injection
+    Instant Appointment <= 1.2 - Unauthenticated Arbitrary File Upload
   author: topscoder
   severity: critical
   description: >
-    
+    The Instant Appointment plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'insapp_upload_image_as_attachment' function in all versions up to, and including, 1.2. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible.
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fed758e0-7fea-4b6a-9157-47f5603be2c9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/097b1530-64fa-45b2-85f3-c6a2311405b5?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/instant-appointment/"

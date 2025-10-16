@@ -1,15 +1,15 @@
-id: stageshow-c938ea7ea1423eee70ef48286d8dcd10
+id: stageshow-144051efe7fd728b12a9a0cb42038107
 
 info:
   name: >
-    StageShow <= 9.8.6 - Reflected Cross-Site Scripting
+    StageShow <= 10.0.3 - Authenticated (Contributor+) Stored Cross-Site Scripting via anchor Parameter
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4c5a6436-1a08-4b3d-ab85-e5f75f216ab8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6543b8ad-e3f3-43c7-93f9-23f7df07e391?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/stageshow/"
     google-query: inurl:"/wp-content/plugins/stageshow/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stageshow,medium
+  tags: cve,wordpress,wp-plugin,stageshow,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.8.6')
+          - compare_versions(version, '<= 10.0.3')

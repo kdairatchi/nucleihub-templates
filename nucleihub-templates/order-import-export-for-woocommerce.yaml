@@ -1,15 +1,15 @@
-id: order-import-export-for-woocommerce-deb2f706b61560f21bb9bc439367e4c9
+id: order-import-export-for-woocommerce-baedf78158cde190c5210cda4f8de2fd
 
 info:
   name: >
-    Order Export & Order Import for WooCommerce <= 2.4.3 - Authenticated (Shop Manager+) Arbitrary File Upload via upload_import_file
+    Order Export & Order Import for WooCommerce <= 2.6.0 - Directory Traversal to Authenticated (Administrator+) Limited Arbitrary File Deletion via admin_log_page Function
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/15ce2e54-ca5a-4dbc-9795-6e989e85b330?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4eb8f85f-656a-4e5a-a57d-7289da2cd951?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.3')
+          - compare_versions(version, '<= 2.6.0')

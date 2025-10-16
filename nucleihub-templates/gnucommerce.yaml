@@ -1,15 +1,15 @@
-id: gnucommerce-2f287de30f5f2366b05f96610c84acf8
+id: gnucommerce-5af02a6d298a2a7b94266e4af6ce337e
 
 info:
   name: >
-    GNUCommerce < 0.5.7-BETA - Cross-Site Scripting
+    GNUCommerce <= 1.5.4 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a5e6817c-02e7-4d28-9446-c316a9ff8cbe?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c14d918-daf9-46e8-9f96-4215e4645c62?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/gnucommerce/"
     google-query: inurl:"/wp-content/plugins/gnucommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gnucommerce,high
+  tags: cve,wordpress,wp-plugin,gnucommerce,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 0.5.7-beta')
+          - compare_versions(version, '<= 1.5.4')

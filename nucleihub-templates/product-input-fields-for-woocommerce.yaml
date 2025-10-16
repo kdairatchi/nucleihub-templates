@@ -1,22 +1,24 @@
-id: product-input-fields-for-woocommerce-9a3ca09635424f94d3861e1ff9bab7e9
+id: product-input-fields-for-woocommerce-c97944407bd399f70cfb424f4d5a0a32
 
 info:
-  name: "Product Input Fields for WooCommerce <= 1.2.6 - Missing Authorization"
+  name: >
+    Product Input Fields for WooCommerce <= 1.7.0 - Cross-Site Request Forgery to Notice Dismissal
   author: topscoder
-  severity: high
-  description: "The Product Input Fields for WooCommerce plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the handle_downloads() function in versions up to, and including, 1.2.6. This makes it possible for unauthenticated attackers to download files from the vulnerable service."
+  severity: medium
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/high-severity-vulnerability-fixed-in-product-input-fields-for-woocommerce/
-    - https://wpscan.com/vulnerability/15f345e6-fc53-4bac-bc5a-de898181ea74
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2123a3cc-08f1-4e30-ac61-275d45cd1227?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/product-input-fields-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/product-input-fields-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,product-input-fields-for-woocommerce,high
+  tags: cve,wordpress,wp-plugin,product-input-fields-for-woocommerce,medium
 
 http:
   - method: GET
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.6')
+          - compare_versions(version, '<= 1.7.0')

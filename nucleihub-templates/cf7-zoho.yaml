@@ -1,23 +1,24 @@
-id: cf7-zoho-a7043d735764a47b172703891de060d7
+id: cf7-zoho-f1568d2551d30a4d11c7362422729272
 
 info:
-  name: "Integration for Contact Form 7 and Zoho CRM, Bigin <= 1.1.7 - Cross-Site Scripting"
+  name: >
+    Integration for Contact Form 7 and Zoho CRM, Bigin <= 1.1.7 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Integration for Contact Form 7 and Zoho CRM, Bigin plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘start_date’ and ‘end_date’ parameters in versions up to, and including, 1.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: high
+  description: >
+    The Integration for Contact Form 7 and Zoho CRM, Bigin plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘start_date’ and ‘end_date’ parameters in versions up to, and including, 1.1.7 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-1/
-    - https://wpscan.com/vulnerability/8ec62534-48e6-4bbc-b1ed-f804d827d70d
-    - https://plugins.trac.wordpress.org/changeset/2583959
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c4a649b0-d5b2-4e4c-833c-01ecf12611a5?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/cf7-zoho/"
     google-query: inurl:"/wp-content/plugins/cf7-zoho/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,cf7-zoho,medium
+  tags: cve,wordpress,wp-plugin,cf7-zoho,high
 
 http:
   - method: GET

@@ -1,16 +1,19 @@
-id: bookingpress-appointment-booking-ce8f10f3d1bfc5579a02e4e64b4f0f6f
+id: bookingpress-appointment-booking-f5aea978e293c926bf9e3e5102845506
 
 info:
-  name: "BookingPress – Appointments Booking Calendar Plugin and Online Scheduling Plugin <= 1.0.13 - SQL Injection"
+  name: >
+    BookingPress – Appointments Booking Calendar Plugin and Online Scheduling Plugin <= 1.0.13 - SQL Injection
   author: topscoder
   severity: medium
-  description: "The BookingPress – Appointments Booking Calendar Plugin and Online Scheduling Plugin for WordPress is vulnerable to SQL Injection via many parameters in versions up to, and including, 1.0.13."
+  description: >
+    The BookingPress – Appointments Booking Calendar Plugin and Online Scheduling Plugin for WordPress is vulnerable to SQL Injection via many parameters in versions up to, and including, 1.0.13.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2707031%40bookingpress-appointment-booking&new=2707031%40bookingpress-appointment-booking&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/574dd6d8-14df-47b8-bf03-28a3c02b73ec?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/bookingpress-appointment-booking/"
     google-query: inurl:"/wp-content/plugins/bookingpress-appointment-booking/"

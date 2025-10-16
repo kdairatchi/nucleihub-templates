@@ -1,20 +1,19 @@
-id: gd-star-rating-935b3171454b7dda53dd2a2f0e3470e7
+id: gd-star-rating-61ae721a4bda4921f858d04808e0494b
 
 info:
-  name: "GD Star Rating <= 1.9.22 - Cross-Site Scripting"
+  name: >
+    GD Star Rating <= 1.9.22 - Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The GD Star Rating plugin for WordPress is vulnerable to Cross-Site Scripting via the 'wpfn' parameter in versions up to, and including, 1.9.22 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The GD Star Rating plugin for WordPress is vulnerable to Cross-Site Scripting via the 'wpfn' parameter in versions up to, and including, 1.9.22 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://seclists.org/bugtraq/2011/Feb/219
-    - https://wordpress.org/plugins/gd-star-rating/#developers
-    - https://web.archive.org/web/20170421003805/http%3A//www.securityfocus.com/bid/46480/info
-    - https://www.htbridge.com/advisory/HTB22844
-    - https://plugins.trac.wordpress.org/browser/gd-star-rating/trunk/widgets/widget_top.php
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f2e6f09e-0ebc-47e3-84f3-9aede2781f42?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/gd-star-rating/"
     google-query: inurl:"/wp-content/plugins/gd-star-rating/"

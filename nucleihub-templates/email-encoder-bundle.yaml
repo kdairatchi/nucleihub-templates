@@ -1,23 +1,24 @@
-id: email-encoder-bundle-85ef10ad73a427a83a73e1d7e3cb2383
+id: email-encoder-bundle-7332fa5eab64428c5a34578dfabc6604
 
 info:
-  name: "Email Encoder < 1.4.2 - Cross-Site Scripting"
+  name: >
+    Email Encoder < 1.4.2 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Email Encoder plugin for WordPress is vulnerable to Cross-Site Scripting via 'email' and 'display' parameters in versions before 1.4.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: high
+  description: >
+    The Email Encoder plugin for WordPress is vulnerable to Cross-Site Scripting via 'email' and 'display' parameters in versions before 1.4.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - http://cinu.pl/research/wp-plugins/mail_a4264af79262061f493f0064d60995de.html
-    - http://blog.cinu.pl/2015/11/php-static-code-analysis-vs-top-1000-wordpress-plugins.html
-    - https://plugins.trac.wordpress.org/changeset/1218365
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/52ac7e85-0a01-41f0-b753-7858a859705f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/email-encoder-bundle/"
     google-query: inurl:"/wp-content/plugins/email-encoder-bundle/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,email-encoder-bundle,medium
+  tags: cve,wordpress,wp-plugin,email-encoder-bundle,high
 
 http:
   - method: GET

@@ -1,15 +1,15 @@
-id: sailthru-triggermail-e3bb9208767a626b15fb7fec447dea53
+id: sailthru-triggermail-5870f9a4b29c6ec55a141d7c46608c2a
 
 info:
   name: >
-    Sailthru Triggermail <= 1.1 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Sailthru Triggermail <= 1.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9c657ea2-ff7b-4ef2-a7dd-a330484dd821?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/47ee441a-4285-4bed-ac9d-b146fd502e46?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

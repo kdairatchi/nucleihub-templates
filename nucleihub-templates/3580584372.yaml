@@ -1,13 +1,18 @@
 id: pop3
 info:
-  name: Heimdal kerberized pop3
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: UCB-pop3 derived
+    hostname: $1
+    info: Spanish
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
-    version: $1
+    vendor: altn
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK UCB based pop server \(version (\d[-.\w]+) at sionisten\) starting\.\r\n
+    - ^\+OK ([-\w_.]+) POP MDaemon ([\d.]+) listo <MDAEMON-[\w.]+@[-\w_.]+>\r\n

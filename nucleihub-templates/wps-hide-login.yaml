@@ -1,21 +1,24 @@
-id: wps-hide-login-dfde3550b45206f37db3200b5123c77e
+id: wps-hide-login-01fbd0fa8f74028a05c79cb6f589540d
 
 info:
-  name: "WPS Hide Login <= 1.5.4.2 - Hidden Login Page Location Disclosure"
+  name: >
+    WPS Hide Login <= 1.5.2.2 - Login Page Disclosure via 'action=confirmaction'
   author: topscoder
-  severity: medium
-  description: "The WPS Hide Login plugin for WordPress is vulnerable to login page disclosure even when the settings of the plugin are set to hide the login page making it possible for unauthenticated attackers to brute force credentials on sites in versions up to, and including, 1.5.4.2."
+  severity: low
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/wordpress-wps-hide-login-fixed-security-issue/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/db3724bf-35bb-4e28-b5e2-1bbc96adc7b6?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 5.3
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wps-hide-login/"
     google-query: inurl:"/wp-content/plugins/wps-hide-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wps-hide-login,medium
+  tags: cve,wordpress,wp-plugin,wps-hide-login,low
 
 http:
   - method: GET
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.4.2')
+          - compare_versions(version, '< 1.5.3')

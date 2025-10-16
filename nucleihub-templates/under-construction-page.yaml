@@ -1,23 +1,24 @@
-id: under-construction-page-7370bfa9593cabc44e44dcd8eff4fd39
+id: under-construction-page-10539fb27ef266dd333b503072d15a65
 
 info:
-  name: "Under Construction <= 3.85 - Authenticated Stored Cross-Site Scripting"
+  name: >
+    Under Construction <= 3.85 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Under Construction plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 3.85, that make it possible for attackers with administrative privileges to inject arbitrary web scripts via the social and connect icon fields."
+  severity: low
+  description: >
+    The Under Construction plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 3.85, that make it possible for attackers with administrative privileges to inject arbitrary web scripts via the social and connect icon fields.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2326120
-    - https://plugins.trac.wordpress.org/changeset/2459690
-    - https://wpscan.com/vulnerability/2ec65510-5e4a-4af5-af58-3b0ca1b56c8d
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d5df75f8-1250-4b79-a796-9146d3037bec?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 5.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/under-construction-page/"
     google-query: inurl:"/wp-content/plugins/under-construction-page/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,under-construction-page,medium
+  tags: cve,wordpress,wp-plugin,under-construction-page,low
 
 http:
   - method: GET

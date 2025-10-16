@@ -1,4 +1,4 @@
-id: abc-notation-9fe23285f13d5d777a6862dda65c5a16
+id: abc-notation-3e2a8016609fe7dbd6a2bd1a270e73c9
 
 info:
   name: >
@@ -9,7 +9,7 @@ info:
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e10930fd-fae0-4554-acf3-da81a124f79d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55430010-f18f-4d8d-bbfa-cc02344369e0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

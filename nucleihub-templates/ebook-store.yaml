@@ -1,15 +1,15 @@
-id: ebook-store-7184cca92c501338d935a199d07cbf5c
+id: ebook-store-7c7f7b79c81a2cb63af146f7eb24e3f5
 
 info:
   name: >
-    Ebook Store <= 5.8001 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Ebook Store <= 5.8012 - Authenticated (Administrator+) Stored Cross-Site Scripting via Order Details
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b0ad4949-b7e8-4c50-af64-c59e053cfd0e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/20e0e651-8330-4062-8fb4-f0545befcb1a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.8001')
+          - compare_versions(version, '<= 5.8012')

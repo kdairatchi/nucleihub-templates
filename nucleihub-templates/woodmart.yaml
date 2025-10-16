@@ -1,23 +1,24 @@
-id: woodmart-d332e28d74109759c50d69eb65574b54
+id: woodmart-625f9c080b812f622677b286241c827a
 
 info:
-  name: "Woodmart <= 7.1.1 - Cross-Site Request Forgery to License Update"
+  name: >
+    WoodMart - Multipurpose WooCommerce Theme <= 8.2.6 - Improper Input Validation Leading to Unauthenticated Cart Manipulation
   author: topscoder
-  severity: medium
-  description: "The Woodmart theme for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 7.1.1. This is due to missing or incorrect nonce validation on one of its functions. This makes it possible for unauthenticated attackers to modify the plugin's license via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-    - https://wpscan.com/vulnerability/9ea05381-f059-466f-a194-2b93f679e467
-    - https://packetstormsecurity.com/files/171189/
-    - https://www.exploitalert.com/view-details.html?id=39345
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b030aa28-5310-4f69-8b86-7e0b0bae741b?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N
-    cvss-score: 6.5
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/woodmart/"
     google-query: inurl:"/wp-content/themes/woodmart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,woodmart,medium
+  tags: cve,wordpress,wp-theme,woodmart,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.1.1')
+          - compare_versions(version, '<= 8.2.6')

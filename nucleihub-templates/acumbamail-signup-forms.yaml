@@ -1,19 +1,19 @@
-id: acumbamail-signup-forms
+id: acumbamail-signup-forms-b398ff2d4dfec3b2c44d2d35ba00ba2c
 
 info:
-  name: "Acumbamail < 1.0.4.1 - Sensitive Information Disclosure"
+  name: >
+    Acumbamail < 1.0.4.1 - Sensitive Information Disclosure
   author: topscoder
   severity: high
-  description: "The Acumbamail plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 1.0.4 via the callAPI function. This can allow unauthenticated attackers to extract sensitive data including emails, passwords, usernames, etc."
+  description: >
+    The Acumbamail plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 1.0.4 via the callAPI function. This can allow unauthenticated attackers to extract sensitive data including emails, passwords, usernames, etc.
   reference:
-    - https://web.archive.org/web/20210120131208/https%3A//www.securityfocus.com/bid/67220/
-    - https://web.archive.org/web/20210120131208/https%3A//www.securityfocus.com/bid/67220/discuss
-    - https://plugins.trac.wordpress.org/changeset/905692
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-acumbamail-information-disclosure-1-0-4/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e8efc5cf-3497-4426-a8a5-740783a7c2c9?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/acumbamail-signup-forms/"
     google-query: inurl:"/wp-content/plugins/acumbamail-signup-forms/"

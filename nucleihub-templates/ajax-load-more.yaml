@@ -1,27 +1,24 @@
-id: ajax-load-more-3df586ba3dcfe4dd4c93c854bfbed430
+id: ajax-load-more-f397c854bd3f4c6ee4c1268d4b702bee
 
 info:
-  name: "WordPress Infinite Scroll – Ajax Load More <= 2.8.1.1 - Arbitrary File Upload"
+  name: >
+    Ajax Load More <= 7.0.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
-  description: "The WordPress Infinite Scroll – Ajax Load More plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the 'alm_save_repeater()' function called via an AJAX action in versions up to, and including, 2.8.1.2. This makes it possible for authenticated attackers to upload arbitrary files on the affected site's server which may make remote code execution possible."
+  severity: low
+  description: >
+    The WordPress Infinite Scroll – Ajax Load More plugin for WordPress is vulnerable to Stored Cross-Site Scripting via admin settings in all versions up to, and including, 7.0.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. This only affects multi-site installations and installations where unfiltered_html has been disabled.
   reference:
-    - https://wordpress.org/plugins/ajax-load-more/changelog/
-    - https://wpscan.com/vulnerability/9f0c926e-0609-4c89-a724-88e16bcfa82a
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wordpress-infinite-scroll-ajax-load-more-arbitrary-file-upload-2-8-1-1/
-    - https://www.exploit-db.com/exploits/38484
-    - https://www.exploit-db.com/exploits/38660
-    - https://packetstormsecurity.com/files/134285/WordPress-Ajax-Load-More-PHP-Upload.html
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1258606%40ajax-load-more&new=1258606%40ajax-load-more&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9bbcb41-d604-45ec-a36a-4b41e8f7a508?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 4.4
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ajax-load-more/"
     google-query: inurl:"/wp-content/plugins/ajax-load-more/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ajax-load-more,high
+  tags: cve,wordpress,wp-plugin,ajax-load-more,low
 
 http:
   - method: GET
@@ -59,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.1.1')
+          - compare_versions(version, '<= 7.0.1')

@@ -1,15 +1,15 @@
-id: woolentor-addons-bd913475f246a2dc9a45182b322be87a
+id: woolentor-addons-08a6e636e52b1a09b1128bcb601bb8ef
 
 info:
   name: >
-    ShopLentor – WooCommerce Builder for Elementor & Gutenberg +12 Modules – All in One Solution (formerly WooLentor) <= 2.9.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via WL Product Horizontal Filter Widget
+    ShopLentor – WooCommerce Builder for Elementor & Gutenberg +20 Modules – All in One Solution (formerly WooLentor) <= 3.1.0 - Authenticated (Contributor+) Stored DOM-Based Cross-Site Scripting via Flash Sale Countdown Module
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3fc2c2df-b590-413f-ba07-5aa645d069b8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d3405b50-a3f0-4280-8a34-ed86ce3d4db4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.9.0')
+          - compare_versions(version, '<= 3.1.0')

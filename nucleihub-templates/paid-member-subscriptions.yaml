@@ -1,18 +1,19 @@
-id: paid-member-subscriptions-34a1971cc6f270818ec4d58e38d5658c
+id: paid-member-subscriptions-b05b4d3b14642500c4f00a6f1351556f
 
 info:
-  name: "Paid Member Subscriptions <= 2.4.1 - Reflected Cross-Site Scripting"
+  name: >
+    Paid Member Subscriptions <= 2.4.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Paid Member Subscriptions plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 2.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The Paid Member Subscriptions plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 2.4.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-membership-content-restriction-paid-member-subscriptions-multiple-vulnerabilities-2-4-1/
-    - https://sploitus.com/exploit?id=WPEX-ID:A6FEF63C-D588-4431-B06F-72D1FA25B2F7
-    - https://www.trustwave.com/en-us/resources/security-resources/security-advisories/?fid=29172
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/89614950-8517-4765-886a-1aa30a2f052e?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/paid-member-subscriptions/"
     google-query: inurl:"/wp-content/plugins/paid-member-subscriptions/"

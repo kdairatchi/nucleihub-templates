@@ -1,15 +1,15 @@
-id: trackship-for-woocommerce-a9eb4b227bdfbcfa435bfe5422cbfb65
+id: trackship-for-woocommerce-bc14eea7d7df315ebfa393a6b63caa0a
 
 info:
   name: >
-    TrackShip for WooCommerce <= 1.7.5 - Missing Authorization
+    TrackShip for WooCommerce <= 1.9.1 - Authenticated (Shop manager+) SQL Injection
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/41de0cf6-d093-4c33-8123-a097ba3e0add?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6e513cc-5008-4f59-87c1-2a1b42d98850?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/trackship-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/trackship-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,trackship-for-woocommerce,high
+  tags: cve,wordpress,wp-plugin,trackship-for-woocommerce,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.5')
+          - compare_versions(version, '<= 1.9.1')

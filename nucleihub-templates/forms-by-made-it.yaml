@@ -1,15 +1,15 @@
-id: forms-by-made-it-5bf47a85d9451de08ca866ca33b7ca8a
+id: forms-by-made-it-89f89882338bf1c0c1924fdd8286f60f
 
 info:
   name: >
-    Forms <= 2.8.0 - Unauthenticated Arbitrary File Upload
+    Forms <= 2.9.0 - Authenticated (Contributor+) Arbitrary File Upload
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/06dfc3da-6f61-433c-a1e1-48749b654fcd?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2dc616d6-489a-426b-bb52-a0449f907152?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/forms-by-made-it/"
     google-query: inurl:"/wp-content/plugins/forms-by-made-it/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,forms-by-made-it,critical
+  tags: cve,wordpress,wp-plugin,forms-by-made-it,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.0')
+          - compare_versions(version, '<= 2.9.0')

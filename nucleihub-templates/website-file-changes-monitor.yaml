@@ -1,15 +1,15 @@
-id: website-file-changes-monitor-89a7a291d299146dcfe4c6c68e5bb875
+id: website-file-changes-monitor-2f10e5e8f7bb6c74cfd09c43b68b7626
 
 info:
   name: >
-    Website File Changes Monitor <= 1.8.2 - Authenticated (Admin+) SQL Injection
+    Melapress File Monitor <= 2.0.2 - Authenticated (Admin+) Authenticated SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2046c6cf-32fa-4fac-a4bc-00f11f739d14?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/948dc4ed-7dd3-4a53-83db-82b8c39ace7a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.2')
+          - compare_versions(version, '<= 2.0.2')

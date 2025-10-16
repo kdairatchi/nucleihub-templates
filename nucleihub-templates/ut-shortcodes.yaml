@@ -1,15 +1,15 @@
-id: ut-shortcodes
+id: ut-shortcodes-11079996e5f2e84d5b6f405db5d4ab04
 
 info:
   name: >
-    Shortcodes by United Themes < 5.0.5 - Reflected Cross-Site Scripting
+    Shortcodes by United Themes  <= 5.1.6 - Unauthenticated Arbitrary Shortcode Execution
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2713cd00-efd0-4a12-bf7b-2633289b3534?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e4ca7dad-bfe2-443e-b575-362d8ff93242?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ut-shortcodes/"
     google-query: inurl:"/wp-content/plugins/ut-shortcodes/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ut-shortcodes,medium
+  tags: cve,wordpress,wp-plugin,ut-shortcodes,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.0.5')
+          - compare_versions(version, '<= 5.1.6')

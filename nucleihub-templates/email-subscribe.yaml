@@ -1,23 +1,24 @@
-id: email-subscribe-48359dfc01c28adc200490a2922d878a
+id: email-subscribe-5afc4cc431cc6f53257be795ed1a6334
 
 info:
-  name: "Email Subscription Popup <= 1.2.16 - Reflected Cross-Site Scripting"
+  name: >
+    Email Subscription Popup <= 1.2.22 - Authenticated (Contributor+) Stored Cross-Site Scripting via print_email_subscribe_form Shortcode
   author: topscoder
-  severity: medium
-  description: "The Email Subscription Popup plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via several GET parameters parameter in versions up to, and including, 1.2.16 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.svn.wordpress.org/email-subscribe/tags/1.2.17/readme.txt
-    - https://plugins.svn.wordpress.org/email-subscribe/tags/1.2.17/readme.md
-    - https://www.i13websolution.com/product/wordpress-newsletter-subscription-pro-plugin/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f8c18b0d-15fe-45d6-9915-85d38803c117?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 4.7
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/email-subscribe/"
     google-query: inurl:"/wp-content/plugins/email-subscribe/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,email-subscribe,medium
+  tags: cve,wordpress,wp-plugin,email-subscribe,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2.17')
+          - compare_versions(version, '<= 1.2.22')

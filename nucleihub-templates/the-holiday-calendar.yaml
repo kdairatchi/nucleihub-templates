@@ -1,15 +1,15 @@
-id: the-holiday-calendar-2d99d6c7b1aa0437b1504a366c3afc83
+id: the-holiday-calendar-98c5c44b58660c62eb8a2799c5eb2421
 
 info:
   name: >
-    The Holiday Calendar < 1.11.3 - Cross-Site Scripting
+    The Holiday Calendar <= 1.18.2.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f4211712-26b2-4f59-82b8-928e405cd08d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/12f73a24-3301-499f-8e49-87b151f87f66?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/the-holiday-calendar/"
     google-query: inurl:"/wp-content/plugins/the-holiday-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,the-holiday-calendar,high
+  tags: cve,wordpress,wp-plugin,the-holiday-calendar,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.11.3')
+          - compare_versions(version, '<= 1.18.2.1')

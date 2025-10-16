@@ -1,15 +1,15 @@
-id: jetpack-boost-be4f8996dedf1810e444fa9f9032bd9a
+id: jetpack-boost-a1c1135383ab0287b4d535de5f15ca02
 
 info:
   name: >
-    Jetpack Boost <= 3.4.6 - Authenticated (Admin+) Server-Side Request Forgery
+    Jetpack <= 13.7 & Jetpack Boost <= 3.4.7 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/03725477-7d7b-4ec9-8b9f-5ce9f8905243?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/876f9c76-dc4f-4d79-a037-43304245df32?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4.6')
+          - compare_versions(version, '<= 3.4.7')

@@ -1,15 +1,15 @@
-id: ui-slider-filter-by-price-d3eec7b6ccfa249eb5709bb6662d3550
+id: ui-slider-filter-by-price-ab63412f56cf43b786a6d5d0d7cb500f
 
 info:
   name: >
-    Ui Slider Filter By Price <= 1.1 - Cross-Site Request Forgery
+    Ui Slider Filter By Price <= 1.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bb1ae910-c562-48a7-b81d-3bc5dd7913e1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a4a4b064-4a93-4aa4-8052-f168302a0a9b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

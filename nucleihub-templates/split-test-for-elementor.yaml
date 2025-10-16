@@ -1,15 +1,15 @@
-id: split-test-for-elementor-bde4325200fb2f444fb8a10edf1336f9
+id: split-test-for-elementor-fa10e219390c7736eed89a523dd09d92
 
 info:
   name: >
-    Split Test For Elementor <= 1.6.9 - Cross-Site Request Forgery
+    Split Test For Elementor <= 1.8.3 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/be23388e-9371-4ea0-974b-80f76de90012?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6c4ec70-22b5-49e1-a00b-5b29aab5fc91?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/split-test-for-elementor/"
     google-query: inurl:"/wp-content/plugins/split-test-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,split-test-for-elementor,medium
+  tags: cve,wordpress,wp-plugin,split-test-for-elementor,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.9')
+          - compare_versions(version, '<= 1.8.3')

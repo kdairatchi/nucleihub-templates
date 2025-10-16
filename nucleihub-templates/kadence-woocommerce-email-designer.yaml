@@ -1,15 +1,15 @@
-id: kadence-woocommerce-email-designer-4dfff6448412058d4d875106af579cfe
+id: kadence-woocommerce-email-designer-289eff880e78d098a67c54ab2ac9cc5c
 
 info:
   name: >
-    Kadence WooCommerce Email Designer <= 1.5.11 - Cross-Site Request Forgery
+    Kadence WooCommerce Email Designer <= 1.5.16 - Authenticated (Shop Manager+) Arbitrary Options Update
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b8483b8-07b4-436f-992f-35e16fef867b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2768f926-16a8-4a7e-a022-a8bd638e1081?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/kadence-woocommerce-email-designer/"
     google-query: inurl:"/wp-content/plugins/kadence-woocommerce-email-designer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,kadence-woocommerce-email-designer,medium
+  tags: cve,wordpress,wp-plugin,kadence-woocommerce-email-designer,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.11')
+          - compare_versions(version, '<= 1.5.16')

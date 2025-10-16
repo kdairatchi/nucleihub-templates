@@ -1,15 +1,15 @@
-id: simple-video-management-system-fe81f412bd4df4c608aa4da3676e4eac
+id: simple-video-management-system-76e68a11d9ea68b7137e0134cccb0842
 
 info:
   name: >
-    Simple Video Management System <= 1.0.4 - Reflected Cross-Site Scripting
+    Simple Video Management System <= 1.0.4 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cdaa6b7c-bf38-44b5-9d83-2918cbedc683?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/55f4a1b5-2ff1-4abd-b89d-6a3aa921a24b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-video-management-system/"
     google-query: inurl:"/wp-content/plugins/simple-video-management-system/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-video-management-system,medium
+  tags: cve,wordpress,wp-plugin,simple-video-management-system,low
 
 http:
   - method: GET

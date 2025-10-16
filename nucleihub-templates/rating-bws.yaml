@@ -1,15 +1,15 @@
-id: rating-bws-8e5aafd762f8234dee17745d4d843002
+id: rating-bws-1a9690eccb87a4bb6fee586269d949d8
 
 info:
   name: >
-    Rating by BestWebSoft < 0.2 - Reflected Cross-Site Scripting
+    Rating by BestWebSoft <= 1.7 - Authenticated (Subscriber+) PHP Object Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d5c23952-3732-4316-aa43-ddab88a6ba79?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/85e68071-47e3-45a0-8c38-801f125331ba?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rating-bws/"
     google-query: inurl:"/wp-content/plugins/rating-bws/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rating-bws,medium
+  tags: cve,wordpress,wp-plugin,rating-bws,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 0.2')
+          - compare_versions(version, '<= 1.7')

@@ -1,18 +1,19 @@
-id: co-authors-plus-5b6be4946b2a3dbcadcff2eda3c95c0f
+id: co-authors-plus-7e7dc44023dd72d805e0b5c2856be4bb
 
 info:
-  name: "Co-Authors Plus 3.5 - 3.5.1 - Sensitive Information Disclosure"
+  name: >
+    Co-Authors Plus 3.5 - 3.5.1 - Sensitive Information Disclosure
   author: topscoder
   severity: high
-  description: "The Co-Authors Plus plugin for WordPress is vulnerable to sensitive information disclosure via the /wp/v2/coauthors REST API input in versions 3.5 and 3.5.1. This is due to insufficient capability checking that allows unauthorized users to access the endpoint and retrieve guest authors email addresses."
+  description: >
+    The Co-Authors Plus plugin for WordPress is vulnerable to sensitive information disclosure via the /wp/v2/coauthors REST API input in versions 3.5 and 3.5.1. This is due to insufficient capability checking that allows unauthorized users to access the endpoint and retrieve guest authors email addresses.
   reference:
-    - https://wpscan.com/vulnerability/3b59fa89-76f2-42de-b8dc-b20029b03ca2
-    - https://patchstack.com/database/vulnerability/co-authors-plus-/wordpress-co-authors-plus-plugin-3-5-1-guest-authors-email-address-disclosure-vulnerability
-    - https://github.com/Automattic/Co-Authors-Plus/blob/master/CHANGELOG.md
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9743351-9f28-49bf-8b08-85ffbdcfa5f0?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/co-authors-plus/"
     google-query: inurl:"/wp-content/plugins/co-authors-plus/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 3.5', '<= 3.5')
+          - compare_versions(version, '>= 3.5', '<= 3.5.1')

@@ -1,18 +1,19 @@
-id: wp-responsive-thumbnail-slider-053335d1e7bf19fa6996b1d17033fe9e
+id: wp-responsive-thumbnail-slider-ca74d54263443de487648b3d948d25d1
 
 info:
-  name: "Thumbnail carousel slider < 1.0.1 - Stored Cross-Site Scripting and Cross-Site Request Forgery"
+  name: >
+    Thumbnail carousel slider < 1.0.1 - Stored Cross-Site Scripting and Cross-Site Request Forgery
   author: topscoder
   severity: high
-  description: "The Thumbnail carousel slider plugin for WordPress is vulnerable to Stored Cross-Site Scripting and Cross-Site Request Forgery via the ‘title’ parameter in versions before 1.0.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The Stored Cross-Site scripting vulnerability requires authentication with admin-level privileges while the Cross-Site Request Forgery does not require any authentication."
+  description: >
+    The Thumbnail carousel slider plugin for WordPress is vulnerable to Stored Cross-Site Scripting and Cross-Site Request Forgery via the ‘title’ parameter in versions before 1.0.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page. The Stored Cross-Site scripting vulnerability requires authentication with admin-level privileges while the Cross-Site Request Forgery does not require any authentication.
   reference:
-    - https://cxsecurity.com/issue/WLB-2015080167
-    - https://patchstack.com/database/vulnerability/wp-responsive-thumbnail-slider/wordpress-thumbnail-carousel-slider-plugin-1-0-stored-cross-site-scripting-xss-and-cross-site-request-forgery-csrf-vulnerabilities
-    - https://wpscan.com/vulnerability/ab7ac7d5-a68d-4af7-a38a-65aa940337f1
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f87d37a-879f-4506-a651-8c965a558e28?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
     cvss-score: 7.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-responsive-thumbnail-slider/"
     google-query: inurl:"/wp-content/plugins/wp-responsive-thumbnail-slider/"

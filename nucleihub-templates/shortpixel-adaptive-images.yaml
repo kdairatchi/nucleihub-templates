@@ -1,24 +1,24 @@
-id: shortpixel-adaptive-images-ef505e9fa07bbad3de14e67f3967fca9
+id: shortpixel-adaptive-images-330f2442996514dda2cea69a25dbf8c1
 
 info:
-  name: "ShortPixel Adaptive Images <= 3.7.1 - Cross-Site Request Forgery via shortpixel_ai_handle_page_action"
+  name: >
+    ShortPixel Adaptive Images – WebP, AVIF, CDN, Image Optimization <= 3.10.4 - Authenticated (Administrator+) Stored Cross-Site Scripting via API URL
   author: topscoder
-  severity: medium
-  description: "The ShortPixel Adaptive Images plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 3.7.1. This is due to missing or incorrect nonce validation on the 'shortpixel_ai_handle_page_action' ajax action. This makes it possible for unauthenticated attackers to modify plugin settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.svn.wordpress.org/shortpixel-adaptive-images/tags/3.7.2/readme.txt
-    - https://plugins.svn.wordpress.org/shortpixel-adaptive-images/tags/3.7.2/readme.md
-    - https://shortpixel.com/
-    - https://plugins.trac.wordpress.org/changeset/2909593/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/56ab6429-4b1b-461a-9fcd-b4be84985118?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/shortpixel-adaptive-images/"
     google-query: inurl:"/wp-content/plugins/shortpixel-adaptive-images/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,shortpixel-adaptive-images,medium
+  tags: cve,wordpress,wp-plugin,shortpixel-adaptive-images,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7.2')
+          - compare_versions(version, '<= 3.10.4')

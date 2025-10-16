@@ -1,16 +1,19 @@
-id: pixtypes-eb67a8401f7f67e142eeee51a620ea93
+id: pixtypes-7648593683bbe71e9b65e42b822d721d
 
 info:
-  name: "PixTypes <= 1.4.14 - Cross-Site Request Forgery"
+  name: >
+    PixTypes <= 1.4.15 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The PixTypes plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.14. This is due to missing or incorrect nonce validation on the save_pixtypes_settings() function. This makes it possible for unauthenticated attackers to modify theme settings in the plugin, via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2895213%40pixtypes&new=2895213%40pixtypes&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca05783d-7516-469e-b8a0-c23035db43b7?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
-    cvss-score: 4.3
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pixtypes/"
     google-query: inurl:"/wp-content/plugins/pixtypes/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.14')
+          - compare_versions(version, '<= 1.4.15')

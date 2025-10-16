@@ -1,18 +1,19 @@
-id: konzept-42c151a3ad2acc06652db4e511d6034f
+id: konzept-e156ecf110ea3ce572d586e38d87df16
 
 info:
-  name: "Konzept - Fullscreen Portfolio WordPress Theme <= 2.4 - Reflected Cross-Site Scripting"
+  name: >
+    Konzept - Fullscreen Portfolio WordPress Theme <= 2.4 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The 'Konzept - Fullscreen Portfolio WordPress Theme' theme for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘s’ parameter in versions up to, and including, 2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The "Konzept - Fullscreen Portfolio WordPress Theme" theme for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘s’ parameter in versions up to, and including, 2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://themeforest.net/item/konzept-fullscreen-portfolio-wordpress-theme/2383907
-    - https://web.archive.org/web/20201127164346/https%3A//vladvector.ru/exploit/2020-07-30-konzept-fullscreen-portfolio-wordpress-theme-v2-3.txt
-    - https://wpscan.com/vulnerability/ef4dc66a-6b66-449a-97c0-20738b0aafd7
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ffe9bfbd-3672-4162-bb1b-675c7eb9e655?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/konzept/"
     google-query: inurl:"/wp-content/themes/konzept/"

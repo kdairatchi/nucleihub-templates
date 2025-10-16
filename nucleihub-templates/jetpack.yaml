@@ -1,23 +1,24 @@
-id: jetpack-30941ee2523ad0b6eab5ba5173b1fab0
+id: jetpack-591940a6fa897c980e9ad0e6c43f4c11
 
 info:
-  name: "Jetpack <= 3.5.2 - Cross-Site Scripting"
+  name: >
+    Jetpack < 13.9.1 - Missing Authorization to Authenticated (Subscriber+) Sensitive Information Disclosure
   author: topscoder
-  severity: high
-  description: "The Jetpack plugin for WordPress, in versions up to 3.5.2, is vulnerable to DOM based Cross-Site Scripting via the file genericons/example.html. This vulnerability allowed unauthenticated users to execute JavaScript in a visitor's browser provided they were able to trick them into clicking on a carefully crafted link. Executing JavaScript in an administrative user was possible if the victim was logged on to the affected site as an administrator."
+  severity: low
+  description: >
+    The Jetpack – WP Security, Backup, Speed, & Growth plugin for WordPress is vulnerable to unauthorized access of data due to missing capability checks in the Contact_Form_Endpoint class in various versions version up to, but not including, 13.9.1. This makes it possible for authenticated attackers, with subscriber-level access and above, to read all Jetpack form submissions on the site.
   reference:
-    - https://blog.sucuri.net/2015/05/jetpack-and-twentyfifteen-vulnerable-to-dom-based-xss-millions-of-wordpress-websites-affected-millions-of-wordpress-websites-affected.html
-    - https://vulners.com/wpexploit/WPEX-ID%3A2765D571-059B-4D6F-948C-3CA7B9FEBCDC
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-jetpack-wp-security-backup-speed-growth-cross-site-scripting-3-5-2/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/411ca76a-6cab-4829-8e8b-5c54697cf8ee?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    cvss-score: 4.3
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/jetpack/"
     google-query: inurl:"/wp-content/plugins/jetpack/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,jetpack,high
+  tags: cve,wordpress,wp-plugin,jetpack,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.2')
+          - compare_versions(version, '>= 9.9', '<= 9.9.2')

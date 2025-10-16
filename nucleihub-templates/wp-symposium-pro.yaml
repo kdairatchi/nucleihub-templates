@@ -1,27 +1,24 @@
-id: wp-symposium-pro-0b469a62ab55f9c63a4acb5c805e7d3d
+id: wp-symposium-pro-4f2f20e2676a50a9e9d94fb82d2dfa84
 
 info:
-  name: "WP Symposium Pro < 16.01 - Cross-Site Request Forgery"
+  name: >
+    WP Symposium Pro < 16.01 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The WP Symposium Pro plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions before 16.01. This is due to missing or incorrect nonce validation on the edit profile page. This makes it possible for unauthenticated attackers to change a user's password leading to full account takeover via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The WP Symposium Pro plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions before 16.01. This is due to missing or incorrect nonce validation on the edit profile page. This makes it possible for unauthenticated attackers to change a user's password leading to full account takeover via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://0x62626262.wordpress.com/2016/01/08/wp-symposium-pro-social-network-plugin-xss-and-critical-csrf-vulnerability/
-    - https://wordpress.org/support/topic/security-vulnerability-11/
-    - https://wordpress.org/plugins/wp-symposium-pro/#developers
-    - https://web.archive.org/web/20160302014302/http%3A//www.wpsymposiumpro.com%3A80/wp-symposium-pro-16-01-critical-update
-    - https://seclists.org/oss-sec/2016/q1/39
-    - https://plugins.trac.wordpress.org/changeset/1322601
-    - https://plugins.trac.wordpress.org/changeset/1322602
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7296fdb-d5d6-4d4f-ac80-b9d5452191b4?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-symposium-pro/"
     google-query: inurl:"/wp-content/plugins/wp-symposium-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-symposium-pro,high
+  tags: cve,wordpress,wp-plugin,wp-symposium-pro,medium
 
 http:
   - method: GET

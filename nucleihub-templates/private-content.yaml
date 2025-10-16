@@ -1,15 +1,15 @@
-id: private-content-8b9c604bcde8ac819457950e6e689b68
+id: private-content-2a31cfafc1a9aa9a53353c738c59f3ae
 
 info:
   name: >
-    PrivateContent  <= 8.4.3 - Protection Mechanism Bypass
+    Private Content <= 8.11.5 - Unauthenticated Privilege Escalation via Account Takeover
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/de73304e-7a28-4304-b1ed-2f6dd7738236?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/256c4984-eee8-4ed0-ba34-e022822d6387?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 8.4.3')
+          - compare_versions(version, '<= 8.11.5')

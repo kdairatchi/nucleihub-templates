@@ -1,23 +1,24 @@
-id: simplepress-bc3bfd05673c2127b2f86cd569a7485f
+id: simplepress-23a9cfc794537b0e932034e1f3487f28
 
 info:
-  name: "Simple:Press – WordPress Forum Plugin <= 6.6.0 - Arbitrary File Upload"
+  name: >
+    Simple:Press Forum <= 6.10.10 - Reflected Cross-Site Scripting via msearch
   author: topscoder
-  severity: critical
-  description: "The Simple:Press – WordPress Forum Plugin for WordPress is vulnerable to arbitrary file uploads due to missing file type validation in the ~/admin/resources/jscript/ajaxupload/sf-uploader.php file in versions up to, and including, 6.6.0. This makes it possible for attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
+  severity: medium
+  description: >
+    The Simple:Press Forum plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'msearch' parameter in all versions up to, and including, 6.10.10 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://blog.nintechnet.com/wordpress-simplepress-plugin-fixed-critical-vulnerabilities/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-simple-press-wordpress-forum-arbitrary-file-upload-6-6-0/
-    - https://wpscan.com/vulnerability/27d4a8a5-9d81-4b42-92be-3f7d1ef22843
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ceea74e0-afb2-4b5c-a538-48aace4d9619?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simplepress/"
     google-query: inurl:"/wp-content/plugins/simplepress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simplepress,critical
+  tags: cve,wordpress,wp-plugin,simplepress,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 6.6.1')
+          - compare_versions(version, '<= 6.10.10')

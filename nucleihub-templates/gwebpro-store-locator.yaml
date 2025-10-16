@@ -1,15 +1,15 @@
-id: gwebpro-store-locator-a48522809c277db29c19ddd5318a9a6f
+id: gwebpro-store-locator-1d41c69ab7bb0110559ea0cc1ba53775
 
 info:
   name: >
-    G Web Pro Store Locator <= 2.1 - Reflected Cross-Site Scripting
+    G Web Pro Store Locator  <= 2.0.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb84b71e-7d4d-4bd7-88cb-1b86d7023edb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/86b1710d-9503-4be3-a443-8c0ad6161d88?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1')
+          - compare_versions(version, '<= 2.0.1')

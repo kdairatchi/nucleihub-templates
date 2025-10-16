@@ -1,15 +1,15 @@
-id: widgetize-pages-light-18266088c15f4215696bd9399f486a06
+id: widgetize-pages-light-f4e7ea71abd09b952356338ed971c606
 
 info:
   name: >
-    Widgetize Pages Light <= 3.0 - Reflected Cross-Site Scripting
+    Widgetize Pages Light <= 3.0 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/00a9b83e-793e-46df-a3de-5728cf424d28?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0c714138-1224-4966-8191-64a99505b8e8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

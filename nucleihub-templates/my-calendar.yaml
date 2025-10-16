@@ -1,25 +1,24 @@
-id: my-calendar-67109c5e41d13671b58a5aed4e6925d9
+id: my-calendar-52562fbf0c978f8cfde6363356900566
 
 info:
-  name: "My Calendar <= 2.3.29 - Path Traversal to Remote Code Execution"
+  name: >
+    My Calendar <= 3.3.16 - Administrator+ Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
-  description: "The My Calendar plugin for WordPress is vulnerable to Path Traversal in versions up to, and including, 2.3.29 via the  'edit_my_calendar_styles' function in the 'my-calendar-styles.php' file. This allows unauthenticated attackers to overwrite the contents of all files the vulnerable service has access to, including adding executable PHP to PHP files."
+  severity: low
+  description: >
+    The My Calendar plugin for WordPress is vulnerable to Stored Cross-Site Scripting via various parameters including the ‘street’ parameter in versions up to, and including, 3.3.16  due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://blog.sucuri.net/2015/04/security-advisory-xss-vulnerability-affecting-multiple-wordpress-plugins.html
-    - https://www.joedolson.com/2015/04/important-security-fix-for-my-calendar/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-my-calendar-multiple-vulnerabilities-2-3-29/
-    - https://web.archive.org/web/20160314072602/https%3A//software-talk.org/blog/2015/05/arbitrary-file-override-reflected-xss-vulnerability-my-calendar/
-    - https://wpscan.com/vulnerability/39459852-324e-4e8d-93d1-18fb3f41f749
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/801132f5-e4ea-4d56-8429-9f33896f6dff?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 5.5
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/my-calendar/"
     google-query: inurl:"/wp-content/plugins/my-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,my-calendar,critical
+  tags: cve,wordpress,wp-plugin,my-calendar,low
 
 http:
   - method: GET
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.29')
+          - compare_versions(version, '<= 3.3.16')

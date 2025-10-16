@@ -1,23 +1,24 @@
-id: visitor-maps
+id: visitor-maps-a95a1bf2e233e0151a923c4acc0d3a36
 
 info:
-  name: "Visitor Maps <= 1.5.8.6 - Stored Cross-Site Scripting"
+  name: >
+    Visitor Maps <= 1.5.8.6 - Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Visitor Maps plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'order' and 'sort_by' parameters in versions up to, and including, 1.5.8.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The Visitor Maps plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'order' and 'sort_by' parameters in versions up to, and including, 1.5.8.6 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - http://cinu.pl/research/wp-plugins/mail_ab2b31e73ea44cf0bb56d6f519164272.html
-    - http://blog.cinu.pl/2015/11/php-static-code-analysis-vs-top-1000-wordpress-plugins.html
-    - https://wpscan.com/vulnerability/05060623-565d-42c5-855e-6e9dff07ebb8
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/06ff683d-b3ef-4cae-84f4-be6ada37d5bf?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/visitor-maps/"
     google-query: inurl:"/wp-content/plugins/visitor-maps/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,visitor-maps,medium
+  tags: cve,wordpress,wp-plugin,visitor-maps,low
 
 http:
   - method: GET

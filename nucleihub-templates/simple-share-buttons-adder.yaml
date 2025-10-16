@@ -1,23 +1,24 @@
-id: simple-share-buttons-adder-5625db2be051e69df2a794017546d212
+id: simple-share-buttons-adder-cdb564084911afff3cb0a626a8225cad
 
 info:
-  name: "Simple Share Buttons Adder <= 4.4 - Cross-Site Request Forgery"
+  name: >
+    Simple Share Buttons Adder <= 4.4 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The Simple Share Buttons Adder  plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.4. This is due to missing or incorrect nonce validation. This makes it possible for unauthenticated attackers to execute arbitrary javascript in the context of the Homepage, Pages, Posts, Category/Archive pages and post Excerpt via forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The Simple Share Buttons Adder  plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 4.4. This is due to missing or incorrect nonce validation. This makes it possible for unauthenticated attackers to execute arbitrary javascript in the context of the Homepage, Pages, Posts, Category/Archive pages and post Excerpt via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://advisories.dxw.com/advisories/csrf-and-stored-xss-in-simple-share-buttons-adder/
-    - https://packetstormsecurity.com/files/127238/
-    - https://wordpress.org/plugins/simple-share-buttons-adder/#developers
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f72c94f-b0b6-464b-8bc7-df3d75b22edb?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N
     cvss-score: 8.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-share-buttons-adder/"
     google-query: inurl:"/wp-content/plugins/simple-share-buttons-adder/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-share-buttons-adder,high
+  tags: cve,wordpress,wp-plugin,simple-share-buttons-adder,medium
 
 http:
   - method: GET

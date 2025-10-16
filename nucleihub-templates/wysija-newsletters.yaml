@@ -1,20 +1,19 @@
-id: wysija-newsletters-8608623a89f6c8d55e945e267797249b
+id: wysija-newsletters-494fecde523914f791a114ba3546502f
 
 info:
-  name: "MailPoet Newsletters <= 2.7.2 - Reflected Cross-Site Scripting"
+  name: >
+    MailPoet Newsletters <= 2.6.19 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The MailPoet Newsletters plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'encodedForm' parameter in versions up to, and including, 2.7.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The MailPoet Newsletters plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘wysija-key’ parameter in versions up to, and including, 2.6.19 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://sumofpwn.nl/advisory/2016/reflected_cross_site_scripting_vulnerability_in_mailpoet_newsletters_plugin.html
-    - https://seclists.org/fulldisclosure/2016/Sep/17
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-mailpoet-newsletters-previous-multiple-vulnerabilities-2-7-2/
-    - https://wpscan.com/vulnerability/6541c536-526e-4663-bef2-344d6f132761
-    - https://packetstormsecurity.com/files/138667/WordPress-MailPoet-Newsletters-2.7.2-Cross-Site-Scripting.html
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/14667d93-4fba-4c50-8228-737ae91f2789?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:L/I:L/A:L
-    cvss-score: 6.5
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wysija-newsletters/"
     google-query: inurl:"/wp-content/plugins/wysija-newsletters/"
@@ -57,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.2')
+          - compare_versions(version, '< 2.7')

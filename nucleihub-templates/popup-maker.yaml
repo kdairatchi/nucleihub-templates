@@ -1,17 +1,19 @@
-id: popup-maker-0778ba2e8279a5b4258a5cfc2e564be9
+id: popup-maker-9f279daa55ef5c0bf1b747b0faef3010
 
 info:
-  name: "Popup Maker <= 1.17.1 - Missing Authorization via save_popup_enabled_state"
+  name: >
+    Popup Maker <= 1.18.0 - Cross-Site Request Forgery via init
   author: topscoder
   severity: medium
-  description: "The Popup Maker plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the save_popup_enabled_state function in versions up to, and including, 1.17.1. This makes it possible for authenticated attackers with contributor-level access, and above, to enable and disable popups even when they do not have the right to edit those popups."
+  description: >
+    The Popup Maker plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.18.0. This is due to missing or incorrect nonce validation on the 'init' function. This makes it possible for unauthenticated attackers to flush the popup cache via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://patchstack.com/database/vulnerability/popup-maker/wordpress-popup-maker-plugin-1-17-1-broken-access-control-vulnerability
-    - https://plugins.trac.wordpress.org/changeset/2863081/popup-maker/trunk/classes/Admin/Ajax.php?old=2800473&old_path=popup-maker%2Ftrunk%2Fclasses%2FAdmin%2FAjax.php
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/533f71d5-823d-45eb-8ecf-76afafd2a5d3?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
+    cvss-score: 4.3
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/popup-maker/"
     google-query: inurl:"/wp-content/plugins/popup-maker/"
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.17.1')
+          - compare_versions(version, '<= 1.18.0')

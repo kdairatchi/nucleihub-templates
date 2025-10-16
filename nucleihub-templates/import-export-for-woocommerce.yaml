@@ -1,15 +1,15 @@
-id: import-export-for-woocommerce-bcf2ad7e63917a98b59c548c5519a59f
+id: import-export-for-woocommerce-5ea5e5225f96e660e767b4c54517b14b
 
 info:
   name: >
-    Import Export For WooCommerce <= 1.5 - Authenticated (Subscriber+) Arbitrary File Upload
+    Import Export For WooCommerce <= 1.6.2 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/afb5b791-0bc7-466f-87f6-f6c5ebed576b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/98008119-1be7-404c-b191-7585d51549d3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/import-export-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/import-export-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,import-export-for-woocommerce,low
+  tags: cve,wordpress,wp-plugin,import-export-for-woocommerce,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5')
+          - compare_versions(version, '<= 1.6.2')

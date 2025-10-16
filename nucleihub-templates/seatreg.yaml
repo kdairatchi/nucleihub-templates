@@ -1,23 +1,24 @@
-id: seatreg
+id: seatreg-891d838799ecd49c2e02a081d3575e09
 
 info:
-  name: "SeatReg <= 1.27.0 - Open Redirect"
+  name: >
+    SeatReg <= 1.56.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The SeatReg plugin for WordPress is vulnerable to Open Redirect in versions up to, and including, 1.23.0. This makes it possible for an attacker to redirect users to malicious sites or utilize the affected system in a phishing campaign."
+  severity: low
+  description: >
+    
   reference:
-    - https://packetstormsecurity.com/files/167888/wpseatreg1230-redirect.txt
-    - https://www.exploitalert.com/view-details.html?id=38900
-    - https://plugins.trac.wordpress.org/browser/seatreg/trunk/php/seatreg_functions.php#L2133
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/769bc1fa-4f41-431e-9907-6e03d2c921be?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/seatreg/"
     google-query: inurl:"/wp-content/plugins/seatreg/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,seatreg,medium
+  tags: cve,wordpress,wp-plugin,seatreg,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.27.0')
+          - compare_versions(version, '<= 1.56.0')

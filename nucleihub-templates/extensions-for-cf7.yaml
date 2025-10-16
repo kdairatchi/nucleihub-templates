@@ -1,15 +1,15 @@
-id: extensions-for-cf7-ede8cd71e11404562636beb2e315e0f4
+id: extensions-for-cf7-5d8527f1228e71305a36b6b6b31c037d
 
 info:
   name: >
-    Extensions For CF7 <= 3.2.0 - Authenticated (Admin+) Sever-Side Request Forgery
+    Extensions For CF7 (Contact form 7 Database, Conditional Fields and Redirection) <= 3.2.8 - Unauthenticated Arbitrary File Deletion Triggered via Admin Form Submission Deletion
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c59a4802-ce4c-4f19-be7a-848862e1d3cf?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/894b43ed-143d-4c0b-afd1-05fcd6fa5018?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.0')
+          - compare_versions(version, '<= 3.2.8')

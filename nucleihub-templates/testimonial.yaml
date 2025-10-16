@@ -1,15 +1,15 @@
-id: testimonial-ad017083574d0a9626fdaf46e635452f
+id: testimonial-ea33e3afa226b7ece0f4b240ba92c620
 
 info:
   name: >
-    Testimonial Slider <= 2.3.7 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Testimonial Slider <= 2.0.13 - Authenticated (Contributor+) PHP Object Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9be5e54c-286a-4fec-95fb-27e3517f3eb8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/549ddee9-9f38-40e2-ac50-bff5366c0b94?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.7')
+          - compare_versions(version, '<= 2.0.13')

@@ -1,18 +1,19 @@
-id: gdpr-cookie-compliance-af69ee8486c06ae18479ce20dc19c847
+id: gdpr-cookie-compliance-5b52e80b7a4a196252d1c0a901c97013
 
 info:
-  name: "GDPR Cookie Compliance <= 4.0.2 - Missing Authorization"
+  name: >
+    GDPR Cookie Compliance <= 4.12.4 - Cross-Site Request Forgery to License Modification
   author: topscoder
   severity: medium
-  description: "The GDPR Cookie Compliance plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the gdpr_cookie_compliance_reset_settings AJAX action in versions up to, and including, 4.0.2. This makes it possible for authenticated attackers to reset all of the settings."
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/wordpress-gdpr-cookie-compliance-plugin-fixed-authenticated-settings-deletion-vulnerability/
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-gdpr-cookie-compliance-security-bypass-4-0-2/
-    - https://wpscan.com/vulnerability/5ac51325-a7f5-4d38-9b41-61855206083d
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8f847a61-4378-4b04-8eb4-99ef36417b6c?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/gdpr-cookie-compliance/"
     google-query: inurl:"/wp-content/plugins/gdpr-cookie-compliance/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.2')
+          - compare_versions(version, '<= 4.12.4')

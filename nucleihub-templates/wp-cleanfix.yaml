@@ -1,15 +1,15 @@
-id: wp-cleanfix-f9df32c30cdbc90aabff7d807a1f99f7
+id: wp-cleanfix-f0ca3d0896fc41a244e0d785c09cced6
 
 info:
   name: >
-    WP Cleanfix <= 5.6.2 - Missing Authorization via register
+    WP Cleanfix Plugin < 5.0.0 - Remote Code Execution
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57896fa8-9360-41e8-a60e-8b95d01c25ac?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a2c62a8-bc00-43b7-a3e8-a45d0cb75854?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-cleanfix/"
     google-query: inurl:"/wp-content/plugins/wp-cleanfix/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-cleanfix,high
+  tags: cve,wordpress,wp-plugin,wp-cleanfix,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.6.2')
+          - compare_versions(version, '< 5.0.0')

@@ -1,15 +1,15 @@
-id: wp2leads-7befbff671318b46f09f6861a06aa92d
+id: wp2leads-659736a078bbc76d4af92d460a205aa3
 
 info:
   name: >
-    WP2LEADS <= 3.4.2 - Reflected Cross-Site Scripting
+    WP2LEADS <= 3.5.0 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b791711-4028-4c22-837c-2837d2152d6d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ee48355-33a3-4689-8b09-2affee6adf21?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4.2')
+          - compare_versions(version, '<= 3.5.0')

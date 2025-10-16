@@ -1,15 +1,15 @@
-id: timeline-event-history-80aa459f22289c5647643a43aa575b7c
+id: timeline-event-history-678a54e91c0550488e0be8a89b12ad28
 
 info:
   name: >
-    Timeline Event History <= 3.1 - Authenticated (Contributor+) PHP Object Injection
+    Timeline Event History <= 3.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/107afaa6-6c0b-43fb-9713-ebc4f1189ea6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/12fb237d-348c-4b3d-bc8e-21ab85ec49b4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1')
+          - compare_versions(version, '<= 3.2')

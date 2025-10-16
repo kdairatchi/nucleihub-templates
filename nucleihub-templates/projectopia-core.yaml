@@ -1,15 +1,15 @@
-id: projectopia-core-cdc06b2c870332cdecb916d10c97386d
+id: projectopia-core-8492023643c4a48ecfa386590afe3b93
 
 info:
   name: >
-    Projectopia <= 5.1.7 - Missing Authorization to Privilege Escalation via pto_reset_password()
+    Projectopia &#8211; WordPress Project Management <= 5.1.16 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Option Deletion
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d91a7cd4-929d-4df1-9557-ebd47e93c6e3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/de7489e8-fe18-4a80-832c-aa62424c538b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/projectopia-core/"
     google-query: inurl:"/wp-content/plugins/projectopia-core/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,projectopia-core,high
+  tags: cve,wordpress,wp-plugin,projectopia-core,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.1.7')
+          - compare_versions(version, '<= 5.1.16')

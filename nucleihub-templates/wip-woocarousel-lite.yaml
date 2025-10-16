@@ -1,15 +1,15 @@
-id: wip-woocarousel-lite-58c536c08bbfd58c8c5df3f776075f47
+id: wip-woocarousel-lite-c11c646d6ece20bbdcad05e3b8a8dacb
 
 info:
   name: >
-    WIP WooCarousel Lite <= 1.1.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WIP WooCarousel Lite <= 1.1.7 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/50721265-dbbf-4032-a8d6-9cf42a986c0d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c1b513dc-ead4-46ec-a06e-4e856134a170?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wip-woocarousel-lite/"
     google-query: inurl:"/wp-content/plugins/wip-woocarousel-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wip-woocarousel-lite,low
+  tags: cve,wordpress,wp-plugin,wip-woocarousel-lite,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.6')
+          - compare_versions(version, '<= 1.1.7')

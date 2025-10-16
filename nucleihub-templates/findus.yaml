@@ -1,22 +1,24 @@
-id: findus
+id: findus-b278a213cd045b63c171f6ebc4841d81
 
 info:
-  name: "Findus - Directory Listing WordPress Theme < 1.1.15 - Cross-Site Scripting"
+  name: >
+    Findus - Directory Listing WordPress Theme < 1.1.15 - Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The Findus - Directory Listing WordPress Theme for WordPress is vulnerable to Stored Cross-Site Scripting via the several parameters in versions up to, and including, 1.1.14 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  severity: low
+  description: >
+    The Findus - Directory Listing WordPress Theme for WordPress is vulnerable to Stored Cross-Site Scripting via the several parameters in versions up to, and including, 1.1.14 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://themeforest.net/item/findus-directory-listing-wordpress-theme/25741327
-    - https://github.com/vladvector/vladvector.github.io/blob/master/exploit/2020-06-17-findus-directory-listing-wordpress-theme-v1-1-14.txt
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a7b15ce-ff0e-4693-8ceb-afa341306dc3?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 6.4
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/findus/"
     google-query: inurl:"/wp-content/themes/findus/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,findus,medium
+  tags: cve,wordpress,wp-theme,findus,low
 
 http:
   - method: GET

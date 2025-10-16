@@ -1,18 +1,19 @@
-id: mage-eventpress-2a034c55705eaa50f37d9cc7fc4a924e
+id: mage-eventpress-7432d57c7bd5d4642231d8b54e0a9e7f
 
 info:
-  name: "Event Manager and Tickets Selling Plugin for WooCommerce < 3.5.3 - Arbitrary Settings Change"
+  name: >
+    Event Manager and Tickets Selling Plugin for WooCommerce < 3.5.3 - Arbitrary Settings Change
   author: topscoder
   severity: medium
-  description: "The Event Manager and Tickets Selling Plugin for WooCommerce plugin for WordPress is vulnerable to arbitrary settings reset via the mep_wl_ajax_license_activate and mep_wl_ajax_license_deactivate functions in versions before 3.5.3. This is due to a missing capabilities check on these functions. This makes it possible for unauthenticated attackers to arbitrarily modify plugin settings."
+  description: >
+    The Event Manager and Tickets Selling Plugin for WooCommerce plugin for WordPress is vulnerable to arbitrary settings reset via the mep_wl_ajax_license_activate and mep_wl_ajax_license_deactivate functions in versions before 3.5.3. This is due to a missing capabilities check on these functions. This makes it possible for unauthenticated attackers to arbitrarily modify plugin settings.
   reference:
-    - https://wpscan.com/vulnerability/75212a4d-02e6-4164-8337-74219b2607b7
-    - https://wordpress.org/plugins/mage-eventpress/#developers
-    - https://plugins.trac.wordpress.org/changeset/2621792
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c63079af-6a22-4692-ab81-96e166a00c38?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:L
     cvss-score: 6.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/mage-eventpress/"
     google-query: inurl:"/wp-content/plugins/mage-eventpress/"

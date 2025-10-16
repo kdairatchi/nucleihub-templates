@@ -1,15 +1,15 @@
-id: video-list-manager-b9968854f28ac4b4c64945b5bac1378d
+id: video-list-manager-4c43b1fa6a97da3f80ebd92092a40b4a
 
 info:
   name: >
-    Video List Manager <= 1.7 - Authenticated (Admin+) SQL Injection
+    Video List Manager <= 1.7 - Authenticated (Contributor+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b2d42ab-46c1-4c3e-b99a-1cdcade1b5bb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/093611bc-1b09-4654-a7f8-b4c6bd7c72c5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

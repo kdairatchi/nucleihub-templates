@@ -1,15 +1,15 @@
-id: advanced-sermons-41f001d73531fa4b61ea9410a9071fce
+id: advanced-sermons-0c1fd8a60502a824e15f2c96eca40fdc
 
 info:
   name: >
-    Advanced Sermons <= 3.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Advanced Sermons <= 3.6 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/959197c0-ce59-4f61-8fe9-11ac38bb0e41?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/099f4139-8680-4b12-9d0e-ee4e361151e5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.4')
+          - compare_versions(version, '<= 3.6')

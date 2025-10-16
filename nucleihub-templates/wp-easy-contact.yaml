@@ -1,15 +1,15 @@
-id: wp-easy-contact-3b570fced573df49cceb54d741239f7e
+id: wp-easy-contact-508e043c1893a01c1c1ead5cb489c99f
 
 info:
   name: >
-    Best Contact Management Software <= 3.7.3 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Simplify Contact Management: WP Easy Contact <= 4.0.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/80ba732f-b3cc-4b42-8c56-9fa1cee08c7b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f584a439-3373-441c-a73e-5931ae63e7ae?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.7.3')
+          - compare_versions(version, '<= 4.0.0')

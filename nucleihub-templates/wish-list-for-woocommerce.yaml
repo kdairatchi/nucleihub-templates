@@ -1,15 +1,15 @@
-id: wish-list-for-woocommerce-b8fe77c1be02f29f7734172386a07334
+id: wish-list-for-woocommerce-0270ad8a00cb6556b44a420cf102e736
 
 info:
   name: >
-    Wishlist for WooCommerce: Multi Wishlists Per Customer <= 3.1.2 - Reflected Cross-Site Scripting
+    Wishlist for WooCommerce: Multi Wishlists Per Customer <= 3.1.7 - Cross-Site Request Forgery to Cross-Site Scriping via Wishlist Name
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5992161c-65ad-4601-8ebc-b53470f49c1c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c11456bb-dde3-4ab8-b00b-a6cdcc68a760?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.2')
+          - compare_versions(version, '<= 3.1.7')

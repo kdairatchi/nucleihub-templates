@@ -1,23 +1,24 @@
-id: live-scores-for-sportspress-6302e7d708d5b889b347fcdbb3105891
+id: live-scores-for-sportspress-f1bc284f4f1d0f464eb821afe8610e4a
 
 info:
-  name: "Live Scores for SportsPress <= 1.9.0 - Authenticated (Admin+) Local File Inclusion"
+  name: >
+    Live Scores for SportsPress <= 1.9.0 - Authenticated (Admin+) Local File Inclusion
   author: topscoder
-  severity: high
-  description: "The Live Scores for SportsPress plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 1.9.0 via the 'tab' parameter. This allows authenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included."
+  severity: low
+  description: >
+    The Live Scores for SportsPress plugin for WordPress is vulnerable to Local File Inclusion in versions up to, and including, 1.9.0 via the 'tab' parameter. This allows authenticated attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-1/
-    - https://wpscan.com/vulnerability/50c3f5ab-bbda-4bda-81c8-16dcbf4d6600
-    - https://plugins.trac.wordpress.org/changeset/2583766
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/002c6fea-4b76-47a6-9a39-1195f18aa6f6?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 7.2
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/live-scores-for-sportspress/"
     google-query: inurl:"/wp-content/plugins/live-scores-for-sportspress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,live-scores-for-sportspress,high
+  tags: cve,wordpress,wp-plugin,live-scores-for-sportspress,low
 
 http:
   - method: GET

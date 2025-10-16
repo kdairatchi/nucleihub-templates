@@ -1,15 +1,15 @@
-id: relocate-upload-f24d557ef8f91df6045f7087d948672d
+id: relocate-upload-37051c711a0f4e7ef42fb70437115384
 
 info:
   name: >
-    Relocate Upload < 0.20 - Remote File Inclusion
+    Relocate Upload <= 0.24.1 - Cross-Site Request Forgery
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eb629dfc-1be2-4a56-907f-0b5c64cc066e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9075a705-e72f-4331-ab8f-bb06e1a58225?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/relocate-upload/"
     google-query: inurl:"/wp-content/plugins/relocate-upload/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,relocate-upload,critical
+  tags: cve,wordpress,wp-plugin,relocate-upload,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 0.20')
+          - compare_versions(version, '<= 0.24.1')

@@ -1,24 +1,24 @@
-id: simple-download-monitor-f1319c47c78a6797e1f47d88d80142d0
+id: simple-download-monitor-4100473243bc40ede340ca474bef7045
 
 info:
-  name: "Simple Download Monitor <= 3.9.5 - Log Reset"
+  name: >
+    Simple Download Monitor <= 3.2.8 - Missing Authorization
   author: topscoder
-  severity: medium
-  description: "The Simple Download Monitor plugin for WordPress is vulnerable to Log Resets in versions up to, and including, 3.9.5. This is due to a lack of nonce and capability checks on the 'sdm_reset_log' AJAX action. This makes it possible for authenticated subscriber-level attackers and above (unauthenticated if performing CSRF) to reset logs within the vulnerable service."
+  severity: critical
+  description: >
+    The Simple Download Monitor plugin for WordPress is vulnerable to authorization bypass due to missing capability checks on the 'sdm_tiny_get_post_ids_ajax_call()' and 'sdm_remove_thumbnail_image_ajax_call()' functions in versions up to, and including, 3.2.8. This makes it possible for unauthorized attackers to access otherwise private files and delete thumbnails.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-october-2021-part-2/#ib-toc-anchor-2
-    - https://wpscan.com/vulnerability/08f4c669-0000-4b17-b762-ae06f5d01538%5C
-    - https://wordpress.org/plugins/simple-download-monitor/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2594688%40simple-download-monitor&new=2594688%40simple-download-monitor&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f5ad74c5-93ba-414c-98ad-0987547f172f?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L
-    cvss-score: 4.3
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:L/A:L
+    cvss-score: 9.9
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-download-monitor/"
     google-query: inurl:"/wp-content/plugins/simple-download-monitor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-download-monitor,medium
+  tags: cve,wordpress,wp-plugin,simple-download-monitor,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.9.5')
+          - compare_versions(version, '<= 3.2.8')

@@ -1,0 +1,30 @@
+id: bmc-controlm-mft-panel
+
+info:
+  name: BMC Control-M MFT Login Panel - Detect
+  author: righettod
+  severity: info
+  description: |
+    BMC Control-M MFT products was detected.
+  reference:
+    - https://documents.bmc.com/supportu/9.0.21/en-US/Documentation/Managed_File_Transfer.htm
+    - https://documents.bmc.com/supportu/9.0.21/en-US/Documentation/home.htm
+  metadata:
+    max-request: 1
+    verified: true
+    shodan-query: http.title:"File Exchange"
+  tags: panel,bmc,login,detect
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers:
+      - type: dsl
+        dsl:
+          - 'status_code == 200'
+          - 'contains(to_lower(body), "file exchange</title>")'
+          - 'contains_any(to_lower(body), "main-b2b-icon.png", "fileexchange.ico")'
+        condition: and
+# digest: 4b0a00483046022100ade4278d8131b59c72a71085ad77262e70cf2ecb9e752e7e0c9d63f2034166ee022100ecc2d2097320d230247c14b29071e041278d636725d4a72575f1c9091133c1ce:922c64590222798bb761d5b6d8e72950

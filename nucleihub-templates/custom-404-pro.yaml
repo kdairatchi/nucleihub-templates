@@ -1,19 +1,19 @@
-id: custom-404-pro-d3fe8291cabafcf386d78bcefbae9ead
+id: custom-404-pro-73782f827c95796fae76aa3ddd57deaf
 
 info:
-  name: "Custom 404 Pro <= 3.7.2 - Unauthenticated SQL Injection"
+  name: >
+    Custom 404 Pro <= 3.7.2 - Unauthenticated SQL Injection
   author: topscoder
   severity: critical
-  description: "The Custom 404 Pro plugin for WordPress is vulnerable to blind SQL Injection via multiple parameters including the 'User-Agent' and 'Referer' Headers in versions up to, and including, 3.7.2 due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  description: >
+    The Custom 404 Pro plugin for WordPress is vulnerable to blind SQL Injection via multiple parameters including the 'User-Agent' and 'Referer' Headers in versions up to, and including, 3.7.2 due to insufficient escaping on the user supplied parameters and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://plugins.svn.wordpress.org/custom-404-pro/tags/3.7.3/readme.txt
-    - https://plugins.svn.wordpress.org/custom-404-pro/tags/3.7.3/readme.md
-    - https://wordpress.org/plugins/custom-404-pro/
-    - https://plugins.trac.wordpress.org/changeset/2903606/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d22fb2e8-bb61-49bc-9fab-8f7c58339a69?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/custom-404-pro/"
     google-query: inurl:"/wp-content/plugins/custom-404-pro/"

@@ -1,15 +1,15 @@
-id: slingblocks-233423977de15183434779778a5405c9
+id: slingblocks-1f2399b8cadf3f1a6bed1b0cc166f2b3
 
 info:
   name: >
-    SlingBlocks – Gutenberg Blocks by FunnelKit (Formerly WooFunnels) <= 1.4.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    SlingBlocks – Gutenberg Blocks by FunnelKit (Formerly WooFunnels) <= 1.6.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/638d18ea-1ff6-432d-abe5-38e84916c106?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c88c6ad8-d4bd-4785-a6e7-e5034c58158b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.1')
+          - compare_versions(version, '<= 1.6.0')

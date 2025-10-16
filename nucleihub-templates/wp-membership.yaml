@@ -1,15 +1,15 @@
-id: wp-membership-05c9e1ca16738cd78fe38ca1f2073848
+id: wp-membership-4e84a6fefd09175e380249cb67e0d590
 
 info:
   name: >
-    Multiple E-plugins (Various Versions) - Authenticated (Subscriber+) Privilege Escalation
+    WP Membership <= 1.6.3 - Missing Authorization to Authenticated (Subscriber+) Settings Update
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/629d4809-1dd2-4b67-8d8d-9c55f5240f94?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/df05f31f-85ee-42e3-97b7-c3c11f2ab2b4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.5.7')
+          - compare_versions(version, '<= 1.6.3')

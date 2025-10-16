@@ -1,15 +1,15 @@
-id: postpage-import-export-with-custom-fields-taxonomies-b8680bd57f1a60cd0e3b6ff498ea1e46
+id: postpage-import-export-with-custom-fields-taxonomies-40c0b648f42a435a18733cdb3ea3823e
 
 info:
   name: >
-    Post/Page Copying Tool <= 2.0.0 - Unauthenticated Sensitive Information Exposure
+    Post/Page Copying Tool  to Export and Import post/page for Cross site Migration <= 2.0.3 - Authenticated (Contributor+) Arbitrary File Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d34ba8b3-e8a8-4810-a0d9-8781bc7d1201?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4824be4c-eec0-4979-85e1-6c692b3a8243?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.0')
+          - compare_versions(version, '<= 2.0.3')

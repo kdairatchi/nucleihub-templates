@@ -1,23 +1,24 @@
-id: page-generator-4d55f7f426b9171b785ddd2035b31d7e
+id: page-generator-d5b79d3fe8a54b23743b7a10d89f752a
 
 info:
-  name: "Page Generator <= 1.6.5 - Cross-Site Request Forgery to Arbitrary Keywords Deletion/Duplication"
+  name: >
+    Page Generator <= 1.6.5 - Cross-Site Request Forgery to Arbitrary Keywords Deletion/Duplication
   author: topscoder
-  severity: high
-  description: "The Page Generator plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.6.5. This is due to missing or incorrect nonce validation on the ajax function. This makes it possible for unauthenticated attackers to duplicate or deleted keywords granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The Page Generator plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.6.5. This is due to missing or incorrect nonce validation on the ajax function. This makes it possible for unauthenticated attackers to duplicate or deleted keywords granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2746523%40page-generator%2Ftrunk&old=2745987%40page-generator%2Ftrunk&sfp_email=&sfph_mail=
-    - https://patchstack.com/database/vulnerability/page-generator-/wordpress-page-generator-plugin-1-6-5-arbitrary-keywords-deletion-duplication-via-cross-site-request-forgery-csrf-vulnerability
-    - https://wpscan.com/vulnerability/8c585797-3756-4bed-aa7a-de20d246a3d1
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/83f6bdda-e489-4e85-b510-7bfaa2329609?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/page-generator/"
     google-query: inurl:"/wp-content/plugins/page-generator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,page-generator,high
+  tags: cve,wordpress,wp-plugin,page-generator,medium
 
 http:
   - method: GET

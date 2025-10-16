@@ -1,15 +1,15 @@
-id: wp-jobhunt-a8c82b776116932f17b2139396dc2d85
+id: wp-jobhunt-897acad6d876a847af385831a6de3a03
 
 info:
   name: >
-    JobCareer | Job Board Responsive WordPress Theme < 2.4 - Unauthenticated Arbitrary Password Reset
+    WP JobHunt <= 7.2 - Authenticated (Subscriber+) Insecure Direct Object Reference to Arbitrary Account Deletion
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/acbea2eb-fa87-4117-b347-049c819599c7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/afb3e0e0-68c7-43f6-981f-59c3f3507429?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.4')
+          - compare_versions(version, '<= 7.2')

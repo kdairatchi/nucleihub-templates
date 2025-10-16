@@ -1,16 +1,19 @@
-id: buddyforms-c64121306f5662e50a16c034995ff052
+id: buddyforms-21a92539fb9f0986ca96ed0b50098fc6
 
 info:
-  name: "Post, Registration and Profile Form Builder – FrontEnd Editor BuddyForms – Easy WordPress Forms <= 2.8.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode"
+  name: >
+    Post, Registration and Profile Form Builder – FrontEnd Editor BuddyForms – Easy WordPress Forms <= 2.6.9 - Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Post, Registration and Profile Form Builder – FrontEnd Editor BuddyForms – Easy WordPress Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the plugin's shortcode(s) in versions up to, and including, 2.8.1 due to insufficient input sanitization and output escaping on user supplied attributes. This makes it possible for authenticated attackers with contributor-level and above permissions to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    The Post, Registration and Profile Form Builder – FrontEnd Editor BuddyForms – Easy WordPress Forms plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in versions up to, and including, 2.6.9 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2911299/buddyforms
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba5d1bd4-da0d-43f4-b28f-4a4a2702b3b0?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/buddyforms/"
     google-query: inurl:"/wp-content/plugins/buddyforms/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.1')
+          - compare_versions(version, '<= 2.6.9')

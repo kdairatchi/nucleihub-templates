@@ -1,18 +1,19 @@
-id: register-plus-redux-0c531ee84b50c0edcd2d4a79aae39764
+id: register-plus-redux-ddd5496f8a9e25533ed6b136daf578c2
 
 info:
-  name: "Register Plus Redux <= 4.3 - Cross-Site Scripting"
+  name: >
+    Register Plus Redux <= 4.3 - Cross-Site Scripting
   author: topscoder
   severity: high
-  description: "The Register Plus Redux plugin for WordPress is vulnerable to Cross-Site Scripting in up to, and including 4.3 due to insufficient input sanitization and output escaping on the user_email parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Register Plus Redux plugin for WordPress is vulnerable to Cross-Site Scripting in up to, and including 4.3 due to insufficient input sanitization and output escaping on the user_email parameter. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://packetstormsecurity.com/files/111367/
-    - https://wordpress.org/plugins/register-plus-redux/#developers
-    - https://plugins.trac.wordpress.org/browser/register-plus-redux/trunk/register-plus-redux.php#L255
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3fc5e9b3-a121-40f0-a7e8-32979254f52e?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L
     cvss-score: 7.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/register-plus-redux/"
     google-query: inurl:"/wp-content/plugins/register-plus-redux/"

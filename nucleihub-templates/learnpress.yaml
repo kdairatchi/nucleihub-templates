@@ -1,18 +1,19 @@
-id: learnpress-c4755064e4787c9045b675cd9567880c
+id: learnpress-2d254d7f281ac559c58ae5ec9bc7c046
 
 info:
-  name: "LearnPress – WordPress LMS Plugin <= 4.1.6.7 - Reflected Cross-Site Scripting"
+  name: >
+    LearnPress – WordPress LMS Plugin <= 4.1.6.7 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The LearnPress – WordPress LMS Plugin plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via several  parameters related to pagination in versions up to, and including, 4.1.6.7  due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The LearnPress – WordPress LMS Plugin plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via several  parameters related to pagination in versions up to, and including, 4.1.6.7  due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/browser/learnpress/tags/4.1.6.7/inc/admin/sub-menus/abstract-submenu.php#L221
-    - https://plugins.trac.wordpress.org/browser/learnpress/tags/4.1.6.7/inc/admin/lp-admin-functions.php#L1562
-    - https://plugins.trac.wordpress.org/browser/learnpress/tags/4.1.6.7/inc/admin/sub-menus/abstract-submenu.php#L277
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d7bee25e-7574-4d3d-ad58-9b30d99de525?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/learnpress/"
     google-query: inurl:"/wp-content/plugins/learnpress/"

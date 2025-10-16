@@ -1,23 +1,24 @@
-id: wp-statistics-e36e2b140633272010004fff1f170718
+id: wp-statistics-d881429b533b81341ff4e812f62c75ae
 
 info:
-  name: "WP Statistics <= 12.0.8.1 - Reflected Cross-Site Scripting"
+  name: >
+    WP Statistics <= 13.2.5 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
-  severity: medium
-  description: "The WP Statistics plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions before 12.0.9 due to insufficient input sanitization and output escaping on the IP parameter. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    The WP Statistics plugin for WordPress is vulnerable to time-based blind SQL Injection via the ‘agent’ parameter in versions up to, and including, 13.2.5 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for authenticated attackers, with subscriber-level access or higher, to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://github.com/wp-statistics/wp-statistics/commit/82d06cd069fd9ce0a5d2fedaf1885423d67a1c25
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-statistics-cross-site-scripting-12-0-8-1/
-    - https://web.archive.org/web/20191101102907/http%3A//blog.dewhurstsecurity.com%3A80/2017/07/03/wp-statistics-authenticated-xss-vulnerability.htmlhttps%3A//web.archive.org/web/20191101102907/http%3A//blog.dewhurstsecurity.com%3A80/2017/07/03/wp-statistics-authenticated-xss-vulnerability.html
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/42f54887-ce98-4360-8d07-37b1a48fc3fd?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-statistics/"
     google-query: inurl:"/wp-content/plugins/wp-statistics/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-statistics,medium
+  tags: cve,wordpress,wp-plugin,wp-statistics,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 12.0.8.1')
+          - compare_versions(version, '<= 13.2.5')

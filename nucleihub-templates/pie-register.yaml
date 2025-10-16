@@ -1,23 +1,24 @@
-id: pie-register-cfac1d14cc7ec9daced6ce3824dcc820
+id: pie-register-fc9f478460416d900700bd917270cf13
 
 info:
-  name: "Pie Register – User Registration Forms. Invitation based registrations, Custom Login, Payments <= 3.7.2.3 - Open Redirect"
+  name: >
+    Registration Forms – User Profile, Custom Registration Form, Login Form, Invitation-Based Registrations for WordPress  2.0.14 - 2.0.15 - Authentication Bypass
   author: topscoder
-  severity: medium
-  description: "The Pie Register – User Registration Forms. Invitation based registrations, Custom Login, Payments plugin for WordPress is vulnerable to Open Redirects in versions up to, and including, 3.7.2.3. This is due to insufficient validation on the redirect url supplied via the 'redirect_to' parameter. This makes it possible for unauthenticated attackers to redirect users to potentially malicious sites if they can successfully trick them into performing an action."
+  severity: critical
+  description: >
+    The Registration Forms – User Profile, Custom Registration Form, Login Form, Invitation-Based Registrations plugin for WordPress is vulnerable to authentication bypass in versions 2.0.14 - 2.0.15 . This is due to a lack of validation of user input in a login request to the plugin. This makes it possible for unauthenticated attackers to authenticate as an administrator when supplying a site administrators user id.
   reference:
-    - https://wpscan.com/vulnerability/f6efa32f-51df-44b4-bbba-e67ed5785dd4
-    - https://wordpress.org/plugins/pie-register/#developers
-    - https://plugins.trac.wordpress.org/changeset/2616952
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/053bb01c-9e87-4836-ae1c-567272b21118?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pie-register/"
     google-query: inurl:"/wp-content/plugins/pie-register/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pie-register,medium
+  tags: cve,wordpress,wp-plugin,pie-register,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.7.2.4')
+          - compare_versions(version, '>= 2.0.14', '<= 2.0.15')

@@ -1,15 +1,15 @@
-id: rss-feed-post-generator-echo-b13d377a9dbca142b213f79ffe472808
+id: rss-feed-post-generator-echo-89656c9183c2dd705c5d2339a3c9e811
 
 info:
   name: >
-    Echo RSS Feed Post Generator <= 5.4.6 - Unauthenticated Privilege Escalation
+    Echo RSS Feed Post Generator <= 5.4.8.1 - Unauthenticated Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c099f401-4b05-4532-8e31-af1b1dea7eca?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/72de9f64-f3e0-4705-adc1-6c22076b382f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rss-feed-post-generator-echo/"
     google-query: inurl:"/wp-content/plugins/rss-feed-post-generator-echo/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rss-feed-post-generator-echo,low
+  tags: cve,wordpress,wp-plugin,rss-feed-post-generator-echo,critical
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.4.6')
+          - compare_versions(version, '<= 5.4.8.1')

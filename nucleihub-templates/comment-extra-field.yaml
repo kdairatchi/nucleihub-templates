@@ -1,18 +1,19 @@
-id: comment-extra-field-bae476f18c21fa1831ec2307c001f8ce
+id: comment-extra-field-a7ee04c7a262f16684d09ef95c8713bd
 
 info:
-  name: "Comment Extra Fields <= 1.7 - Reflected Cross-Site Scripting"
+  name: >
+    Comment Extra Fields <= 1.7 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The Comment Extra Fields plugin for WordPress is vulnerable to Cross-Site Scripting via the swfupload.swf file in versions up to, and including, 1.7 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  description: >
+    The Comment Extra Fields plugin for WordPress is vulnerable to Cross-Site Scripting via the swfupload.swf file in versions up to, and including, 1.7 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://packetstormsecurity.com/files/122625/
-    - https://wordpress.org/plugins/comment-extra-field/#developers
-    - https://web.archive.org/web/20121224014706/https%3A//brindi.si/g/blog/vulnerable-swf-bundled-in-wordpress-plugins.html
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b7240711-e575-41ff-ba39-0255ca2aa9f5?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/comment-extra-field/"
     google-query: inurl:"/wp-content/plugins/comment-extra-field/"

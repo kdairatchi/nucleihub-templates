@@ -1,15 +1,15 @@
-id: pepro-ultimate-invoice-df62a53c0087eb9deea6500e9251d973
+id: pepro-ultimate-invoice-95849a475998b8d6d3815bc8ff2f4af3
 
 info:
   name: >
-    PeproDev Ultimate Invoice <= 1.9.7 - Unauthenticated Sensitive Information Exposure via init_plugin
+    PeproDev Ultimate Invoice <= 2.0.8 - Insecure Direct Object Reference to Unauthenticated Order Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5be9d0ff-5d9c-4e80-a4d7-66ef4859a959?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/46186f8d-e50c-476a-9480-b6121412474a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.7')
+          - compare_versions(version, '<= 2.0.8')

@@ -1,15 +1,15 @@
-id: chamber-dashboard-business-directory-7cdbdf9ea1ad4d4d4263843649962087
+id: chamber-dashboard-business-directory-8a95abac2e689446a6a81507f2f0fbad
 
 info:
   name: >
-    Chamber Dashboard Business Directory <= 3.3.8 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Chamber Dashboard Business Directory <= 3.3.11 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/54e5989f-3d2c-4ed3-b4c4-f2589b885637?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/78cb078e-a3ce-42e7-a2e3-b85f5343a0d0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.3.8')
+          - compare_versions(version, '<= 3.3.11')

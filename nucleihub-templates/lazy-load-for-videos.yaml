@@ -1,15 +1,15 @@
-id: lazy-load-for-videos-87e0c777336fb84709b767b823696ba6
+id: lazy-load-for-videos-4aed2752e488b9661d611b92fd45fae3
 
 info:
   name: >
-    Lazy Load for Videos <= 2.18.2 - Cross-Site Request Forgery
+    Lazy Load for Videos <= 2.18.7 - Authenticated (Contributor+) Stored Cross-Site Scripting via data-video-title and href Attributes
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a467ad30-8271-421c-8af4-8165fd60c03e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d28bd7d-ad3f-4720-9e09-466169fc672b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/lazy-load-for-videos/"
     google-query: inurl:"/wp-content/plugins/lazy-load-for-videos/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,lazy-load-for-videos,medium
+  tags: cve,wordpress,wp-plugin,lazy-load-for-videos,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.18.2')
+          - compare_versions(version, '<= 2.18.7')

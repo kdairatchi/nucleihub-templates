@@ -1,23 +1,24 @@
-id: addthis-e4054a5c22707906f9b3ef375b68813e
+id: addthis-76fbbdcb88b9bb0b9d295dec3c57cd35
 
 info:
-  name: "AddThis <= 5.0.12 - Cross-Site Scripting"
+  name: >
+    AddThis <= 5.0.2 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The AddThis plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 5.0.12 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: low
+  description: >
+    The AddThis plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘at_async_loading’ AJAX action in versions up to, and including, 5.0.2 due to insufficient input sanitization and output escaping. This makes it possible for Subscriber-level attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-share-buttons-by-addthis-cross-site-scripting-5-0-12/
-    - https://wordpress.org/plugins/addthis/#developers
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1218684%40addthis&new=1218684%40addthis&sfp_email=&sfph_mail=
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a276d70d-3ad7-49e0-a25c-8089cdd581da?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 6.4
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/addthis/"
     google-query: inurl:"/wp-content/plugins/addthis/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,addthis,medium
+  tags: cve,wordpress,wp-plugin,addthis,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.0.13')
+          - compare_versions(version, '< 5.0.3')

@@ -1,15 +1,15 @@
-id: search-exclude-dd2156b084e252fc5742e2c033ed21ea
+id: search-exclude-c3ba95e1e33660f5fc00ad52f27a4d1a
 
 info:
   name: >
-    Search Exclude <= 1.2.6 - Authenticated (Editor+) Stored Cross-Site Scripting
+    Search Exclude <= 2.4.9 - Missing Authorization to Unauthenticated Plugin Settings Modification
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/211aa83e-e97b-4fd7-8cfe-308ac698c17e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1f72a309-8ef8-4943-8e64-38bb7909397a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/search-exclude/"
     google-query: inurl:"/wp-content/plugins/search-exclude/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,search-exclude,low
+  tags: cve,wordpress,wp-plugin,search-exclude,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.6')
+          - compare_versions(version, '<= 2.4.9')

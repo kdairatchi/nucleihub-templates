@@ -1,18 +1,19 @@
-id: woo-coupon-usage
+id: woo-coupon-usage-4838a8ae69fb4fac820d736646415dd2
 
 info:
-  name: "WooCommerce Affiliate Plugin – Coupon Affiliates <= 4.11.0.1 - Reflected Cross-Site Scripting"
+  name: >
+    WooCommerce Affiliate Plugin – Coupon Affiliates <= 4.11.0.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The WooCommerce Affiliate Plugin – Coupon Affiliates plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘page’ parameter in versions up to, and including, 4.11.0.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The WooCommerce Affiliate Plugin – Coupon Affiliates plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘page’ parameter in versions up to, and including, 4.11.0.1 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-september-2021-part-1/
-    - https://wpscan.com/vulnerability/bf3e2546-85fb-4555-a406-60a3290dd743
-    - https://plugins.trac.wordpress.org/changeset/2586587
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bdd0bdf3-6952-4b87-a3e8-156757d22e74?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woo-coupon-usage/"
     google-query: inurl:"/wp-content/plugins/woo-coupon-usage/"

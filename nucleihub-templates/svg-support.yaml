@@ -1,15 +1,15 @@
-id: svg-support-8737608367f730b35c2f865cc5227ba0
+id: svg-support-4c154062b9e64289dc68c473e37cb5d1
 
 info:
   name: >
-    SVG Support 2.5 - 2.5.1 - Insecure Plugin Defaults to Cross-Site Scripting
+    SVG Support <= 2.5.10 - Authenticated (Author+) Stored Cross-Site Scripting via SVG File Upload
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ddcf7901-e9cf-4ca0-87ae-70ecac09d102?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5852f08d-0506-464e-afd1-c625e4034e1d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/svg-support/"
     google-query: inurl:"/wp-content/plugins/svg-support/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,svg-support,high
+  tags: cve,wordpress,wp-plugin,svg-support,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 2.5', '<= 2.5.1')
+          - compare_versions(version, '<= 2.5.10')
